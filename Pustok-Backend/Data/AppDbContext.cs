@@ -16,6 +16,10 @@ namespace Pustok_Backend.Data
         public DbSet<Brand> Brands { get; set; }
 
         public DbSet<Setting>Settings { get; set; }
+        public DbSet<Social> Socials { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
+
+
 
 
 
@@ -29,6 +33,9 @@ namespace Pustok_Backend.Data
 
             modelBuilder.Entity<Brand>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Setting>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Social>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Subscribe>().HasQueryFilter(m => !m.SoftDeleted);
+
 
 
 
@@ -73,10 +80,26 @@ namespace Pustok_Backend.Data
             modelBuilder.Entity<Setting>().HasData(
                 new Setting { Id=1,Key="HeaderLogo",Value= "logo.webp" },
                 new Setting { Id=2,Key="FooterLogo",Value= "logo--footer.webp" },
-                new Setting { Id = 3, Key = "Address", Value = "Example Street 98, HH2 BacHa, New York, USA" },
+                new Setting { Id = 3, Key = "Address", Value = "7/135 Saint St. London" },
                 new Setting { Id = 4, Key = "Phone", Value = "+18088 234 5678" },
                 new Setting { Id = 5, Key = "Email", Value = "support@hastech.com" },
-                new Setting { Id = 6, Key = "PaymentMethod", Value = "payment.webp" }
+                new Setting { Id = 6, Key = "PaymentMethod", Value = "payment.webp" },
+                new Setting { Id = 7, Key = "Address2", Value = "1130/5 Louis III St. New York" },
+                new Setting { Id = 8, Key = "Phone2", Value = "+18088 625 4251" },
+                new Setting { Id = 9, Key = "Email2", Value = "info@lawyersattorneys.com" }
+                );
+
+            modelBuilder.Entity<Social>().HasData(
+                new Social { Id=1,IconName= "fa-brands fa-facebook-f", Link= "https://www.facebook.com/" },
+                new Social { Id = 2, IconName = "fa-brands fa-twitter", Link = "https://twitter.com/" },
+                new Social { Id = 3, IconName = "fa-brands fa-google", Link = "https://www.google.com/" },
+                new Social { Id = 4, IconName = "fa-brands fa-youtube", Link = "https://www.youtube.com/" }
+                );
+
+
+            modelBuilder.Entity<Subscribe>().HasData(
+                new Subscribe { Id = 1,Email="surac@gmail.com"},
+                new Subscribe { Id = 2, Email = "kubra@gmail.com" }
                 );
 
         }

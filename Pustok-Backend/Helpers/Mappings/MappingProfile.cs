@@ -2,7 +2,10 @@
 using Pustok_Backend.Areas.Admin.ViewModels.Advert;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
+using Pustok_Backend.Areas.Admin.ViewModels.Setting;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
+using Pustok_Backend.Areas.Admin.ViewModels.Social;
+using Pustok_Backend.Areas.Admin.ViewModels.Subscribe;
 using Pustok_Backend.Models;
 
 namespace Pustok_Backend.Helpers.Mappings
@@ -32,6 +35,19 @@ namespace Pustok_Backend.Helpers.Mappings
             CreateMap<AdvertVM, AdvertEditVM>();
 
             CreateMap<AdvertEditVM, Advert>();
+
+            CreateMap<Social, SocialVM>();
+            CreateMap<SocialVM, SocialEditVM>();
+
+            CreateMap<SocialEditVM, Social>();
+
+            CreateMap<Setting, SettingEditVM>();
+            CreateMap<SettingEditVM, Setting>();
+            CreateMap<Subscribe, SubscribeVM>();
+            CreateMap<SubscribeCreateVM, Subscribe>();
+            CreateMap<SubscribeCreateVM, SubscribeVM>();
+
+
 
 
 

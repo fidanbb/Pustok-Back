@@ -78,38 +78,32 @@
                         <div class="footer-title">
                             <h3>NEWSLETTER SUBSCRIBE</h3>
                         </div>
+                        
                         <div class="newsletter-form">
-                            <form action="">
-                                <input type="email"
+                            <form method="post" asp-controller="Subscribe" asp-action="SubscribeToNewsletter">
+                                <input type="email" required
                                        class="form-control"
+                                       asp-for="@Model.Subscribe.Email "
                                        placeholder="Enter Your Email Address Here..." />
-                                <button btn w-100 type="submit">Subscribe</button>
+                                <span class="text-danger" asp-validation-for="@Model.Subscribe.Email"></span>
+                                <button class="btn w-100" type="submit">Subscribe</button>
                             </form>
                         </div>
 
                         <div class="social-btns">
                             <h3>Stay Connected</h3>
                             <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
-                                        <i class="ion ion-social-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="ion ion-social-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.google.com/" target="_blank">
-                                        <i class="ion ion-social-google"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/" target="_blank">
-                                        <i class="ion ion-social-youtube"></i>
-                                    </a>
-                                </li>
+
+                                @foreach (var item in Model.Socials)
+                                {
+                                    <li>
+                                        <a href="@item.Link" target="_blank">
+                                            <i class="@item.IconName"></i>
+                                        </a>
+                                    </li>
+                                }
+                               
+                               
                             </ul>
                         </div>
                     </div>

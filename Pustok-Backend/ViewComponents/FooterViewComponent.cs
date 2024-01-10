@@ -16,7 +16,7 @@ namespace Pustok_Backend.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            FooterVM model = _layoutService.GetFooterDatas();
+            FooterVM model = await _layoutService.GetFooterDatas();
 
 
             return await Task.FromResult(View(model));

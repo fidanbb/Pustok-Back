@@ -1,0 +1,66 @@
+﻿@model List<SocialVM>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section css {
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+}
+
+
+
+<div class="container" style="margin-left:30px">
+    <h1 class="text-center mt-3 mb-5">Socials</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Icon
+                    </th>
+                    <th>
+                       Link
+                    </th>
+                 
+
+                    <th>
+                        CreatedDate
+                    </th>
+
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            <i  class="@item.IconName"></i>
+                        </td>
+                        <td class="py-1" style="width:200px;white-space:normal">
+                            @item.Link
+                        </td>
+                      
+
+                        <td>
+                            @item.CreatedDate.ToString("MM/dd/yyyy")
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+

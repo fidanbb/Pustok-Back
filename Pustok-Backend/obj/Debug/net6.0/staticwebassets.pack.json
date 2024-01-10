@@ -7061,6 +7061,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\44bac618-ee89-4c6e-970c-7680bb7c5792-promo-banner-full.webp"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\4a2dee5d-2cae-4352-ab57-5711b3689457-payment.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\4a2dee5d-2cae-4352-ab57-5711b3689457-payment.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\61c61f29-503f-49d1-aabc-3b6b79c51883-promo-banner-with-text.webp",
       "PackagePath": "staticwebassets\\assets\\images\\61c61f29-503f-49d1-aabc-3b6b79c51883-promo-banner-with-text.webp"
     },
@@ -7121,6 +7125,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\cart-product-1.webp"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\cd9983f7-447a-4e6c-808c-09193bd87d79-logo.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cd9983f7-447a-4e6c-808c-09193bd87d79-logo.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\client-2.webp",
       "PackagePath": "staticwebassets\\assets\\images\\client-2.webp"
     },
@@ -7147,14 +7155,6 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\logo--footer.webp",
       "PackagePath": "staticwebassets\\assets\\images\\logo--footer.webp"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\logo.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\logo.webp"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\payment.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\payment.webp"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\product-1.webp",

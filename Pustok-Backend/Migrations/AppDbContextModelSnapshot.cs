@@ -189,48 +189,48 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2395),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4789),
                             Image = "promo-banner-with-text.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2396)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4790)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2398),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4790),
                             Image = "promo-banner-with-text-2.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2399)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4791)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2400),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4791),
                             Header = "Buy 3. Get Free 1.",
                             Image = "promo-banner-mid.webp",
                             SoftDeleted = false,
                             Title = "50% off for selected products in Pustok.",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2401)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4792)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2403),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4793),
                             Header = "$26.00",
                             Image = "promo-banner-small.webp",
                             SoftDeleted = false,
                             Title = "Praise for The Night Child",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2404)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4793)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2406),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4794),
                             Header = "I Love This Idea!",
                             Image = "promo-banner-full.webp",
                             SoftDeleted = false,
                             Title = "Cover up front of book and leave summary",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2407)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4794)
                         });
                 });
 
@@ -336,50 +336,50 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2694),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4804),
                             Image = "brand-1.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2697)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4805)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2700),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4805),
                             Image = "brand-2.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2700)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4806)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2702),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4806),
                             Image = "brand-3.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2703)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4807)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2704),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4807),
                             Image = "brand-4.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2705)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4808)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2706),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4808),
                             Image = "brand-5.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2707)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4809)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2709),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4809),
                             Image = "brand-6.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2709)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4810)
                         });
                 });
 
@@ -445,42 +445,42 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2365),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4775),
                             Description = "Orders over $500",
                             IconName = "fas fa-shipping-fast",
                             SoftDeleted = false,
                             Title = "Free Shipping Item",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2366)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4775)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2369),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4777),
                             Description = "100% money back",
                             IconName = "fas fa-redo-alt",
                             SoftDeleted = false,
                             Title = "Money Back Guarantee",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2370)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4777)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2371),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4778),
                             Description = "Lorem ipsum dolor amet",
                             IconName = "fas fa-piggy-bank",
                             SoftDeleted = false,
                             Title = "Cash On Delivery",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2372)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4779)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2374),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4779),
                             Description = "Call us : + 0123.4567.89",
                             IconName = "fas fa-life-ring",
                             SoftDeleted = false,
                             Title = "Help & Support",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2375)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4780)
                         });
                 });
 
@@ -515,56 +515,83 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2739),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4818),
                             Key = "HeaderLogo",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2740),
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4819),
                             Value = "logo.webp"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2742),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4820),
                             Key = "FooterLogo",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2743),
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4820),
                             Value = "logo--footer.webp"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2745),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4821),
                             Key = "Address",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2745),
-                            Value = "Example Street 98, HH2 BacHa, New York, USA"
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4821),
+                            Value = "7/135 Saint St. London"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2747),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4822),
                             Key = "Phone",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2748),
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4822),
                             Value = "+18088 234 5678"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2749),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4823),
                             Key = "Email",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2750),
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4823),
                             Value = "support@hastech.com"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2751),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4824),
                             Key = "PaymentMethod",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2752),
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4824),
                             Value = "payment.webp"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4825),
+                            Key = "Address2",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4825),
+                            Value = "1130/5 Louis III St. New York"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4826),
+                            Key = "Phone2",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4826),
+                            Value = "+18088 625 4251"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4827),
+                            Key = "Email2",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4827),
+                            Value = "info@lawyersattorneys.com"
                         });
                 });
 
@@ -610,26 +637,135 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2090),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4658),
                             Description = " Cover Up Front Of Books and Leave Summary",
                             DirectionId = 1,
                             Header = "J.D. Kurtness",
                             Image = "home-slider-1-ai.webp",
                             SoftDeleted = false,
                             Title = "De Vengeance",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2102)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4666)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2110),
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4669),
                             Description = "Cover Up Front Of Books and Leave Summary",
                             DirectionId = 2,
                             Header = "H.G. Wells",
                             Image = "home-slider-2-ai.webp",
                             SoftDeleted = false,
                             Title = "De Vengeance",
-                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2111)
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4670)
+                        });
+                });
+
+            modelBuilder.Entity("Pustok_Backend.Models.Social", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IconName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Socials");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4838),
+                            IconName = "fa-brands fa-facebook-f",
+                            Link = "https://www.facebook.com/",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4838)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4839),
+                            IconName = "fa-brands fa-twitter",
+                            Link = "https://twitter.com/",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4840)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4840),
+                            IconName = "fa-brands fa-google",
+                            Link = "https://www.google.com/",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4841)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4841),
+                            IconName = "fa-brands fa-youtube",
+                            Link = "https://www.youtube.com/",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4842)
+                        });
+                });
+
+            modelBuilder.Entity("Pustok_Backend.Models.Subscribe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subscribes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4851),
+                            Email = "surac@gmail.com",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4852)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4852),
+                            Email = "kubra@gmail.com",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 22, 36, 30, 45, DateTimeKind.Local).AddTicks(4853)
                         });
                 });
 
