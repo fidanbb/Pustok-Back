@@ -7057,6 +7057,14 @@
       "PackagePath": "staticwebassets\\assets\\css\\pages\\wishlist.scss"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\44bac618-ee89-4c6e-970c-7680bb7c5792-promo-banner-full.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\44bac618-ee89-4c6e-970c-7680bb7c5792-promo-banner-full.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\61c61f29-503f-49d1-aabc-3b6b79c51883-promo-banner-with-text.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\61c61f29-503f-49d1-aabc-3b6b79c51883-promo-banner-with-text.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\author-logo.webp",
       "PackagePath": "staticwebassets\\assets\\images\\author-logo.webp"
     },
@@ -7201,10 +7209,6 @@
       "PackagePath": "staticwebassets\\assets\\images\\product-9.webp"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\promo-banner-full.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\promo-banner-full.webp"
-    },
-    {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\promo-banner-mid.webp",
       "PackagePath": "staticwebassets\\assets\\images\\promo-banner-mid.webp"
     },
@@ -7215,10 +7219,6 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\promo-banner-with-text-2.webp",
       "PackagePath": "staticwebassets\\assets\\images\\promo-banner-with-text-2.webp"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\promo-banner-with-text.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\promo-banner-with-text.webp"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\quotation.webp",

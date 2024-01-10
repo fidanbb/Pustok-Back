@@ -155,6 +155,85 @@ namespace Pustok_Backend.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Pustok_Backend.Models.Advert", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Header")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Adverts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2395),
+                            Image = "promo-banner-with-text.webp",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2396)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2398),
+                            Image = "promo-banner-with-text-2.webp",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2399)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2400),
+                            Header = "Buy 3. Get Free 1.",
+                            Image = "promo-banner-mid.webp",
+                            SoftDeleted = false,
+                            Title = "50% off for selected products in Pustok.",
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2401)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2403),
+                            Header = "$26.00",
+                            Image = "promo-banner-small.webp",
+                            SoftDeleted = false,
+                            Title = "Praise for The Night Child",
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2404)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2406),
+                            Header = "I Love This Idea!",
+                            Image = "promo-banner-full.webp",
+                            SoftDeleted = false,
+                            Title = "Cover up front of book and leave summary",
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2407)
+                        });
+                });
+
             modelBuilder.Entity("Pustok_Backend.Models.AppUser", b =>
                 {
                     b.Property<string>("Id")
@@ -229,6 +308,81 @@ namespace Pustok_Backend.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Pustok_Backend.Models.Brand", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brands");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2694),
+                            Image = "brand-1.webp",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2697)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2700),
+                            Image = "brand-2.webp",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2700)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2702),
+                            Image = "brand-3.webp",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2703)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2704),
+                            Image = "brand-4.webp",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2705)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2706),
+                            Image = "brand-5.webp",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2707)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2709),
+                            Image = "brand-6.webp",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2709)
+                        });
+                });
+
             modelBuilder.Entity("Pustok_Backend.Models.Direction", b =>
                 {
                     b.Property<int>("Id")
@@ -254,6 +408,163 @@ namespace Pustok_Backend.Migrations
                         {
                             Id = 2,
                             Name = "left"
+                        });
+                });
+
+            modelBuilder.Entity("Pustok_Backend.Models.Service", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IconName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Services");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2365),
+                            Description = "Orders over $500",
+                            IconName = "fas fa-shipping-fast",
+                            SoftDeleted = false,
+                            Title = "Free Shipping Item",
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2366)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2369),
+                            Description = "100% money back",
+                            IconName = "fas fa-redo-alt",
+                            SoftDeleted = false,
+                            Title = "Money Back Guarantee",
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2370)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2371),
+                            Description = "Lorem ipsum dolor amet",
+                            IconName = "fas fa-piggy-bank",
+                            SoftDeleted = false,
+                            Title = "Cash On Delivery",
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2372)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2374),
+                            Description = "Call us : + 0123.4567.89",
+                            IconName = "fas fa-life-ring",
+                            SoftDeleted = false,
+                            Title = "Help & Support",
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2375)
+                        });
+                });
+
+            modelBuilder.Entity("Pustok_Backend.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2739),
+                            Key = "HeaderLogo",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2740),
+                            Value = "logo.webp"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2742),
+                            Key = "FooterLogo",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2743),
+                            Value = "logo--footer.webp"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2745),
+                            Key = "Address",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2745),
+                            Value = "Example Street 98, HH2 BacHa, New York, USA"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2747),
+                            Key = "Phone",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2748),
+                            Value = "+18088 234 5678"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2749),
+                            Key = "Email",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2750),
+                            Value = "support@hastech.com"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2751),
+                            Key = "PaymentMethod",
+                            SoftDeleted = false,
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2752),
+                            Value = "payment.webp"
                         });
                 });
 
@@ -299,26 +610,26 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 6, 17, 34, 23, 779, DateTimeKind.Local).AddTicks(5507),
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2090),
                             Description = " Cover Up Front Of Books and Leave Summary",
                             DirectionId = 1,
                             Header = "J.D. Kurtness",
                             Image = "home-slider-1-ai.webp",
                             SoftDeleted = false,
                             Title = "De Vengeance",
-                            UpdatedDate = new DateTime(2024, 1, 6, 17, 34, 23, 779, DateTimeKind.Local).AddTicks(5517)
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2102)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 6, 17, 34, 23, 779, DateTimeKind.Local).AddTicks(5520),
+                            CreatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2110),
                             Description = "Cover Up Front Of Books and Leave Summary",
                             DirectionId = 2,
                             Header = "H.G. Wells",
                             Image = "home-slider-2-ai.webp",
                             SoftDeleted = false,
                             Title = "De Vengeance",
-                            UpdatedDate = new DateTime(2024, 1, 6, 17, 34, 23, 779, DateTimeKind.Local).AddTicks(5521)
+                            UpdatedDate = new DateTime(2024, 1, 10, 15, 10, 16, 52, DateTimeKind.Local).AddTicks(2111)
                         });
                 });
 

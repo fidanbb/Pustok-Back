@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="~/admin/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="~/admin/images/favicon.png" />
+    @RenderSection("css", required: false)
+
 </head>
 <body>
     <div class="container-scroller">
@@ -375,7 +377,7 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Index" >
                             <i class="mdi mdi-grid-large menu-icon"></i>
                             <span class="menu-title">Dashboard</span>
                         </a>
@@ -390,8 +392,8 @@
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Slider" asp-action="Index">Slider</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Advert" asp-action="Index">Advert</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Subscribe" asp-action="Index">Subscribe</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Review" asp-action="Index">Review</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Brand" asp-action="Index">Brand</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="OurServices" asp-action="Index">Our Services</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Customer" asp-action="Index">Customer</a></li>
 
                             </ul>

@@ -1,0 +1,29 @@
+﻿@model int
+
+@{
+    Layout = null;
+}
+
+
+
+
+    <link rel="stylesheet" href="~/assets/css/pages/bootstrap.min.css" />
+
+ 
+    <link rel="stylesheet" href="~/assets/css/pages/error.css" />
+
+
+
+<main>
+    <section id="error-section">
+        <div class="container">
+            <h1 class="error">@Model</h1>
+            <div class="page">
+                @ViewBag.ErrorMessage
+                @*   We are sorry. But the page you are <br />
+                looking for cannot be found. *@
+            </div>
+            <a class="back-home" asp-controller="Home" asp-action="Index">Back to home</a>
+        </div>
+    </section>
+</main>

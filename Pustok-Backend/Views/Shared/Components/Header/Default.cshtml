@@ -1,0 +1,340 @@
+﻿
+@model HeaderVM
+
+<header id="all-header">
+    <!-- comp-header starts -->
+    <section id="comp-header">
+        <!-- header-top starts -->
+        <section id="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="logo">
+                            <a asp-controller="Home" asp-action="Index">
+                                <img src="./assets/images/@Model.HeaderLogo" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="header-phone d-flex align-items-center">
+                            <div class="icon">
+                                <i class="fa-solid fa-headphones"></i>
+                            </div>
+                            <div class="text">
+                                <p>Free Support 24/7</p>
+                                <p class="font-weight-bold number">@Model.Phone</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="menu-nav flex-lg-right">
+                            <ul class="main-menu menu-right">
+                                <li class="menu-item">
+                                    <a asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="shop.html">Shop</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="wishlist.html">Wishlist</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- header-top ends -->
+        <!-- header-below starts -->
+        <section id="header-below">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="category-nav">
+                            <a href="" class="category-trigger">
+                                <i class="fa-solid fa-bars"></i>
+                                Browse Categories
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="category-menu">
+                                <li class="category-item">
+                                    <a href="">Arts & Photography</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="">Biographies</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="">Business & Money</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="">Childrens's Books</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="">Comics</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="">Cookbooks</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="">Education</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="header-search d-flex align-items-center">
+                            <input class="search-text"
+                                   type="text"
+                                   placeholder="Search entire store here" />
+                            <button class="search-btn">Search</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cart-part d-flex align-items-center flex-lg-right">
+                            <div class="login-item">
+                                <a href="login.html">Login</a>
+                                <br />
+                                <span>or</span>
+                                <a href="register.html">Register</a>
+                            </div>
+                            <div class="cart-item d-flex align-items-center">
+                                <a class="cart-widget" href="./cart.html">
+                                    <div class="cart-total">
+                                        <span class="count">1</span>
+                                        <span class="text"> Shopping Cart </span>
+                                        <span class="price">
+                                            <span>£</span> 0.00
+                                            <span><i class="fas fa-chevron-down"></i></span>
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <div class="cart-dropdown">
+                                    <p class="cart-empty d-none">
+                                        Your shopping cart is empty!
+                                    </p>
+                                    <div class="single-cart-block">
+                                        <div class="cart-product">
+                                            <a href="productdetail.html">
+                                                <img src="./assets/images/cart-product-1.webp"
+                                                     alt="" />
+                                            </a>
+                                            <div class="content">
+                                                <h3>
+                                                    <a href="productdetail.html">Kodak PIXPRO Astro Zoom AZ421 16 MP</a>
+                                                </h3>
+                                                <p class="price">
+                                                    <span>1 × </span> <span> £</span>87.34
+                                                </p>
+                                                <button class="delete-product">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="cart-product">
+                                            <a href="productdetail.html">
+                                                <img src="./assets/images/cart-product-1.webp"
+                                                     alt="" />
+                                            </a>
+                                            <div class="content">
+                                                <h3>
+                                                    <a href="productdetail.html">Kodak PIXPRO Astro Zoom AZ421 16 MP</a>
+                                                </h3>
+                                                <p class="price">
+                                                    <span>1 × </span> <span> £</span>87.34
+                                                </p>
+                                                <button class="delete-product">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="cart-product">
+                                            <a href="productdetail.html">
+                                                <img src="./assets/images/cart-product-1.webp"
+                                                     alt="" />
+                                            </a>
+                                            <div class="content">
+                                                <h3>
+                                                    <a href="productdetail.html">Kodak PIXPRO Astro Zoom AZ421 16 MP</a>
+                                                </h3>
+                                                <p class="price">
+                                                    <span>1 × </span> <span> £</span>87.34
+                                                </p>
+                                                <button class="delete-product">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    </div>
+
+                                    <div class="cart-btn">
+                                        <a href="cart.html" class="btn">
+                                            View Cart
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                        <a href="checkout.html" class="btn">
+                                            Check Out
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- header-below ends -->
+    </section>
+    <!-- comp-header ends -->
+    <!-- mobile header starts -->
+    <section id="mobile-header">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-4 col-7">
+                    <div class="logo">
+                        <a href="home.html">
+                            <img src="./assets/images/@Model.HeaderLogo" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5 order-3 order-md-2">
+                    <div class="category-nav">
+                        <a href="" class="category-trigger">
+                            <i class="fa-solid fa-bars"></i>
+                            Browse Categories
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="category-menu">
+                            <li class="category-item">
+                                <a href="">Arts & Photography</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="">Biographies</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="">Business & Money</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="">Childrens's Books</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="">Comics</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="">Cookbooks</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="">Education</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-5 order-md-3 text-right">
+                    <div class="menu-btns">
+                        <ul class="header-links">
+                            <li class="link-item">
+                                <a href="cart.html">
+                                    <i class="ion-bag"></i>
+                                </a>
+                            </li>
+                            <li class="link-item open-sidebar">
+                                <a href="">
+                                    <i class="ion-navicon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <aside id="sidebar">
+                        <div class="close-sidebar">
+                            <i class="ion-android-close"></i>
+                        </div>
+                        <div class="content">
+                            <div class="search">
+                                <form action="">
+                                    <input class="search-text"
+                                           type="text"
+                                           placeholder="Search here" />
+                                    <button class="search-btn">
+                                        <i class="ion-ios-search-strong"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="mobile-menu">
+                                <ul class="menu-list">
+                                    <li class="menu-item">
+                                        <a asp-controller="Home" asp-action="Index">Home</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="shop.html">Shop</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="wishlist.html">Wishlist</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="currency-lang">
+                                <ul class="currency-lang-menu">
+                                    <li class="menu-item">
+                                        <a class="menu-item-trigger currency-trigger" href="">
+                                            Currency - USD $
+                                        </a>
+                                        <ul class="sub-menu currency-menu d-none">
+                                            <li class="sub-menu-item">
+                                                <a href="">USD $</a>
+                                            </li>
+                                            <li class="sub-menu-item">
+                                                <a href="">EUR €</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-item-trigger lang-trigger" href="">
+                                            Lang - Eng
+                                        </a>
+                                        <ul class="sub-menu d-none">
+                                            <li class="sub-menu-item">
+                                                <a href="">Eng</a>
+                                            </li>
+                                            <li class="sub-menu-item">
+                                                <a href="">Ban</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="contact">
+                                <a href="">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    @Model.Phone
+                                </a>
+                                <a href="">
+                                    <i class="fas fa-envelope"></i>
+                                    @Model.Email
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- mobile header ends -->
+</header>

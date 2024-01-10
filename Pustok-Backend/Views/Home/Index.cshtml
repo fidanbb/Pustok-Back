@@ -1,4 +1,7 @@
-﻿@{
+﻿
+@model HomeVM
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -12,48 +15,69 @@
 
 <!-- Slider section starts -->
 <section id="slider-section">
-    <div class="content bg-color-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-md-6 col-sm-6">
-                    <div class="text">
-                        <h1>H.G. Wells</h1>
-                        <h1>De Vengeance</h1>
-                        <h2>Cover Up Front Of Books and Leave Summary</h2>
-                        <a class="btn" href="shop.html">
-                            $ <span>78.09 </span>- Order Now!
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-md-6 col-sm-6">
-                    <div class="image">
-                        <img src="~/assets/images/home-slider-2-ai.webp" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content bg-color-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-md-6 col-sm-6">
-                    <div class="image">
-                        <img src="~/assets/images/home-slider-1-ai.webp" alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-6 col-md-6 col-sm-6">
-                    <div class="text">
-                        <h1>J.D. Kurtness</h1>
-                        <h1>De Vengeance</h1>
-                        <h2>Cover Up Front Of Books and Leave Summary</h2>
-                        <a class="btn" href="shop.html">
-                            $ <span>78.09 </span>- Learn More
-                        </a>
+
+    @foreach (var item in Model.Sliders)
+    {
+        if (item.Direction.ToLower()== SliderTextDirection.Right.ToString().ToLower())
+        {
+            <div class="content bg-color-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-sm-6">
+                            <div class="image">
+                                <img src="~/assets/images/@item.Image" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-sm-6">
+                            <div class="text">
+                                <h1>@item.Header</h1>
+                                <h1>@item.Title</h1>
+                                <h2>@item.Description</h2>
+                                <a class="btn" href="shop.html">
+                                   Learn More
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+        }
+
+        else
+        {
+                        <div class="content bg-color-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-sm-6">
+                            <div class="text">
+                                <h1>@item.Header</h1>
+                                <h1>@item.Title</h1>
+                                <h2>@item.Description</h2>
+                                <a class="btn" href="shop.html">
+                                    Order Now!
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-sm-6">
+                            <div class="image">
+                                <img src="~/assets/images/@item.Image" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        }
+
+    }
+
+
+   
+
+ 
+
+
 </section>
 <!-- Slider section ends -->
 
@@ -61,50 +85,23 @@
 <section id="service-section" class="mb-5">
     <div class="container">
         <div class="row">
-            <div class="col-xl-3 col-md-6 mt-3">
-                <div class="feature-box h-100">
-                    <div class="icon">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <div class="text">
-                        <h5>Free Shipping Item</h5>
-                        <p>Orders over $500</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mt-3">
-                <div class="feature-box h-100">
-                    <div class="icon">
-                        <i class="fas fa-redo-alt"></i>
-                    </div>
-                    <div class="text">
-                        <h5>Money Back Guarantee</h5>
-                        <p>100% money back</p>
+
+            @foreach (var item in Model.SiteServices)
+            {
+                <div class="col-xl-3 col-md-6 mt-3">
+                    <div class="feature-box h-100">
+                        <div class="icon">
+                            <i class="@item.IconName"></i>
+                        </div>
+                        <div class="text">
+                            <h5>@item.Title</h5>
+                            <p>@item.Description</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mt-3">
-                <div class="feature-box h-100">
-                    <div class="icon">
-                        <i class="fas fa-piggy-bank"></i>
-                    </div>
-                    <div class="text">
-                        <h5>Cash On Delivery</h5>
-                        <p>Lorem ipsum dolor amet</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mt-3">
-                <div class="feature-box h-100">
-                    <div class="icon">
-                        <i class="fas fa-life-ring"></i>
-                    </div>
-                    <div class="text">
-                        <h5>Help & Support</h5>
-                        <p>Call us : + 0123.4567.89</p>
-                    </div>
-                </div>
-            </div>
+
+            }
+        
         </div>
     </div>
 </section>
@@ -115,12 +112,12 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 mb-5">
                 <a class="promo-image" href="">
-                    <img src="~/assets/images/promo-banner-with-text.webp" alt="" />
+                    <img src="~/assets/images/@Model.Adverts[0].Image" alt="" />
                 </a>
             </div>
             <div class="col-lg-6 col-md-6 mb-3">
                 <a class="promo-image" href="">
-                    <img src="~/assets/images/promo-banner-with-text-2.webp"
+                    <img src="~/assets/images/@Model.Adverts[1].Image"
                          alt="" />
                 </a>
             </div>
@@ -1574,11 +1571,11 @@
                     <a class="bg-image"
                        href=""
                        style="
-                    background-image: url(./assets/images/promo-banner-mid.webp);
+                    background-image: url(./assets/images/@Model.Adverts[2].Image);
                   "></a>
                     <div class="promo-text">
-                        <h2>Buy 3. Get Free 1.</h2>
-                        <h3>50% off for selected products in Pustok.</h3>
+                        <h2>@Model.Adverts[2].Header</h2>
+                        <h3>@Model.Adverts[2].Title</h3>
                         <a class="btn" href="">See More</a>
                     </div>
                 </div>
@@ -1588,11 +1585,11 @@
                     <a class="bg-image"
                        href=""
                        style="
-                    background-image: url(./assets/images/promo-banner-small.webp);
+                    background-image: url(./assets/images/@Model.Adverts[3].Image);
                   "></a>
                     <div class="promo-text">
-                        <span>$26.00</span>
-                        <h3>Praise for The Night Child</h3>
+                        <span>@Model.Adverts[3].Header</span>
+                        <h3>@Model.Adverts[3].Title</h3>
                         <a class="btn" href="">Buy Now</a>
                     </div>
                 </div>
@@ -1602,30 +1599,6 @@
 </section>
 <!-- promo section ends -->
 
-
-<!-- advertisment section 2 starts -->
-<section id="advertisment-section-2">
-    <div class="section-wrapper">
-        <a class="bg-image"
-           href=""
-           style="
-              background-image: url(./assets/images/promo-banner-full.webp);
-            "></a>
-
-        <div class="text w-100">
-            <div class="container">
-                <div class="row w-100">
-                    <div class="col-lg-7">
-                        <h2>I Love This Idea!</h2>
-                        <h3>Cover up front of book and leave summary</h3>
-                        <a class="btn btn--yellow" href="">$78.09 - Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- advertisment section 2 ends -->
 <!-- arts-and photography products section starst -->
 <section id="arts-book-section">
     <div class="container">
@@ -1856,6 +1829,33 @@
 <!-- arts-and photography products section ends -->
 
 
+<!-- advertisment section 2 starts -->
+<section id="advertisment-section-2">
+    <div class="section-wrapper">
+        <a class="bg-image"
+           href=""
+           style="
+              background-image: url(./assets/images/@Model.Adverts[4].Image);
+            "></a>
+
+        <div class="text w-100">
+            <div class="container">
+                <div class="row w-100">
+                    <div class="col-lg-7">
+                        <h2>@Model.Adverts[4].Header</h2>
+                        <h3>@Model.Adverts[4].Title</h3>
+                        <a class="btn btn--yellow" href="">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- advertisment section 2 ends -->
+
+
+
+
 <!-- Testimonial Section Starts -->
 <section id="testimonial-section">
     <div class="container">
@@ -2047,12 +2047,11 @@
     <div class="container">
         <hr />
         <div class="brand-slider">
-            <img src="~/assets/images/brand-1.webp" alt="" />
-            <img src="~/assets/images/brand-2.webp" alt="" />
-            <img src="~/assets/images/brand-3.webp" alt="" />
-            <img src="~/assets/images/brand-4.webp" alt="" />
-            <img src="~/assets/images/brand-5.webp" alt="" />
-            <img src="~/assets/images/brand-6.webp" alt="" />
+            @foreach (var item in Model.Brands)
+            {
+                <img src="~/assets/images/@item.Image" alt="" />
+            }
+           
         </div>
         <hr />
     </div>

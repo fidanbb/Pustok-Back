@@ -1,0 +1,86 @@
+﻿@model List<AdvertVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container" style="margin-left:30px">
+    <h1 class="text-center mt-3 mb-3">Advert</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Header
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                
+                    <th>
+                        CreatedDate
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            <img src="~/assets/images/@item.Image" alt="image" />
+                        </td>
+
+                        <td class="py-1">
+
+                            @if (@item.Header is null)
+                            {
+                                <p>This advert don't have header'</p>
+                            }
+
+                            else
+                            {
+                                @item.Header
+
+                            }
+                        </td>
+
+                        <td class="py-1">
+
+                            @if (@item.Title is null)
+                            {
+                                <p>This advert don't have title'</p>
+                            }
+
+                            else
+                            {
+                                @item.Title
+
+
+                            }
+                        </td>
+
+
+
+                        <td>
+                            @item.CreatedDate.ToString("MM/dd/yyyy")
+                        </td>
+
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                          
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
