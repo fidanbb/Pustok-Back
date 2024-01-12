@@ -1,0 +1,167 @@
+﻿@model ContactVM
+
+@{
+    ViewData["Title"] = "Contact Page";
+}
+
+
+
+@section css {
+    <link rel="stylesheet" href="~/assets/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="~/assets/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="~/assets/css/pages/contact.css" />
+
+}
+
+
+<!-- Contact section starts -->
+<section id="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+
+                    <form method="post" asp-controller="Contact" asp-action="SendMessage">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label asp-for="@Model.MessageCreate.Name" name="name">Your Full Name </label>
+                                    <input asp-for="@Model.MessageCreate.Name" required type="text" name="name" class="form-control" />
+                                    <span class="text-danger" asp-validation-for="@Model.MessageCreate.Name"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label asp-for="@Model.MessageCreate.Email" name="email">Your Email </label>
+                                    <input asp-for="@Model.MessageCreate.Email" required type="email" name="email" class="form-control" />
+                                    <span class="text-danger" asp-validation-for="@Model.MessageCreate.Email"></span>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label asp-for="@Model.MessageCreate.Message" name="message">Your Message </label>
+                                    <textarea asp-for="@Model.MessageCreate.Message" required  class="form-control"  name="message" id=""
+                                              cols="30"
+                                              rows="5"></textarea>
+                                    <span class="text-danger" asp-validation-for="@Model.MessageCreate.Message"></span>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-btn">
+                                    <button class="btn btn-black w-100" type="submit">
+                                        send
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.428490503048!2d49.8513705759025!3d40.37719495804488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e0!3m2!1sen!2saz!4v1703946903734!5m2!1sen!2saz"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact section ends -->
+<!-- contact info section starts -->
+<section id="contact-info-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-12 mb-3">
+                <div class="contact-info">
+                    <span class="icon icon-phone">
+                        <i class="fa fa-phone"></i>
+                    </span>
+                    <div class="content">
+                        <h3>Contact By Phone</h3>
+                        <p>@Model.Settings["Phone"]</p>
+                        <p>@Model.Settings["Phone2"]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12 mb-3">
+                <div class="contact-info">
+                    <span class="icon">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    <div class="content">
+                        <h3>Contact By Email</h3>
+                        <p>@Model.Settings["Email"]</p>
+                        <p>@Model.Settings["Email2"]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12 mb-3">
+                <div class="contact-info">
+                    <span class="icon">
+                        <i class="fa fa-map-marker"></i>
+                    </span>
+                    <div class="content">
+                        <h3>Come To See Us</h3>
+                        <p>@Model.Settings["Address"]</p>
+                        <p>@Model.Settings["Address2"]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12 mb-3">
+                <div class="contact-info">
+                    <span class="icon">
+                        <i class="fa fa-users"></i>
+                    </span>
+                    <div class="content">
+                        <h3>Pustok Social</h3>
+                        <ul class="social-btns">
+
+                            @foreach (var item in Model.Socials)
+                            {
+                                <li>
+                                    <a href="@item.Link" target="_blank">
+                                        <i class="@item.IconName"></i>
+                                    </a>
+                                </li>
+                            }
+                          
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contct info section ends -->
+<!-- Partners section starts -->
+<section id="partners-section">
+    <div class="container">
+        <hr />
+        <div class="brand-slider">
+
+            @foreach (var item in Model.Brands)
+            {
+                <img src="~/assets/images/@item.Image" alt="" />
+
+            }
+        
+        </div>
+        <hr />
+    </div>
+</section>
+<!-- partners section end -->
+@section script {
+    <script src="~/assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="~/assets/slick-1.8.1/slick/slick.js"></script>
+    <script src="~/assets/js/contact.js"></script>
+
+}

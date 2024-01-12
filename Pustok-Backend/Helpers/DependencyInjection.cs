@@ -16,6 +16,8 @@ namespace Pustok_Backend.Helpers
             services.AddScoped<ILayoutService, LayoutService>();
             services.AddScoped<ISocialService, SocialService>();
             services.AddScoped<ISubscribeService, SubscribeService>();
+            services.AddScoped<IContactService, ContactService>();
+
 
 
 

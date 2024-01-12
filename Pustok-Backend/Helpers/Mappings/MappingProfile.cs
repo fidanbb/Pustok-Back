@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Pustok_Backend.Areas.Admin.ViewModels.Advert;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
+using Pustok_Backend.Areas.Admin.ViewModels.Contact;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
 using Pustok_Backend.Areas.Admin.ViewModels.Setting;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
@@ -46,6 +47,8 @@ namespace Pustok_Backend.Helpers.Mappings
             CreateMap<Subscribe, SubscribeVM>();
             CreateMap<SubscribeCreateVM, Subscribe>();
             CreateMap<SubscribeCreateVM, SubscribeVM>();
+            CreateMap<ContactMessage, ContactMessageVM>();
+            CreateMap<ContactMessageCreateVM, ContactMessage>();
 
 
 

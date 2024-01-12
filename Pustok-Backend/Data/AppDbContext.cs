@@ -19,6 +19,8 @@ namespace Pustok_Backend.Data
         public DbSet<Social> Socials { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
 
+        public DbSet<ContactMessage> ContactMessages { get; set; }
+
 
 
 
@@ -35,6 +37,8 @@ namespace Pustok_Backend.Data
             modelBuilder.Entity<Setting>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Social>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Subscribe>().HasQueryFilter(m => !m.SoftDeleted);
+
+            modelBuilder.Entity<ContactMessage>().HasQueryFilter(m => !m.SoftDeleted);
 
 
 
@@ -100,6 +104,12 @@ namespace Pustok_Backend.Data
             modelBuilder.Entity<Subscribe>().HasData(
                 new Subscribe { Id = 1,Email="surac@gmail.com"},
                 new Subscribe { Id = 2, Email = "kubra@gmail.com" }
+                );
+
+
+
+            modelBuilder.Entity<ContactMessage>().HasData(
+                new ContactMessage { Id = 1, Name = "Fidan Bashirova", Email = "fidanbb@code.edu.az", Message = "Helllooo" }
                 );
 
         }
