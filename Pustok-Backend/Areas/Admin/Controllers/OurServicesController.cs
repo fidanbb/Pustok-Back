@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
 using Pustok_Backend.Services.Interfaces;
@@ -7,6 +8,7 @@ namespace Pustok_Backend.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class OurServicesController : Controller
     {
         private readonly ISiteServicesService _siteServicesService;

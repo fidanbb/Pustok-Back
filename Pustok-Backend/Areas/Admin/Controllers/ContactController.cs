@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Pustok_Backend.Areas.Admin.ViewModels.Contact;
 using Pustok_Backend.Services.Interfaces;
 
@@ -6,6 +7,7 @@ namespace Pustok_Backend.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class ContactController : Controller
     {
         private readonly IContactService _contactService;

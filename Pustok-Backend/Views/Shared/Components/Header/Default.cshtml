@@ -14,7 +14,7 @@
                     <div class="col-lg-3">
                         <div class="logo">
                             <a asp-controller="Home" asp-action="Index">
-                                <img src="./assets/images/@Model.HeaderLogo" alt="" />
+                                <img src="~/assets/images/@Model.HeaderLogo" alt="" />
                             </a>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                                     <a href="shop.html">Shop</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="blog.html">Blog</a>
+                                    <a asp-controller="Blog" asp-action="Index">Blog</a>
                                 </li>
                                 <li class="menu-item">
                                     <a asp-controller="Contact" asp-action="Index">Contact</a>
@@ -156,7 +156,7 @@
                                     <div class="single-cart-block">
                                         <div class="cart-product">
                                             <a href="productdetail.html">
-                                                <img src="./assets/images/cart-product-1.webp"
+                                                <img src="~/assets/images/cart-product-1.webp"
                                                      alt="" />
                                             </a>
                                             <div class="content">
@@ -174,7 +174,7 @@
                                         <hr />
                                         <div class="cart-product">
                                             <a href="productdetail.html">
-                                                <img src="./assets/images/cart-product-1.webp"
+                                                <img src="~/assets/images/cart-product-1.webp"
                                                      alt="" />
                                             </a>
                                             <div class="content">
@@ -192,7 +192,7 @@
                                         <hr />
                                         <div class="cart-product">
                                             <a href="productdetail.html">
-                                                <img src="./assets/images/cart-product-1.webp"
+                                                <img src="~/assets/images/cart-product-1.webp"
                                                      alt="" />
                                             </a>
                                             <div class="content">
@@ -237,7 +237,7 @@
                 <div class="col-md-4 col-7">
                     <div class="logo">
                         <a href="home.html">
-                            <img src="./assets/images/@Model.HeaderLogo" alt="" />
+                            <img src="~/assets/images/@Model.HeaderLogo" alt="" />
                         </a>
                     </div>
                 </div>
@@ -347,7 +347,7 @@
                                         <a asp-controller="Home" asp-action="Index">Home</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="blog.html">Blog</a>
+                                        <a asp-controller="Blog" asp-action="Index">Blog</a>
                                     </li>
                                     <li class="menu-item">
                                         <a href="shop.html">Shop</a>

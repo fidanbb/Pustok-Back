@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Pustok_Backend.Areas.Admin.ViewModels.Advert;
+using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
 using Pustok_Backend.Areas.Admin.ViewModels.Contact;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
@@ -7,6 +8,7 @@ using Pustok_Backend.Areas.Admin.ViewModels.Setting;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
 using Pustok_Backend.Areas.Admin.ViewModels.Social;
 using Pustok_Backend.Areas.Admin.ViewModels.Subscribe;
+using Pustok_Backend.Areas.Admin.ViewModels.Tag;
 using Pustok_Backend.Areas.Admin.ViewModels.Testimonial;
 using Pustok_Backend.Models;
 
@@ -56,8 +58,9 @@ namespace Pustok_Backend.Helpers.Mappings
                                                    .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.AppUser.Image));
 
 
-
-
+            CreateMap<Blog, BlogVM>().ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.BlogAuthor.FullName))
+                                     .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m=>m.IsMain).Image));
+            CreateMap<Tag, TagVM>();
 
 
 

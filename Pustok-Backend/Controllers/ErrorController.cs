@@ -16,6 +16,12 @@ namespace Pustok_Backend.Controllers
                         ViewBag.ErrorMessage = "Something Went Wrong";
                         break;
                     }
+                case 401:
+                    {
+                        ViewBag.Title = "Unauthorized";
+                        ViewBag.ErrorMessage = "You are lacking proper authentication credentials";
+                        break;
+                    }
 
                 case 403:
                     {

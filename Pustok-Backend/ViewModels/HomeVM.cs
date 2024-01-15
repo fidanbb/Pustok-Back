@@ -1,4 +1,5 @@
 ﻿using Pustok_Backend.Areas.Admin.ViewModels.Advert;
+using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
@@ -14,6 +15,8 @@ namespace Pustok_Backend.ViewModels
         public ICollection<BrandVM> Brands { get; set; }
 
         public List<TestimonialVM> Testimonials { get; set; }
+
+        public List<BlogVM> Blogs { get; set; }
 
     }
 }

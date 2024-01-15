@@ -20,6 +20,8 @@ namespace Pustok_Backend.Helpers
             services.AddScoped<IContactService, ContactService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ITestimonialService, TestimonialService>();
+            services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<ITagService, TagService>();
 
 
 

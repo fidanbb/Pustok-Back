@@ -1,7 +1,9 @@
 ﻿@model ContactVM
+@inject UserManager<AppUser> _userManager;
 
 @{
     ViewData["Title"] = "Contact Page";
+    AppUser user = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
 }
 
 
@@ -21,43 +23,86 @@
             <div class="col-lg-6">
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form method="post" asp-controller="Contact" asp-action="SendMessage">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.MessageCreate.Name" name="name">Your Full Name </label>
+                                        <input asp-for="@Model.MessageCreate.Name" value="@user.Name @user.Surname" required type="text" name="name" class="form-control" />
+                                        <span class="text-danger" asp-validation-for="@Model.MessageCreate.Name"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.MessageCreate.Email" name="email">Your Email </label>
+                                        <input asp-for="@Model.MessageCreate.Email" value="@user.Email" required type="email" name="email" class="form-control" />
+                                        <span class="text-danger" asp-validation-for="@Model.MessageCreate.Email"></span>
 
-                    <form method="post" asp-controller="Contact" asp-action="SendMessage">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label asp-for="@Model.MessageCreate.Name" name="name">Your Full Name </label>
-                                    <input asp-for="@Model.MessageCreate.Name" required type="text" name="name" class="form-control" />
-                                    <span class="text-danger" asp-validation-for="@Model.MessageCreate.Name"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label asp-for="@Model.MessageCreate.Email" name="email">Your Email </label>
-                                    <input asp-for="@Model.MessageCreate.Email" required type="email" name="email" class="form-control" />
-                                    <span class="text-danger" asp-validation-for="@Model.MessageCreate.Email"></span>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.MessageCreate.Message" name="message">Your Message </label>
+                                        <textarea asp-for="@Model.MessageCreate.Message" required class="form-control" name="message" id=""
+                                                  cols="30"
+                                                  rows="5"></textarea>
+                                        <span class="text-danger" asp-validation-for="@Model.MessageCreate.Message"></span>
 
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-btn">
+                                        <button class="btn btn-black w-100" type="submit">
+                                            send
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label asp-for="@Model.MessageCreate.Message" name="message">Your Message </label>
-                                    <textarea asp-for="@Model.MessageCreate.Message" required  class="form-control"  name="message" id=""
-                                              cols="30"
-                                              rows="5"></textarea>
-                                    <span class="text-danger" asp-validation-for="@Model.MessageCreate.Message"></span>
+                        </form>
+                    }
 
+                    else
+                    {
+                        <form method="post" asp-controller="Contact" asp-action="SendMessage">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.MessageCreate.Name" name="name">Your Full Name </label>
+                                        <input asp-for="@Model.MessageCreate.Name" required type="text" name="name" class="form-control" />
+                                        <span class="text-danger" asp-validation-for="@Model.MessageCreate.Name"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.MessageCreate.Email" name="email">Your Email </label>
+                                        <input asp-for="@Model.MessageCreate.Email" required type="email" name="email" class="form-control" />
+                                        <span class="text-danger" asp-validation-for="@Model.MessageCreate.Email"></span>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.MessageCreate.Message" name="message">Your Message </label>
+                                        <textarea asp-for="@Model.MessageCreate.Message" required class="form-control" name="message" id=""
+                                                  cols="30"
+                                                  rows="5"></textarea>
+                                        <span class="text-danger" asp-validation-for="@Model.MessageCreate.Message"></span>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-btn">
+                                        <button class="btn btn-black w-100" type="submit">
+                                            send
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="form-btn">
-                                    <button class="btn btn-black w-100" type="submit">
-                                        send
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    }
+
                 </div>
             </div>
             <div class="col-lg-6">

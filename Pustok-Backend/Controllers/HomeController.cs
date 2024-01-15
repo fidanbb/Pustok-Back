@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Pustok_Backend.Areas.Admin.ViewModels.Advert;
+using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
@@ -17,18 +18,21 @@ namespace Pustok_Backend.Controllers
         private readonly IAdvertService _advertService;
         private readonly IBrandService _brandService;
         private readonly ITestimonialService _testimonialService;
+        public readonly IBlogService _blogService;
 
         public HomeController(ISliderService sliderService,
                                ISiteServicesService siteServicesService,
                                IAdvertService advertService,
                                IBrandService brandService,
-                               ITestimonialService testimonialService)
+                               ITestimonialService testimonialService,
+                               IBlogService blogService)
         {
                 _sliderService = sliderService;
             _siteServicesService = siteServicesService;
             _advertService = advertService;
             _brandService = brandService;
             _testimonialService = testimonialService;
+            _blogService = blogService;
         }
 
 
@@ -42,7 +46,7 @@ namespace Pustok_Backend.Controllers
                 List<AdvertVM> adverts = await _advertService.GetAllAsync();
                 ICollection <BrandVM> brands =await _brandService.GetAllAsync();
                 List<TestimonialVM> testimonials = await _testimonialService.GetWithIncludesAndTakeAsync(4);
-
+                List<BlogVM> blogs= await _blogService.GetAllWithTakeInDescendingOrderAsync(3);
 
                 HomeVM model = new()
                 {
@@ -50,7 +54,8 @@ namespace Pustok_Backend.Controllers
                     SiteServices = siteServices,
                     Adverts = adverts,
                     Brands = brands,
-                    Testimonials = testimonials
+                    Testimonials = testimonials,
+                    Blogs = blogs
                 };
                 return View(model);
             }

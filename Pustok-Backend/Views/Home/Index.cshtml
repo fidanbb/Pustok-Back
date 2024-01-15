@@ -1895,105 +1895,42 @@
         </div>
 
         <div class="blog-slider">
-            <div class="blog-card">
-                <div class="image">
-                    <a href="blogdetail">
-                        <img src="~/assets/images/blog-grid-1.webp" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <div class="content-header">
-                        <div class="date-badge">
-                            <span class="date"> 13 </span>
-                            <span class="month"> Aug </span>
-                        </div>
-                        <h3>
-                            <a href="blogdetail.html">How to Water and Care for Mounted</a>
-                        </h3>
+            @foreach (var item in Model.Blogs )
+            {
+                <div class="blog-card">
+                    <div class="image">
+                        <a asp-controller="Blog" asp-action="Detail">
+                            <img src="~/assets/images/@item.Image" alt="" />
+                        </a>
                     </div>
-                    <p class="blog-author">
-                        <i class="fas fa-user-edit"></i>
-                        Post by
-                        <a href="">Hastech</a>
-                    </p>
-                    <article>
-                        <p>
-                            Virtual reality and 3-D technology are already
-                            well-established in the entertainment...
-                        </p>
-                    </article>
-                    <a class="card-link" href="blogdetail.html">
-                        Read More <i class="fas fa-chevron-circle-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="image">
-                    <a href="blogdetail">
-                        <img src="~/assets/images/blog-grid-2.webp" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <div class="content-header">
-                        <div class="date-badge">
-                            <span class="date"> 31 </span>
-                            <span class="month"> Jun </span>
+                    <div class="content">
+                        <div class="content-header">
+                            <div class="date-badge">
+                                <span class="date"> @item.CreatedDate.Day </span>
+                                <span class="month"> @item.CreatedDate.ToString("MMMM").Substring(0, 3)</span>
+                            </div>
+                            <h3>
+                                <a asp-controller="Blog" asp-action="Detail">@item.Title.Substring(0, (int)Math.Ceiling((item.Title.Length * 0.4)))</a>
+                            </h3>
                         </div>
-                        <h3>
-                            <a href="blogdetail.html">What Everyone Must Know About </a>
-                        </h3>
-                    </div>
-                    <p class="blog-author">
-                        <i class="fas fa-user-edit"></i>
-                        Post by
-                        <a href="">Hastech</a>
-                    </p>
-                    <article>
-                        <p>
-                            Virtual reality and 3-D technology are already
-                            well-established in the entertainment...
+                        <p class="blog-author">
+                            <i class="fas fa-user-edit"></i>
+                            Post by
+                            <a href="">@item.Author</a>
                         </p>
-                    </article>
-                    <a class="card-link" href="blogdetail.html">
-                        Read More <i class="fas fa-chevron-circle-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div class="image">
-                    <a href="blogdetail">
-                        <img src="~/assets/images/blog-grid-3.webp" alt="" />
-                    </a>
-                </div>
-                <div class="content">
-                    <div class="content-header">
-                        <div class="date-badge">
-                            <span class="date"> 26 </span>
-                            <span class="month"> Jan </span>
-                        </div>
-                        <h3>
-                            <a href="blogdetail.html">
-                                Why You Never See BLOG TITLE That
-                            </a>
-                        </h3>
+                        <article>
+                            <p>
+                                @item.Description.Substring(0, (int)Math.Ceiling((item.Description.Length * 0.1)))
+                            </p>
+                        </article>
+                        <a class="card-link" asp-controller="Blog" asp-action="Detail">
+                            Read More <i class="fas fa-chevron-circle-right"></i>
+                        </a>
                     </div>
-                    <p class="blog-author">
-                        <i class="fas fa-user-edit"></i>
-                        Post by
-                        <a href="">Hastech</a>
-                    </p>
-                    <article>
-                        <p>
-                            Virtual reality and 3-D technology are already
-                            well-established in the entertainment...
-                        </p>
-                    </article>
-                    <a class="card-link" href="blogdetail.html">
-                        Read More <i class="fas fa-chevron-circle-right"></i>
-                    </a>
                 </div>
-            </div>
+            }
+         
+        
         </div>
     </div>
 </section>
