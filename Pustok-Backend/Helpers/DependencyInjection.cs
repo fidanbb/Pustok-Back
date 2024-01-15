@@ -7,6 +7,7 @@ namespace Pustok_Backend.Helpers
     {
         public static IServiceCollection AddServiceLayer(this IServiceCollection services)
         {
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ISliderService, SliderService>();
             services.AddScoped<ISiteServicesService, SiteServicesService>();
             services.AddScoped<IAdvertService, AdvertService>();
@@ -17,6 +18,12 @@ namespace Pustok_Backend.Helpers
             services.AddScoped<ISocialService, SocialService>();
             services.AddScoped<ISubscribeService, SubscribeService>();
             services.AddScoped<IContactService, ContactService>();
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<ITestimonialService, TestimonialService>();
+
+
+
+
 
 
 

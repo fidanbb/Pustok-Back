@@ -6,6 +6,11 @@ namespace Pustok_Backend.Models
     {
         public string Name { get; set; }
         public string Surname { get; set; }
+
+        public string? Image { get; set; }
+
         public bool IsRememberMe { get; set; }
+
+        public List<Testimonial> Testimonials { get; set; }
     }
 }

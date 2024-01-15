@@ -20,6 +20,8 @@ namespace Pustok_Backend.Data
         public DbSet<Subscribe> Subscribes { get; set; }
 
         public DbSet<ContactMessage> ContactMessages { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+
 
 
 
@@ -39,7 +41,7 @@ namespace Pustok_Backend.Data
             modelBuilder.Entity<Subscribe>().HasQueryFilter(m => !m.SoftDeleted);
 
             modelBuilder.Entity<ContactMessage>().HasQueryFilter(m => !m.SoftDeleted);
-
+            modelBuilder.Entity<Testimonial>().HasQueryFilter(m => !m.SoftDeleted);
 
 
 
@@ -110,6 +112,19 @@ namespace Pustok_Backend.Data
 
             modelBuilder.Entity<ContactMessage>().HasData(
                 new ContactMessage { Id = 1, Name = "Fidan Bashirova", Email = "fidanbb@code.edu.az", Message = "Helllooo" }
+                );
+
+
+            modelBuilder.Entity<Testimonial>().HasData(
+                
+                new Testimonial { Id=1,Review= " Discovered Pustok, a reader's paradise! Vast collection caters to every literary taste. User-friendly interface made browsing a delight. Quick shipping, excellent customer service – my go-to online bookstore.", AppUserId= "0efd01de-4eec-45ff-9de4-f03f9abdf104" },
+                new Testimonial { Id = 2, Review = "Explored numerous online bookstores, but this one stands out. Curated selection, easy navigation – a reader's haven. Intuitive layout, discover new titles effortlessly. Timely delivery, well-packaged books – highly recommended satisfaction!.", AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85" },
+                new Testimonial { Id = 3, Review = "Exceeded expectations, Pustok website. Robust search functionality, find what I wanted easily. Seamless checkout process, orders arrive promptly. Attention to detail, quality service keeps me coming back for more literary treasures.", AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7" },
+                new Testimonial { Id = 4, Review = "Can't say enough good things about Pustok! Vast array of genres, inclusion of hard-to-find titles. Aesthetically pleasing and highly functional design. Orders accurate, well-packaged, delivered on time – a gem in online book retail!", AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" },
+                new Testimonial { Id = 5, Review = " hard-to-find titles. Aesthetically pleasing and highly functional design. Orders accurate, well-packaged, delivered on time – a gem in online book retail!", AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" },
+                 new Testimonial { Id = 6, Review = "Can't say enough good things aboard-to-find e book retail!", AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" }
+
+
                 );
 
         }

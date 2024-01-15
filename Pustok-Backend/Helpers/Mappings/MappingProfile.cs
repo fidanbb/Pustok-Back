@@ -7,6 +7,7 @@ using Pustok_Backend.Areas.Admin.ViewModels.Setting;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
 using Pustok_Backend.Areas.Admin.ViewModels.Social;
 using Pustok_Backend.Areas.Admin.ViewModels.Subscribe;
+using Pustok_Backend.Areas.Admin.ViewModels.Testimonial;
 using Pustok_Backend.Models;
 
 namespace Pustok_Backend.Helpers.Mappings
@@ -49,6 +50,10 @@ namespace Pustok_Backend.Helpers.Mappings
             CreateMap<SubscribeCreateVM, SubscribeVM>();
             CreateMap<ContactMessage, ContactMessageVM>();
             CreateMap<ContactMessageCreateVM, ContactMessage>();
+
+            CreateMap<Testimonial, TestimonialVM>().ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.AppUser.Name))
+                                                   .ForMember(dest => dest.Surname, opt => opt.MapFrom(src => src.AppUser.Surname))
+                                                   .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.AppUser.Image));
 
 
 

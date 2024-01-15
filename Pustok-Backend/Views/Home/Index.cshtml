@@ -1863,66 +1863,24 @@
             <h2>CLIENT TESTIMONIALS</h2>
         </div>
         <div class="testimonial-slider">
-            <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="~/assets/images/client-3.webp" alt="" />
+                
+            @foreach (var item in Model.Testimonials)
+            {
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="~/assets/images/@item.Image" alt="" />
+                    </div>
+                    <div class="testimonial-body">
+                        <article>
+                            <p>
+                               @item.Review
+                            </p>
+                            <span class="client-name d-block">@item.Name @item.Surname</span>
+                        </article>
+                    </div>
                 </div>
-                <div class="testimonial-body">
-                    <article>
-                        <p>
-                            Lorem Ipsum This is Photoshops version of . Proin gravida
-                            nibh vel velit.Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. In molestie augue magna. Pell..
-                        </p>
-                        <span class="client-name d-block">Rebecka Filson</span>
-                    </article>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="~/assets/images/client-4.webp" alt="" />
-                </div>
-                <div class="testimonial-body">
-                    <article>
-                        <p>
-                            elit. In molestie This is Photoshops version of Lorem Ipsum.
-                            Proin gravida nibh vel velit.Lorem ipsum dolor sit amet,
-                            consectetur adipiscing augue magna. Pell..
-                        </p>
-                        <span class="client-name d-block">Rebecka Filson</span>
-                    </article>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="~/assets/images/client-5.webp" alt="" />
-                </div>
-                <div class="testimonial-body">
-                    <article>
-                        <p>
-                            Pell Photoshops version of Lorem Ipsum. Proin gravida nibh
-                            vel velit.Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. In molestie augue magna. This is..
-                        </p>
-                        <span class="client-name d-block">Rebecka Filson</span>
-                    </article>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="~/assets/images/client-2.webp" alt="" />
-                </div>
-                <div class="testimonial-body">
-                    <article>
-                        <p>
-                            In molestie augue magna.This is Photoshops version of Lorem
-                            Ipsum. Proin gravida nibh vel velit.Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Pell..
-                        </p>
-                        <span class="client-name d-block">Rebecka Filson</span>
-                    </article>
-                </div>
-            </div>
+
+            }
         </div>
     </div>
 </section>

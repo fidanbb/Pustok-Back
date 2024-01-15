@@ -7,6 +7,8 @@ namespace Pustok_Backend.ViewModels.Layout
         public string HeaderLogo { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
+        public string UserFullName { get; set; }
+
 
     }
 }

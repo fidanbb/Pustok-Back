@@ -78,6 +78,23 @@ $(document).ready(function () {
     e.stopPropagation();
   });
 
+  //mobile menu user trigger
+
+    $(".account-trigger").click(function (e) {
+    $(".user-menu").toggleClass("d-none");
+    e.stopPropagation();
+    })
+
+    // computer menu user trigger
+
+    $(".current-user").click(function (e) {
+        console.log("salaml")
+        $(".logout-btn").toggleClass("d-none");
+        e.stopPropagation();
+    })
+
+
+
   // cart hover
 
   $(".cart-item").mouseover(function () {
@@ -139,5 +156,11 @@ $(document).ready(function () {
     if ($(".category-menu").hasClass("show-category-menu")) {
       $(".category-menu").removeClass("show-category-menu");
     }
+    if (!$(".user-menu").hasClass("d-none")) {
+      $(".user-menu").addClass("d-none");
+      }
+      if (!$(".logout-btn").hasClass("d-none")) {
+          $(".logout-btn").addClass("d-none");
+      }
   });
 });

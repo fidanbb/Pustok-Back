@@ -1,0 +1,93 @@
+﻿@model LoginVM
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+@section css {
+
+    <link rel="stylesheet" href="~/assets/css/pages/login.css" />
+
+}
+
+<section id="login-section">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-12 col-xs-12 col-lg-5 mb-3 mb-lg-0">
+                <div class="login-form">
+                    <h4>Login</h4>
+                    <div class="text-danger" style=" text-align: left; position: relative; right: 0px; top: -4px;" asp-validation-summary="All"></div>
+
+                    <form method="post" asp-controller="Account" asp-action="Login">
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <div class="email">
+                                    <label asp-for="EmailOrUsername">Email or Username</label>
+                                    <input asp-for="EmailOrUsername" class="form-control"
+                                           type="text"
+                                           placeholder="Enter your email or username " />
+                                    <span class="text-danger" asp-validation-for="EmailOrUsername"></span>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                                <div class="password">
+                                    <label asp-for="Password">Password</label>
+                                    <input asp-for="Password" class="form-control"
+                                           type="password"
+                                           placeholder="Enter your password" />
+                                    <i class="fa-regular fa-eye eyes"></i>
+                                    <span class="text-danger" asp-validation-for="Password"></span>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 mb-3">
+                                <div class="login-items">
+                                    <div class="remember">
+                                        <input asp-for="IsRememberMe" class="form-check-input"
+                                               type="checkbox"
+                                             
+                                               id="form2Example31"
+                                              />
+                                        <label asp-for="IsRememberMe" class="form-check-label" for="form2Example31">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <div class="forgot-password">
+                                        <a asp-action="ForgotPassword">Forgot Password?</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <div class="reg-btn">
+                                    <button type="submit" class="btn">Login</button>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 mb-3">
+                                <div class="account">
+                                    <p>
+                                        Don't have an account?
+                                        <a asp-action="Register">Register</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section script {
+
+    <script src="~/assets/js/login.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+
+}
+

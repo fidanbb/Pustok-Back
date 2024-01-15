@@ -1,6 +1,9 @@
 ﻿
 @model HeaderVM
 
+@inject UserManager<AppUser> userManager;
+
+
 <header id="all-header">
     <!-- comp-header starts -->
     <section id="comp-header">
@@ -96,13 +99,44 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="cart-part d-flex align-items-center flex-lg-right">
-                            <div class="login-item">
-                                <a href="login.html">Login</a>
-                                <br />
-                                <span>or</span>
-                                <a href="register.html">Register</a>
-                            </div>
+                        <div class="cart-part d-flex align-items-center flex-lg-right" style="position:relative">
+
+                            @if (!User.Identity.IsAuthenticated)
+                            {
+                                    <div class="login-item">
+
+                            <a asp-controller="Account" asp-action="Login">Login</a>
+                            <br />
+                            <span>or</span>
+                            <a asp-controller="Account" asp-action="Register">Register</a>
+
+
+                                </div>
+                            }
+
+                            else
+                            {
+
+                                <div class="account">
+
+                                    <div class="my-account">
+                                        <p class="current-user" style="margin-bottom:0; cursor:pointer">@Model.UserFullName</p>
+                                    </div>
+
+                                    <div class="logout-btn d-none" style="position:absolute; top:50px; background:#fff; border:1px solid #ddd; padding:5px 20px 5px 20px; z-index:9999999  ">
+                                        <form asp-controller="Account" asp-action="Logout" asp-route-userId="@userManager.Users.Where(u=>u.UserName==User.Identity.Name).FirstOrDefault().Id" method="post">
+                                            <div class="logout">
+                                                <button style="border:none; color: black; background: transparent; cursor:pointer;outline:none  " type="submit">Logout</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            }
+
+                  
+
+
                             <div class="cart-item d-flex align-items-center">
                                 <a class="cart-widget" href="./cart.html">
                                     <div class="cart-total">
@@ -243,6 +277,13 @@
                     <div class="menu-btns">
                         <ul class="header-links">
                             <li class="link-item">
+                             
+                                    <i class="fa-regular fa-user account-trigger"></i>
+            
+
+                            </li>
+
+                            <li class="link-item">
                                 <a href="cart.html">
                                     <i class="ion-bag"></i>
                                 </a>
@@ -253,6 +294,37 @@
                                 </a>
                             </li>
                         </ul>
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <ul class="user-menu d-none">
+                                <li class="sub-menu-item">
+                                    <a asp-controller="Account" asp-action="Login">Login</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a asp-controller="Account" asp-action="Register">Register</a>
+                                </li>
+                            </ul>
+                        }
+
+                        else
+                        {
+                            <ul class="user-menu d-none">
+                                <li class="sub-menu-item">
+                                    <a style="font-size:15px" >@Model.UserFullName</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <form asp-controller="Account" asp-action="Logout" asp-route-userId="@userManager.Users.Where(u=>u.UserName==User.Identity.Name).FirstOrDefault().Id" method="post">
+                                        <div class="logout">
+                                            <button style=" font-size:15px; border:none; color: black; background: transparent; cursor:pointer;outline:none  " type="submit">Logout</button>
+                                        </div>
+                                    </form>
+                                </li>
+                               
+                            </ul>
+                        }
+
+                       
+
                     </div>
                     <aside id="sidebar">
                         <div class="close-sidebar">
