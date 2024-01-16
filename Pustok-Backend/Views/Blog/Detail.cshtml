@@ -1,4 +1,5 @@
-﻿
+﻿@model BlogDetailPageVM
+
 @{
     ViewData["Title"] = "Detail";
 }
@@ -16,59 +17,27 @@
             <div class="col-lg-8 mb-4 mb-lg-0">
                 <div class="blog-post">
                     <div class="blog-image">
-                        <img src="~/assets/images/blog-grid-1.webp" alt="" />
+                        <img src="~/assets/images/@Model.Blog.Image" alt="" />
                     </div>
                     <div class="blog-content">
                         <div class="blog-header">
                             <h3 class="blog-title">
-                                How BLOG TITLE Made Me A Better Salesperson
+                                @Model.Blog.Title
                             </h3>
                             <div class="post-detail">
                                 <span class="date">
                                     <i class="fa-regular fa-calendar"></i>
-                                    7 March, 2022
+                                    @Model.Blog.CreatedDate.Day @Model.Blog.CreatedDate.ToString("MMMM"), @Model.Blog.CreatedDate.Year
                                 </span>
                                 <span class="author">
                                     <i class="fa-regular fa-user"></i>
-                                    By John Doe
+                                    By @Model.Blog.Author
                                 </span>
                             </div>
                         </div>
                         <article class="blog-desc">
                             <p>
-                                Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras
-                                pretium arcu ex. Aenean posuere libero eu augue
-                                condimentum rhoncus. Praesent ornare tortor ac ante
-                                egestas hendrerit. Aliquam et metus pharetra, bibendum
-                                massa nec, fermentum odio. Nunc id leo ultrices, mollis
-                                ligula in, finibus tortor. Mauris eu dui ut lectus
-                                fermentum eleifend. Pellentesque faucibus sem ante, non
-                                malesuada odio varius nec. Suspendisse potenti. Aenean et
-                                tempor eros, vitae sollicitudin velit. Etiam varius enim
-                                nec quam tempor, sed efficitur ex ultrices. Phasellus
-                                pretium est vel dui vestibulum condimentum. Aenean nec
-                                suscipit nibh. Phasellus nec lacus id arcu facilisis
-                                elementum. Curabitur lobortis, elit ut elementum congue,
-                                erat ex bibendum odio, nec iaculis lacus sem non lorem.
-                                Duis suscipit metus ante, sed convallis quam posuere quis.
-                                Ut tincidunt eleifend odio, ac fringilla mi vehicula nec.
-                                Nunc vitae lacus eget lectus imperdiet tempus sed in dui.
-                                Nam molestie magna at risus consectetur, placerat suscipit
-                                justo dignissim. Sed vitae fringilla enim, nec ullamcorper
-                                arcu. Suspendisse turpis ipsum, tempus in nulla eu,
-                                posuere pharetra nibh. In dignissim vitae lorem non
-                                mollis. Praesent pretium tellus in tortor viverra
-                                condimentum. Nullam dignissim facilisis nisl, accumsan
-                                placerat justo ultricies vel. Vivamus finibus mi a neque
-                                pretium, ut convallis dui lacinia. Morbi a rutrum velit.
-                                Curabitur sagittis quam quis consectetur mattis. Aenean
-                                sit amet quam vel turpis interdum sagittis et eget neque.
-                                Nunc ante quam, luctus et neque a, interdum iaculis metus.
-                                Aliquam vel ante mattis, placerat orci id, vehicula quam.
-                                Suspendisse quis eros cursus, viverra urna sed, commodo
-                                mauris. Cras diam arcu, fringilla a sem condimentum,
-                                viverra facilisis nunc. Curabitur vitae orci id nulla
-                                maximus maximus. Nunc pulvinar sollicitudin molestie.
+                                @Model.Blog.Description
                             </p>
                         </article>
                     </div>
@@ -76,28 +45,21 @@
                 <div class="blog-item">
                     <div class="post-tags">
                         <strong>Tags:</strong>
-                        <a href="">Strategy</a>
-                        ,
-                        <a href="">Best Seller</a>
-                        ,
-                        <a href="">Detective</a>
+                        @foreach (var item in Model.Blog.Tags)
+                        {
+                            <a href="">@item.Name</a>
+                        }
+                       
+                      
                     </div>
                     <div class="social-btns">
-                        <a href="">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
-                        <a href="">
-                            <i class="fab fa-google-plus-g"></i>
-                        </a>
-                        <a href="">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                   @foreach (var item in Model.Socials)
+                        {
+                            <a href="@item.Link">
+                                <i class="@item.IconName"></i>
+                            </a>
+                        }
+                      
                     </div>
                 </div>
                 <div class="related-blogs">
@@ -105,66 +67,39 @@
                         <div class="col-lg-12">
                             <h4 class="widget-title">Related Posts</h4>
                         </div>
-                        <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-                            <div class="blog">
-                                <div class="blog-image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-1.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <h5 class="title">
-                                        <a href="./blogdetail.html">
-                                            How Library Can Increase Your Profit!
+                        @foreach (var item in Model.RelatedBlogs)
+                        {
+                            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                                <div class="blog">
+                                    <div class="blog-image">
+                                        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Image" alt="" />
                                         </a>
-                                    </h5>
-                                    <p class="desc">
-                                        Pellentesque vel nibh gravida erat dddd interdum
-                                        lacinia vel in lectus. Sed fermentum pulvinar.
-                                    </p>
-                                    <div class="blog-author-date">
-                                        <span class="date">
-                                            <i class="fa-regular fa-calendar"></i>
-                                            7 March, 2022
-                                        </span>
-                                        <span class="author">
-                                            <i class="fa-regular fa-user"></i>
-                                            By John Doe
-                                        </span>
+                                    </div>
+                                    <div class="blog-content">
+                                        <h5 class="title">
+                                            <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">
+                                                @item.Title.Substring(0, (int)Math.Ceiling((item.Title.Length * 0.4)))
+                                            </a>
+                                        </h5>
+                                        <p class="desc">
+                                            @item.Description.Substring(0, (int)Math.Ceiling((item.Description.Length * 0.09)))
+                                        </p>
+                                        <div class="blog-author-date">
+                                            <span class="date">
+                                                <i class="fa-regular fa-calendar"></i>
+                                                @item.CreatedDate.Day @item.CreatedDate.ToString("MMMM"), @item.CreatedDate.Year
+                                            </span>
+                                            <span class="author">
+                                                <i class="fa-regular fa-user"></i>
+                                                By @item.Author
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="blog">
-                                <div class="blog-image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-2.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <h5 class="title">
-                                        <a href="./blogdetail.html">
-                                            How Library Can Increase Your Profit!
-                                        </a>
-                                    </h5>
-                                    <p class="desc">
-                                        Pellentesque vel nibh gravida erat dddd interdum
-                                        lacinia vel in lectus. Sed fermentum pulvinar.
-                                    </p>
-                                    <div class="blog-author-date">
-                                        <span class="date">
-                                            <i class="fa-regular fa-calendar"></i>
-                                            7 March, 2022
-                                        </span>
-                                        <span class="author">
-                                            <i class="fa-regular fa-user"></i>
-                                            By John Doe
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        }
                     </div>
                 </div>
 
@@ -252,102 +187,50 @@
                     <div class="widget recent-posts">
                         <h4 class="widget-title">Recent Posts</h4>
                         <div class="posts">
-                            <div class="post">
-                                <div class="image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-1.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./blogdetail.html">
-                                            Grow to Epiphytic Tropical Plants
+                        @foreach (var item in Model.LatestBlogs)
+                            {
+                                <div class="post">
+                                    <div class="image">
+                                        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Image" alt="" />
                                         </a>
-                                    </h6>
-                                    <p class="date">7 March, 2022</p>
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">
+                                            <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">
+                                                @item.Title.Substring(0, (int)Math.Ceiling((item.Title.Length * 0.4)))
+                                            </a>
+                                        </h6>
+                                        <p class="date">@item.CreatedDate.Day @item.CreatedDate.ToString("MMMM"), @item.CreatedDate.Year</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="post">
-                                <div class="image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-2.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./blogdetail.html">
-                                            Grow to Epiphytic Tropical Plants
-                                        </a>
-                                    </h6>
-                                    <p class="date">7 March, 2022</p>
-                                </div>
-                            </div>
-
-                            <div class="post">
-                                <div class="image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-3.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./blogdetail.html">
-                                            Grow to Epiphytic Tropical Plants
-                                        </a>
-                                    </h6>
-                                    <p class="date">7 March, 2022</p>
-                                </div>
-                            </div>
-                            <div class="post">
-                                <div class="image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-4.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./blogdetail.html">
-                                            Grow to Epiphytic Tropical Plants
-                                        </a>
-                                    </h6>
-                                    <p class="date">7 March, 2022</p>
-                                </div>
-                            </div>
+                            }
+                        
                         </div>
                     </div>
 
                     <div class="widget archives-widget">
                         <h4 class="widget-title">Archives</h4>
                         <ul>
-                            <li class="arc-item">
-                                <a href="">January</a>
-                                (3)
-                            </li>
-                            <li class="arc-item">
-                                <a href="">February</a>
-                                (1)
-                            </li>
-                            <li class="arc-item">
-                                <a href="">March</a>
-                                (2)
-                            </li>
-                            <li class="arc-item">
-                                <a href="">April</a>
-                                (5)
-                            </li>
+                           @foreach (var item in Model.Dates)
+                            {
+                                <li class="arc-item">
+                                    <a href="">@item.Month.ToString("MMMM")</a>
+                                    (@item.Count)
+                                </li>
+                            }
+                          
                         </ul>
                     </div>
 
                     <div class="widget tags">
                         <h4 class="widget-title">Tags</h4>
                         <div class="all-tags">
-                            <a href="">Food</a>
-                            <a href="">Business</a>
-                            <a href="">News</a>
-                            <a href="">Strategy</a>
-                            <a href="">Best Seller</a>
-                            <a href="">Detective</a>
-                            <a href="">Action</a>
+                          @foreach (var item in Model.Tags)
+                            {
+                                <a asp-controller="Blog" asp-action="Index" asp-route-tagId="@item.Id">@item.Name</a>
+                            }
+                           
                         </div>
                     </div>
                 </div>

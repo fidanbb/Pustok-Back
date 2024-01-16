@@ -8,5 +8,7 @@ namespace Pustok_Backend.ViewModels
     {
         public Paginate<BlogVM> PaginatedDatas { get; set; }
         public List<TagVM> Tags { get; set; }
+
+        public List<BlogVM> LatestBlogs { get; set; }
     }
 }

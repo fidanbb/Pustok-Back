@@ -28,6 +28,16 @@ namespace Pustok_Backend.Services
                                                                  .ToListAsync());
         }
 
+        public async Task<BlogDetailVM> GetByIdWithoutTrackingAsync(int id)
+        {
+            return _mapper.Map<BlogDetailVM>(await _context.Blogs.Include(m => m.BlogAuthor)
+                                                                 .Include(m => m.Images)
+                                                                 .Include(m => m.BlogTags)
+                                                                 .ThenInclude(m => m.Tag)
+                                                                 .AsNoTracking()
+                                                                 .FirstOrDefaultAsync(m => m.Id == id));
+        }
+
         public async Task<int> GetCountAsync(int? tagId, string searchText)
         {
             int count= await _context.Blogs.CountAsync();
@@ -43,6 +53,20 @@ namespace Pustok_Backend.Services
             }
 
             return count;
+        }
+
+        public async Task<List<(DateTime Month, int Count)>> GetDatesOfDatasAsync()
+        {
+            var dateCounts = await _context.Blogs
+          .GroupBy(blog => new { blog.CreatedDate.Month })
+          .Select(group => new
+          {
+              Month = new DateTime(2000, group.Key.Month, 1), 
+              Count = group.Count()
+          })
+          .ToListAsync();
+
+            return dateCounts.Select(dc => (dc.Month, dc.Count)).ToList();
         }
 
         public async Task<List<BlogVM>> GetPaginatedDatasAsync(int page, int take, int? tagId, string searchText)
@@ -91,6 +115,20 @@ namespace Pustok_Backend.Services
 
 
             return blogs;
+        }
+
+        public async Task<List<BlogVM>> GetRelatedDatasAsync(BlogDetailVM currentBlog, int take)
+        {
+            var tagIds = currentBlog.Tags.Select(t => t.Id);
+            return _mapper.Map<List<BlogVM>>(await _context.Blogs.Include(m => m.Images)
+                                                          .Include(m => m.BlogAuthor)
+                                                          .Include(m => m.BlogTags)
+                                                          .ThenInclude(m => m.Tag)
+                                                         .Where(blog => blog.Id != currentBlog.Id)
+        .Where(blog => blog.BlogTags.Any(tag => tagIds.Contains(tag.Tag.Id)))
+                                                        
+                                                          .Take(take)
+                                                          .ToListAsync());
         }
     }
 }

@@ -13,77 +13,20 @@
 <section id="blog-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mb-4 mb-lg-0">
-                <div class="blogs">
-                    <div class="row">
-                        @foreach (var item in Model.PaginatedDatas.Datas)
-                        {
-                            <div class="col-lg-6 col-md-6 mb-lg-6 mb-3">
-                                <div class="blog-card">
-                                    <div class="blog-image">
-                                        <a asp-controller="Blog" asp-action="Detail">
-                                            <img src="~/assets/images/@item.Image" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3 class="title">
-                                            <a asp-controller="Blog" asp-action="Detail">
-                                                @item.Title.Substring(0, (int)Math.Ceiling((item.Title.Length * 0.4)))
-                                            </a>
-                                        </h3>
-                                        <p>
-                                            <span class="date">@item.CreatedDate.ToString("MM/dd/yyyy") </span>|
-                                            <a class="author" >@item.Author</a>
-                                        </p>
-                                        <p class="desc">
-                                            @item.Description.Substring(0, (int)Math.Ceiling((item.Description.Length * 0.08)))
-                                        </p>
-                                        <a asp-controller="Blog" asp-action="Detail" class="blog-link">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col-lg-8 mb-4 mb-lg-0 blog-list">
+                <partial name="_BlogsPartial" model="Model.PaginatedDatas" />
 
-                        }
-                    
-                    </div>
-                </div>
-                <div class="pagination">
-                    <nav aria-label="...">
-                        <ul class="pagination">
-                            <li class="page-item  @(Model.PaginatedDatas.HasPrevious ? "" : "disabled")">
-                                <a class="page-link" asp-action="Index" asp-route-page="@(Model.PaginatedDatas.CurrentPage - 1)">
-                                    Previous
-                                </a>
-                            </li>
-
-                            @for (int i = 1; i <= Model.PaginatedDatas.TotalPage; i++)
-                            {
-                                <li class="page-item @(Model.PaginatedDatas.CurrentPage == i ? "active" : "")">
-                                    <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
-                                </li>
-
-                            }
-
-                            <li class="page-item  @(Model.PaginatedDatas.HasNext ? "" : "disabled")">
-                                <a class="page-link" asp-action="Index" asp-route-page="@(Model.PaginatedDatas.CurrentPage + 1)">
-                                    Next
-                                </a>
-                            </li>
-
-                           
-                        </ul>
-                    </nav>
-                </div>
             </div>
+
             <div class="col-lg-4">
                 <div class="left-side-blog">
                     <div class="search-box">
                         <form action="">
                             <div class="search">
                                 <input type="text"
-                                       class="form-control"
+                                       class="form-control input-area"
                                        placeholder="Search" />
-                                <span><i class="fas fa-search"></i></span>
+                                <span style="cursor:pointer" class="blog-search-btn"><i class="fas fa-search"></i></span>
                             </div>
                         </form>
                     </div>
@@ -129,67 +72,25 @@
                     <div class="widget recent-posts">
                         <h4 class="widget-title">Recent Posts</h4>
                         <div class="posts">
-                            <div class="post">
-                                <div class="image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-1.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./blogdetail.html">
-                                            Grow to Epiphytic Tropical Plants
+                          @foreach (var item in Model.LatestBlogs)
+                            {
+                                <div class="post">
+                                    <div class="image">
+                                        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Image" alt="" />
                                         </a>
-                                    </h6>
-                                    <p class="date">7 March, 2022</p>
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">
+                                            <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">
+                                                @item.Title.Substring(0, (int)Math.Ceiling((item.Title.Length * 0.4)))
+                                            </a>
+                                        </h6>
+                                        <p class="date">@item.CreatedDate.Day @item.CreatedDate.ToString("MMMM"), @item.CreatedDate.Year</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="post">
-                                <div class="image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-2.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./blogdetail.html">
-                                            Grow to Epiphytic Tropical Plants
-                                        </a>
-                                    </h6>
-                                    <p class="date">7 March, 2022</p>
-                                </div>
-                            </div>
-
-                            <div class="post">
-                                <div class="image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-3.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./blogdetail.html">
-                                            Grow to Epiphytic Tropical Plants
-                                        </a>
-                                    </h6>
-                                    <p class="date">7 March, 2022</p>
-                                </div>
-                            </div>
-                            <div class="post">
-                                <div class="image">
-                                    <a href="./blogdetail.html">
-                                        <img src="~/assets/images/blog-grid-4.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./blogdetail.html">
-                                            Grow to Epiphytic Tropical Plants
-                                        </a>
-                                    </h6>
-                                    <p class="date">7 March, 2022</p>
-                                </div>
-                            </div>
+                            }
+                          
                         </div>
                     </div>
 
@@ -198,7 +99,7 @@
                         <div class="all-tags">
                             @foreach (var item in Model.Tags)
                             {
-                                <a  class="blog-tag" data-id="@item.Id">@item.Name</a>
+                                <a class="blog-tag" style="cursor:pointer" data-id="@item.Id" >@item.Name</a>
 
                             }
                            
