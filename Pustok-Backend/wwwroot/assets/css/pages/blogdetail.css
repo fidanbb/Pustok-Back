@@ -254,6 +254,25 @@ main #blog-detail-section .leave-reply .reply-form button {
 main #blog-detail-section .leave-reply .reply-form button:hover {
   opacity: 0.8;
 }
+
+
+ main #blog-detail-section .leave-reply .reply-form a {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 17px;
+        padding: 12.5px 40px;
+        line-height: 1.5;
+        height: 48px;
+        background-color: #63ab00;
+        color: #fff;
+        transition: all 0.5s;
+    }
+
+ main #blog-detail-section .leave-reply .reply-form a:hover {
+            opacity: 0.8;
+ }
+
+
 main #blog-detail-section .left-side-blog {
   position: sticky;
   top: 0;

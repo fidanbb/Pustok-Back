@@ -1,4 +1,5 @@
 ﻿using Pustok_Backend.Areas.Admin.ViewModels.Blog;
+using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Social;
 using Pustok_Backend.Areas.Admin.ViewModels.Tag;
 
@@ -14,7 +15,9 @@ namespace Pustok_Backend.ViewModels
 
         public List<TagVM> Tags { get; set; }
 
-        public List<(DateTime Month, int Count)> Dates { get; set; }
+        public List<(int Month, int Count)> Dates { get; set; }
+
+        public BlogCommentCreateVM BlogComment { get; set; }
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Pustok_Backend.Areas.Admin.ViewModels.Advert;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
+using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
 using Pustok_Backend.Areas.Admin.ViewModels.Contact;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
@@ -64,10 +65,14 @@ namespace Pustok_Backend.Helpers.Mappings
 
             CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.BlogAuthor.FullName))
                                    .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image))
-                                    .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.Tag).ToList()));
+                                    .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.Tag).ToList()))
+                                    .ForMember(dest => dest.Comments, opt => opt.MapFrom(src => src.BlogComments));
 
+            CreateMap<BlogComment, BlogCommentVM>();
 
-
+            CreateMap<BlogCommentCreateVM, BlogComment>();
+            CreateMap<TagCreateVM, Tag>();
+            CreateMap<TagEditVM, Tag>();
         }
     }
 }

@@ -393,6 +393,22 @@ namespace Pustok_Backend.Data
 
     );
 
+            modelBuilder.Entity<BlogComment>().HasData(
+                
+                new BlogComment { Id=1,Message= "The book recommendations on this blog are like a treasure map for bibliophiles! 🗺️📚 Each review is a journey into a new literary world. I recently picked up a suggested novel, and it completely captivated me. Thanks for being my guide in the vast realm of books!", BlogId=1,AppUserId= "0efd01de-4eec-45ff-9de4-f03f9abdf104" },
+                new BlogComment { Id = 2, Message = "This blog is my go-to source for discovering hidden gems in the book world. The recent post on Naoki Urasawa's latest work was spot-on! The storytelling is phenomenal, and the blog's insights added a new layer to my reading experience. Can't wait for the next recommendation!", BlogId = 2, AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85" },
+                new BlogComment { Id = 3, Message = "Kudos to the blog for introducing me to fantastic books I never thought I'd enjoy. The thoughtful reviews make it easy to step out of my comfort zone. I picked up one of the recommended titles, and it turned out to be a pleasant surprise. Keep broadening our literary horizons!", BlogId = 3, AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7" },
+                new BlogComment { Id = 4, Message = "I appreciate the diverse range of books covered on this blog. The variety in genres and themes keeps my reading list exciting and unpredictable. The recent review on No Longer Human was enlightening. It's evident that the blogger has a genuine passion for literature. Bravo!", BlogId = 4, AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" },
+                new BlogComment { Id = 5, Message = "I've been following this blog for months, and it never disappoints. The reviews are like a sneak peek into the soul of each book. The latest post on Jack London's novel left me eager to explore more of their work. Thanks for consistently providing such enriching content!", BlogId = 5, AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104" },
+                new BlogComment { Id = 6, Message = "The blog's reviews are like a beacon guiding me to the most intriguing plots and characters. I enjoyed the recent discussion on Romance. The analysis was thought-provoking and added a new layer of appreciation for the books in that category. An intellectual oasis for bookworms!", BlogId = 6, AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85" },
+                new BlogComment { Id = 7, Message = "This blog is a haven for those seeking literary escapades. The recent post on Fourth Wing resonated with me deeply. The emotional nuances explored in the review mirrored my own experience with the book. It's wonderful to find a community that shares the love for storytelling.", BlogId = 7, AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7" },
+                new BlogComment { Id = 8, Message = "The book recommendations here are like a curated collection of literary wonders. I recently picked up a novel highlighted in a post, and it became an instant favorite. Thank you for helping me discover gems I might have overlooked otherwise. Looking forward to the next revelation!", BlogId = 8, AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" },
+                new BlogComment { Id = 9, Message = "This blog has become my literary compass. The reviews not only provide insights into the books but also ignite interesting discussions in the comments section. It's a community where book lovers unite. The recent post on detective sparked engaging conversations. Cheers to a blog that fosters a love for reading!", BlogId = 9, AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104" },
+                new BlogComment { Id = 10, Message = "I'm constantly impressed by the range of genres covered on this blog. The recent spotlight on Madeline MIller's works was a delightful surprise. I've now added their entire bibliography to my to-be-read list. The blog consistently delivers exciting discoveries for avid readers. Much appreciated!", BlogId = 10, AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7" }
+
+
+                );
+             
 
 
 

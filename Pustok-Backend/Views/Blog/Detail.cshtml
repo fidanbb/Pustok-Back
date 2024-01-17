@@ -1,6 +1,10 @@
 ﻿@model BlogDetailPageVM
+@inject UserManager<AppUser> _userManager;
+
+    
 
 @{
+    AppUser user = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
     ViewData["Title"] = "Detail";
 }
 
@@ -104,45 +108,93 @@
                 </div>
 
                 <div class="post-comments">
-                    <h4 class="widget-title">1 Comment</h4>
-                    <div class="single-comment">
-                        <div class="comment-image">
-                            <img src="~/assets/images/author-logo.webp" alt="" />
+                    <h4 class="widget-title">@Model.Blog.Comments.Count() Comment</h4>
+                  @foreach (var item in Model.Blog.Comments.OrderByDescending(m=>m.CreatedDate).Take(3))
+                    {
+                        <div class="single-comment">
+                            <div class="comment-image">
+                                @if (_userManager.Users.FirstOrDefault(m=>m.Id==item.AppUserId).Image is null)
+                                {
+                                    <img src="~/assets/images/author-logo.webp" alt="" />
+
+                                }
+                                else
+                                {
+                                    <img src="~/assets/images/@_userManager.Users.FirstOrDefault(m=>m.Id==item.AppUserId).Image" alt="" />
+                                }
+                            </div>
+                            <div class="text">
+                                <p class="author">
+                                    @_userManager.Users.FirstOrDefault(m => m.Id == item.AppUserId).Name @_userManager.Users.FirstOrDefault(m => m.Id == item.AppUserId).Surname
+                                </p>
+                                <p class=".desc">
+                                   @item.Message
+                                </p>
+                                <a href="">
+                                    <i class="fa fa-reply"></i>
+                                    Reply
+                                </a>
+                            </div>
                         </div>
-                        <div class="text">
-                            <p class="author">Michel Poe</p>
-                            <p class=".desc">
-                                Donec suscipit porta lorem eget condimentum. Morbi vitae
-                                mauris in leo venenatis varius. Aliquam nunc enim, egestas
-                                ac dui in, aliquam vulputate erat.
-                            </p>
-                            <a href="">
-                                <i class="fa fa-reply"></i>
-                                Reply
-                            </a>
-                        </div>
-                    </div>
+                    }
+                       
+
+          
+                
+
                 </div>
 
                 <div class="leave-reply">
                     <h4 class="widget-title">Leave a Reply</h4>
-                    <div class="reply-form">
-                        <form action="">
-                            <input type="text"
-                                   class="form-control"
-                                   placeholder="Your Name" />
-                            <input type="email"
-                                   class="form-control"
-                                   placeholder="Your Email" />
-                            <textarea class="form-control"
-                                      name=""
-                                      id=""
-                                      cols="40"
-                                      rows="5"
-                                      placeholder="Your Message"></textarea>
-                            <button class="btn" type="submit">Submit</button>
-                        </form>
-                    </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="reply-form">
+                            <form method="post" asp-controller="Blog" asp-action="PostComment" asp-route-userId="@user.Id" asp-route-blogId="@Model.Blog.Id">
+                                <input type="text"
+                                       value="@user.Name @user.Surname"
+                                       readonly
+                                       class="form-control"
+                                       style="background-color:#fff!important"
+                                       placeholder="Your Name" />
+                                <input type="email"
+                                    value="@user.Email"
+                                    readonly
+                                       style="background-color:#fff!important"
+                                       class="form-control"
+                                       placeholder="Your Email" />
+                                <textarea class="form-control"
+                                         asp-for="@Model.BlogComment.Message"
+                                          cols="40"
+                                          rows="5"
+                                          placeholder="Your Message"></textarea>
+                                 <span class="text-danger" asp-validation-for="@Model.BlogComment.Message"></span>
+                                <button class="btn" type="submit">Submit</button>
+                            </form>
+                        </div>  
+                    }
+                    else
+                    {
+
+                        <div class="reply-form">
+                            <form >
+                                <input type="text"
+                                     
+                                       class="form-control"
+                                       placeholder="Your Name" />
+                                <input type="email"
+                                  
+                                       class="form-control"
+                                       placeholder="Your Email" />
+                                <textarea class="form-control"
+                                         
+                                          cols="40"
+                                          rows="5"
+                                          placeholder="Your Message"></textarea>
+                                <a asp-controller="Account" asp-action="Login" class="btn" >Submit</a>
+                            </form>
+                        </div>
+                    }
+
                 </div>
             </div>
             <div class="col-lg-4">
@@ -214,8 +266,9 @@
                         <ul>
                            @foreach (var item in Model.Dates)
                             {
-                                <li class="arc-item">
-                                    <a href="">@item.Month.ToString("MMMM")</a>
+                                <li class="arc-item" data-id="@item.Month">
+                                    <a asp-controller="Blog" asp-action="Index" asp-route-month="@item.Month">
+                                        @CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(item.Month)</a>
                                     (@item.Count)
                                 </li>
                             }

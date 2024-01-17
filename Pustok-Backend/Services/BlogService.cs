@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
+using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
 using Pustok_Backend.Data;
+using Pustok_Backend.Models;
 using Pustok_Backend.Services.Interfaces;
 
 namespace Pustok_Backend.Services
@@ -19,6 +21,14 @@ namespace Pustok_Backend.Services
             _context = context;
             _mapper = mapper;
         }
+
+        public async Task CreateCommentAsync(BlogComment comment)
+        {
+
+            await _context.BlogComments.AddAsync(comment);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<List<BlogVM>> GetAllWithTakeInDescendingOrderAsync(int take)
         {
             return _mapper.Map<List<BlogVM>>(await _context.Blogs.Include(m => m.Images)
@@ -32,13 +42,14 @@ namespace Pustok_Backend.Services
         {
             return _mapper.Map<BlogDetailVM>(await _context.Blogs.Include(m => m.BlogAuthor)
                                                                  .Include(m => m.Images)
+                                                                 .Include(m => m.BlogComments)
                                                                  .Include(m => m.BlogTags)
                                                                  .ThenInclude(m => m.Tag)
                                                                  .AsNoTracking()
                                                                  .FirstOrDefaultAsync(m => m.Id == id));
         }
 
-        public async Task<int> GetCountAsync(int? tagId, string searchText)
+        public async Task<int> GetCountAsync(int? tagId,int? month, string searchText)
         {
             int count= await _context.Blogs.CountAsync();
             if(tagId is not null)
@@ -52,24 +63,33 @@ namespace Pustok_Backend.Services
                                                             
             }
 
+
+            if (month != null)
+            {
+                count =await _context.Blogs.Where(m => m.CreatedDate.Month == month).CountAsync();
+                                                                 
+            }
+
             return count;
         }
 
-        public async Task<List<(DateTime Month, int Count)>> GetDatesOfDatasAsync()
+
+
+        public async Task<List<(int Month, int Count)>> GetDatesOfDatasAsync()
         {
             var dateCounts = await _context.Blogs
-          .GroupBy(blog => new { blog.CreatedDate.Month })
-          .Select(group => new
-          {
-              Month = new DateTime(2000, group.Key.Month, 1), 
-              Count = group.Count()
-          })
-          .ToListAsync();
+                .GroupBy(blog => blog.CreatedDate.Month)
+                .Select(group => new
+                {
+                    Month = group.Key,
+                    Count = group.Count()
+                })
+                .ToListAsync();
 
             return dateCounts.Select(dc => (dc.Month, dc.Count)).ToList();
         }
 
-        public async Task<List<BlogVM>> GetPaginatedDatasAsync(int page, int take, int? tagId, string searchText)
+        public async Task<List<BlogVM>> GetPaginatedDatasAsync(int page, int take, int? tagId,int? month, string searchText)
         {
             List<BlogVM> blogs= _mapper.Map<List<BlogVM>>(await _context.Blogs.Include(m => m.Images)
                                                                  .Include(m => m.BlogAuthor)
@@ -86,6 +106,18 @@ namespace Pustok_Backend.Services
                                                                  .Include(m => m.BlogTags)
                                                                  .ThenInclude(m => m.Tag)
                                                                  .Where(m=>m.Title.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+                                                                 .Skip((page * take) - take)
+                                                                 .Take(take)
+                                                                 .ToListAsync());
+            }
+
+            if(month != null)
+            {
+                blogs =_mapper.Map<List<BlogVM>>(await _context.Blogs.Include(m => m.Images)
+                                                                 .Include(m => m.BlogAuthor)
+                                                                 .Include(m => m.BlogTags)
+                                                                 .ThenInclude(m => m.Tag)
+                                                                 .Where(m=>m.CreatedDate.Month ==month)
                                                                  .Skip((page * take) - take)
                                                                  .Take(take)
                                                                  .ToListAsync());

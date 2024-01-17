@@ -1,6 +1,8 @@
 ﻿using MailKit.Search;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
+using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Social;
 using Pustok_Backend.Areas.Admin.ViewModels.Tag;
 using Pustok_Backend.Helpers;
@@ -25,11 +27,11 @@ namespace Pustok_Backend.Controllers
             _socialService = socialService;
 
         }
-        public async Task<IActionResult> Index(int page = 1, int take = 6,int? tagId=null,string searchText=null)
+        public async Task<IActionResult> Index(int page = 1, int take = 6,int? tagId=null,int? month=null,string searchText=null)
         {
-            List<BlogVM> dbPaginatedDatas = await _blogService.GetPaginatedDatasAsync(page, take,tagId,searchText);
+            List<BlogVM> dbPaginatedDatas = await _blogService.GetPaginatedDatasAsync(page, take,tagId,month,searchText);
 
-            int pageCount = await GetPageCountAsync(take,tagId,searchText);
+            int pageCount = await GetPageCountAsync(take,tagId,month,searchText);
 
             Paginate<BlogVM> paginatedDatas = new(dbPaginatedDatas, page, pageCount);
             List<TagVM> tags=await _tagService.GetAllAsync();
@@ -45,9 +47,9 @@ namespace Pustok_Backend.Controllers
             return View(model);
         }
 
-        private async Task<int> GetPageCountAsync(int take, int? tagId, string searchText)
+        private async Task<int> GetPageCountAsync(int take, int? tagId,int? month, string searchText)
         {
-            int blogCount = await _blogService.GetCountAsync(tagId,searchText);
+            int blogCount = await _blogService.GetCountAsync(tagId,month,searchText);
             return (int)Math.Ceiling((decimal)(blogCount) / take);
         }
 
@@ -59,9 +61,9 @@ namespace Pustok_Backend.Controllers
             {
                 if (id is null) throw new ArgumentNullException();
 
-                var blogs = await _blogService.GetPaginatedDatasAsync(page, take, (int)id, null);
+                var blogs = await _blogService.GetPaginatedDatasAsync(page, take, (int)id,null, null);
 
-                int pageCount = await GetPageCountAsync(take, (int)id, null);
+                int pageCount = await GetPageCountAsync(take, (int)id,null, null);
 
                 Paginate<BlogVM> model = new(blogs, page, pageCount);
 
@@ -86,9 +88,9 @@ namespace Pustok_Backend.Controllers
             try
             {
                 
-                var blogs = await _blogService.GetPaginatedDatasAsync(page, take, null, searchText);
+                var blogs = await _blogService.GetPaginatedDatasAsync(page, take, null,null, searchText);
 
-                int pageCount = await GetPageCountAsync(take, null, searchText);
+                int pageCount = await GetPageCountAsync(take, null,null, searchText);
 
                 Paginate<BlogVM> model = new(blogs, page, pageCount);
 
@@ -121,7 +123,7 @@ namespace Pustok_Backend.Controllers
                 List<BlogVM> latestBlogs = await _blogService.GetAllWithTakeInDescendingOrderAsync(4);
                 List<BlogVM> relatedBlogs=await _blogService.GetRelatedDatasAsync(blog,2);
                 List<TagVM> tags = await _tagService.GetAllAsync();
-                List < (DateTime Month, int Count)> dates = await _blogService.GetDatesOfDatasAsync();
+                List < (int Month, int Count)> dates = await _blogService.GetDatesOfDatasAsync();
 
                 BlogDetailPageVM model = new()
                 {
@@ -144,6 +146,42 @@ namespace Pustok_Backend.Controllers
             {
                 return NotFound();
             }
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+
+        public async Task<IActionResult> PostComment(BlogCommentCreateVM blogComment, string userId, int? blogId)
+        {
+            try
+            {
+                if (userId is null || blogId is null) throw new ArgumentNullException();
+
+                if (!ModelState.IsValid) return RedirectToAction(nameof(Detail), new { id = blogId });
+
+                BlogComment newBlogComment = new()
+                {
+                    AppUserId = userId,
+                    BlogId = (int)blogId,
+                    Message = blogComment.Message,
+                };
+
+                await _blogService.CreateCommentAsync(newBlogComment);
+
+                return RedirectToAction(nameof(Detail), new { id = blogId });
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
         }
 
 
