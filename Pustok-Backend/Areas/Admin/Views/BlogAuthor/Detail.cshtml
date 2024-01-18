@@ -1,0 +1,26 @@
+﻿@model BlogAuthorVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container mt-5 " style="margin-left:30px">
+
+
+
+    <h3 class="mb-3">Author - @Model.FullName</h3>
+   
+    @foreach (var item in Model.BlogTitles)
+    {
+        <p class="mb-3">Blog Titles - @item</p>
+    }
+
+
+    <p class="mb-3">Created Date - @Model.CreatedDate</p>
+    <p>Updated Date - @Model.UpdatedDate</p>
+
+
+
+    <div class="back mt-2">
+        <a class="btn btn-info text-white" asp-action="Index">Back</a>
+    </div>
+</div>

@@ -3,8 +3,10 @@
     public class BlogCommentVM
     {
         public int Id { get; set; }
-        public int BlogId { get; set; }
+        public string BlogTitle { get; set; }
         public string Message { get; set; }
-        public string AppUserId { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

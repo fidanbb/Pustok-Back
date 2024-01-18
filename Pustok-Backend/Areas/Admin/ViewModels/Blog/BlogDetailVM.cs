@@ -12,6 +12,7 @@ namespace Pustok_Backend.Areas.Admin.ViewModels.Blog
         public string Author { get; set; }
         public string Title { get; set; }
         public string Image { get; set; }
+        public List<BlogImage> Images { get; set; }
         public List<Models.BlogComment> Comments { get; set; }
         public List<Models.Tag> Tags { get; set; }
 

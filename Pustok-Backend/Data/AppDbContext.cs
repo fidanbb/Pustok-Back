@@ -222,7 +222,7 @@ namespace Pustok_Backend.Data
             Engage with discussions on detective fiction, crime thrillers, and the evolving nature of mystery narratives in contemporary literature. The blog seeks to unravel the secrets behind creating a compelling mystery, inviting readers to appreciate the craftsmanship of authors who keep them guessing until the final page.
 
             Let the journey into the unknown begin, where every shadow conceals a clue, and every revelation opens new possibilities. Unveiling the Secrets of Mystery is not just a blog; it's an exploration of the enigmatic and a celebration of the enduring allure of mystery in the world of literature.",
-        BlogAuthorId = 1,
+        BlogAuthorId = 4,
         CreatedDate = new DateTime(2023, 5, 5)
     },
     new Blog
@@ -236,7 +236,7 @@ namespace Pustok_Backend.Data
             Engage with explorations of legendary quests, magical systems, and the enduring appeal of fantastical storytelling. The blog seeks to unravel the threads that connect fantasy literature with our deepest desires for adventure, heroism, and the extraordinary. Join us in this journey where every page turns into a gateway to realms where dreams take flight, and the impossible becomes a reality in the hands of visionary authors.
 
             Let the magic of fantasy unfold before you, as we embark on a journey through realms where the boundaries between reality and imagination blur, and the fantastical becomes an integral part of the literary landscape.",
-        BlogAuthorId = 2,
+        BlogAuthorId = 5,
         CreatedDate = new DateTime(2023, 5, 15)
     },
     new Blog
@@ -250,7 +250,7 @@ namespace Pustok_Backend.Data
             This blog is not merely about exploring love stories; it's an invitation to dissect the anatomy of romantic narratives, examining the elements that make them timeless and universally relatable. Join us in the exploration of love as a literary theme, where every novel becomes a unique note in the symphony of hearts that resonates across the pages of written words.
 
             Whether you're a hopeless romantic or a curious reader intrigued by the complexities of human emotion, Love and Romance in Written Words promises a journey through literary landscapes where love unfolds in its many forms, leaving an indelible mark on the reader's heart.",
-        BlogAuthorId = 3,
+        BlogAuthorId = 6,
         CreatedDate = new DateTime(2021, 6, 25)
     },
     new Blog
@@ -264,7 +264,7 @@ namespace Pustok_Backend.Data
             The blog seeks to explore the influence of science fiction on societal perspectives, technological advancements, and the shaping of possible futures. Join us in contemplating the 'what if' scenarios, where authors envision worlds that challenge our understanding of reality and push the boundaries of human potential.
 
             Whether you're a seasoned science fiction enthusiast or a newcomer to the genre, Charting the Course of Science Fiction promises an exploration of literary frontiers that expand the mind and spark the imagination. Let the journey through the galaxies of science fiction literature begin, where every novel becomes a star in the vast constellation of speculative storytelling.",
-        BlogAuthorId = 1,
+        BlogAuthorId = 7,
         CreatedDate = new DateTime(2022, 7, 12)
     },
     new Blog
@@ -278,7 +278,7 @@ namespace Pustok_Backend.Data
             The blog seeks to bridge the gap between the worlds of fiction and non-fiction, exploring the ways in which narrative techniques and storytelling conventions are employed to convey real-world truths. Join us in the exploration of literary explorations, where every non-fiction book becomes a window into the complexities, wonders, and challenges of the world we inhabit.
 
             Whether you're passionate about history, social issues, or scientific discoveries, Literary Explorations in Non-Fiction promises a curated journey through the vast expanse of non-fiction literature, where every book is a beacon of knowledge waiting to be discovered and shared.",
-        BlogAuthorId = 2,
+        BlogAuthorId = 8,
         CreatedDate = new DateTime(2020, 9, 8)
     },
       new Blog
@@ -292,7 +292,7 @@ namespace Pustok_Backend.Data
             This blog is not just an exploration of the short story as a literary form; it's an invitation to discover the diverse voices and styles that contribute to the richness of short-form fiction. Join us in celebrating the storytellers who masterfully navigate the delicate balance between conciseness and depth, creating emotional landscapes that linger in the minds of readers long after the final sentence.
 
             Whether you're a seasoned admirer of short stories or a newcomer curious about the potential within brevity, The Art of Short Stories promises a curated journey through the captivating world of succinct narratives, where every story is a testament to the enduring power of concise and emotionally resonant storytelling.",
-          BlogAuthorId = 3,
+          BlogAuthorId = 9,
           CreatedDate = new DateTime(2021, 9, 2)
       },
 
@@ -309,7 +309,7 @@ namespace Pustok_Backend.Data
             Through literary reflections, we will explore the intersection of literature and self-help, examining how the written word becomes a guiding light in moments of uncertainty and a source of strength during life's transitions. Whether you're embarking on a quest for mindfulness, resilience, or purpose, join us on this exploration of self-help literature as we navigate the path to personal growth together.
 
             The journey unfolds with each turn of the page, offering readers a roadmap to self-discovery, empowerment, and a renewed sense of purpose. May these literary reflections serve as companions on your quest for a more meaningful and fulfilling life.",
-         BlogAuthorId = 1,
+         BlogAuthorId = 10,
          CreatedDate = new DateTime(2022, 10, 18)
      }
                    );

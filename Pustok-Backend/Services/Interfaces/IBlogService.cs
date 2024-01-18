@@ -8,6 +8,10 @@ namespace Pustok_Backend.Services.Interfaces
     {
         Task<List<BlogVM>> GetAllWithTakeInDescendingOrderAsync(int take);
         Task<int> GetCountAsync(int? tagId, int? month, string searchText);
+
+        Task<int> GetBlogCountAsync();
+
+        Task<List<BlogVM>> GetPaginatedBlogDatasAsync(int page,int take);
       
         Task<List<BlogVM>> GetPaginatedDatasAsync(int page, int take, int? tagId, int? month, string searchText);
 
@@ -18,5 +22,19 @@ namespace Pustok_Backend.Services.Interfaces
         Task<List<(int Month, int Count)>> GetDatesOfDatasAsync();
 
         Task CreateCommentAsync(BlogComment comment);
+
+        Task<List<BlogCommentVM>>GetCommentsAsync(int page, int take);
+
+        Task<BlogCommentVM>GetCommentByIdAsync(int id);
+
+        Task DeleteCommentAsync(int? id);
+
+        Task<int> GetCommentCountAsync();
+
+        Task CreateAsync(BlogCreateVM blog);
+
+        Task<BlogVM> GetByNameWithoutTrackingAsync(string name);
+
+        Task DeleteAsync(int id);
     }
 }

@@ -1,0 +1,85 @@
+﻿@model BlogDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .blog-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+    }
+
+    .blog-info {
+        margin-top: 20px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    p {
+        color: #666;
+        font-size:10px;
+    }
+
+    .tag {
+        color: #666;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .active-image {
+        border: 3px solid greenyellow;
+    }
+</style>
+
+
+<div class="container">
+    @if (Model.Images.Count() != 0)
+    {
+        foreach (var item in Model.Images)
+        {
+            <img class="blog-image @(item.IsMain ? "active-image": "")" src="~/assets/images/@item.Image" alt="Blog Image">
+        }
+    }
+
+<div class="blog-info">
+        <h2 class="mb-3">Author - @Model.Author</h2>
+        <h2 class="mb-3">Title - @Model.Title</h2>
+
+        <p> <span style="font-weight:900;">Description</span> - @Model.Description</p>
+
+        @if (Model.Tags.Count()!=0)
+        {
+            <p class="mb-5" style="font-size:16px; font-weight:bold">
+                Tags -
+                @foreach (var item in Model.Tags)
+                {
+                    <span class="tag">@item.Name</span>
+                }
+            </p>
+        }
+       
+    
+    <div class="back mt-2">
+        <a class="btn btn-info text-white" asp-action="Index">Back</a>
+    </div>
+</div>
+</div>

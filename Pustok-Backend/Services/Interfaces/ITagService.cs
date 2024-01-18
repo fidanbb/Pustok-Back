@@ -1,4 +1,5 @@
-﻿using Pustok_Backend.Areas.Admin.ViewModels.Tag;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Pustok_Backend.Areas.Admin.ViewModels.Tag;
 
 namespace Pustok_Backend.Services.Interfaces
 {
@@ -12,5 +13,6 @@ namespace Pustok_Backend.Services.Interfaces
         Task CreateAsync(TagCreateVM tag);
         Task EditAsync(TagEditVM tag);
         Task<TagVM> GetByNameWithoutTrackingAsync(string name);
+        List<SelectListItem> GetAllSelectedTagsAsync();
     }
 }

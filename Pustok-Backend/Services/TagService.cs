@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Pustok_Backend.Areas.Admin.ViewModels.Tag;
@@ -75,8 +76,18 @@ namespace Pustok_Backend.Services
                                                          .FirstOrDefaultAsync(m => m.Name.Trim().ToLower() == name.Trim().ToLower()));
         }
 
+        public List<SelectListItem> GetAllSelectedTagsAsync()
+        {
+            return _context.Tags.Select(m => new SelectListItem()
+            {
+                Text = m.Name,
+                Value = m.Id.ToString(),
 
-      
+            }).ToList();
+        }
+
+
+
 
     }
 }
