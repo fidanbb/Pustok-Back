@@ -20,11 +20,12 @@ namespace Pustok_Backend.ViewComponents
             _layoutService = layoutService;
             _httpContextAccessor = httpContextAccessor;
             _userManager = userManager;
+          
         }
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            HeaderVM model = _layoutService.GetHeaderDatas();
+            HeaderVM model = await _layoutService.GetHeaderDatas();
             
 
             string userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -34,6 +35,7 @@ namespace Pustok_Backend.ViewComponents
                 AppUser currentUser = await _userManager.FindByIdAsync(userId);
                 model.UserFullName = currentUser.Name + " " +currentUser.Surname;
             }
+            
 
 
             return await Task.FromResult(View(model));

@@ -1,4 +1,5 @@
-﻿using Pustok_Backend.Areas.Admin.ViewModels.Social;
+﻿using Pustok_Backend.Areas.Admin.ViewModels.Category;
+using Pustok_Backend.Areas.Admin.ViewModels.Social;
 
 namespace Pustok_Backend.ViewModels.Layout
 {
@@ -8,6 +9,8 @@ namespace Pustok_Backend.ViewModels.Layout
         public string Phone { get; set; }
         public string Email { get; set; }
         public string UserFullName { get; set; }
+
+        public List<CategoryVM> Categories { get; set; }
 
 
     }

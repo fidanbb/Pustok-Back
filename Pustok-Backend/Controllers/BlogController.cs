@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
+using Pustok_Backend.Areas.Admin.ViewModels.Category;
 using Pustok_Backend.Areas.Admin.ViewModels.Social;
 using Pustok_Backend.Areas.Admin.ViewModels.Tag;
 using Pustok_Backend.Helpers;
@@ -18,13 +19,16 @@ namespace Pustok_Backend.Controllers
         private readonly IBlogService _blogService;
         private readonly ITagService _tagService;
         private readonly ISocialService _socialService;
+        private readonly ICategoryService _categoryService;
         public BlogController(IBlogService blogService,
                               ITagService tagService,
-                              ISocialService socialService)
+                              ISocialService socialService,
+                              ICategoryService categoryService)
         {
             _blogService = blogService;
             _tagService = tagService;
             _socialService = socialService;
+            _categoryService = categoryService;
 
         }
         public async Task<IActionResult> Index(int page = 1, int take = 6,int? tagId=null,int? month=null,string searchText=null)
@@ -36,12 +40,14 @@ namespace Pustok_Backend.Controllers
             Paginate<BlogVM> paginatedDatas = new(dbPaginatedDatas, page, pageCount);
             List<TagVM> tags=await _tagService.GetAllAsync();
             List<BlogVM> latestBlogs = await _blogService.GetAllWithTakeInDescendingOrderAsync(4);
+            List<CategoryVM> categories = await _categoryService.GetAllAsync();
 
             BlogPageVM model = new()
             {
                 PaginatedDatas = paginatedDatas,
                 Tags = tags,
-                LatestBlogs = latestBlogs
+                LatestBlogs = latestBlogs,
+                Categories=categories,
             };
 
             return View(model);
@@ -124,6 +130,8 @@ namespace Pustok_Backend.Controllers
                 List<BlogVM> relatedBlogs=await _blogService.GetRelatedDatasAsync(blog,2);
                 List<TagVM> tags = await _tagService.GetAllAsync();
                 List < (int Month, int Count)> dates = await _blogService.GetDatesOfDatasAsync();
+                List<CategoryVM> categories = await _categoryService.GetAllAsync();
+
 
                 BlogDetailPageVM model = new()
                 {
@@ -132,7 +140,9 @@ namespace Pustok_Backend.Controllers
                     LatestBlogs = latestBlogs,
                     RelatedBlogs = relatedBlogs,
                     Tags = tags,
-                    Dates = dates
+                    Dates = dates,
+                    Categories = categories,
+                   
                 };
 
                 return View(model);

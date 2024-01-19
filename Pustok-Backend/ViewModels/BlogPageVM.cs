@@ -1,4 +1,5 @@
 ﻿using Pustok_Backend.Areas.Admin.ViewModels.Blog;
+using Pustok_Backend.Areas.Admin.ViewModels.Category;
 using Pustok_Backend.Areas.Admin.ViewModels.Tag;
 using Pustok_Backend.Helpers;
 
@@ -10,5 +11,6 @@ namespace Pustok_Backend.ViewModels
         public List<TagVM> Tags { get; set; }
 
         public List<BlogVM> LatestBlogs { get; set; }
+        public List<CategoryVM  > Categories { get; set; }
     }
 }

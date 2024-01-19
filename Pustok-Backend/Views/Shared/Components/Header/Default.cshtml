@@ -36,7 +36,7 @@
                                     <a asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="shop.html">Shop</a>
+                                    <a asp-controller="Shop" asp-action="Index">Shop</a>
                                 </li>
                                 <li class="menu-item">
                                     <a asp-controller="Blog" asp-action="Index">Blog</a>
@@ -45,7 +45,7 @@
                                     <a asp-controller="Contact" asp-action="Index">Contact</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="wishlist.html">Wishlist</a>
+                                    <a asp-controller="Wishlist" asp-action="Index">Wishlist</a>
                                 </li>
                             </ul>
                         </div>
@@ -66,27 +66,14 @@
                                 <i class="fa-solid fa-angle-down"></i>
                             </a>
                             <ul class="category-menu">
-                                <li class="category-item">
-                                    <a href="">Arts & Photography</a>
-                                </li>
-                                <li class="category-item">
-                                    <a href="">Biographies</a>
-                                </li>
-                                <li class="category-item">
-                                    <a href="">Business & Money</a>
-                                </li>
-                                <li class="category-item">
-                                    <a href="">Childrens's Books</a>
-                                </li>
-                                <li class="category-item">
-                                    <a href="">Comics</a>
-                                </li>
-                                <li class="category-item">
-                                    <a href="">Cookbooks</a>
-                                </li>
-                                <li class="category-item">
-                                    <a href="">Education</a>
-                                </li>
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <li class="category-item">
+                                        <a href="">@item.Name</a>
+                                    </li>
+
+                                }
+                            
                             </ul>
                         </div>
                     </div>
@@ -278,7 +265,7 @@
                         <ul class="header-links">
                             <li class="link-item">
                              
-                                    <i class="fa-regular fa-user account-trigger"></i>
+                            <i class="fa-regular fa-user account-trigger"></i>
             
 
                             </li>
@@ -350,7 +337,7 @@
                                         <a asp-controller="Blog" asp-action="Index">Blog</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="shop.html">Shop</a>
+                                        <a asp-controller="Shop" asp-action="Index">Shop</a>
                                     </li>
                                     <li class="menu-item">
                                         <a asp-controller="Contact" asp-action="Index">Contact</a>

@@ -7,13 +7,16 @@ namespace Pustok_Backend.Services
     {
         private readonly ISettingService _settingService;
         private readonly ISocialService _socialService;
+        private readonly ICategoryService _categoryService;
 
         public LayoutService( ISettingService settingService,
-                              ISocialService socialService)
+                              ISocialService socialService,
+                              ICategoryService categoryService)
         {
            
             _settingService = settingService;
             _socialService = socialService;
+            _categoryService = categoryService;
         }
         public async Task< FooterVM> GetFooterDatas()
         {
@@ -29,14 +32,15 @@ namespace Pustok_Backend.Services
             };
         }
 
-        public HeaderVM GetHeaderDatas()
+        public async Task<HeaderVM> GetHeaderDatas()
         {
             Dictionary<string, string> settingDatas = _settingService.GetSettings();
             return new HeaderVM
             {
                 HeaderLogo = settingDatas["HeaderLogo"],
                 Phone = settingDatas["Phone"],
-                Email = settingDatas["Email"]
+                Email = settingDatas["Email"],
+                Categories =await _categoryService.GetAllAsync()
                 
             };
         }

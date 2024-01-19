@@ -6,6 +6,11 @@
 @{
     AppUser user = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
     ViewData["Title"] = "Detail";
+    int productCount = 0;
+    foreach (var item in Model.Categories)
+    {
+        productCount += item.Products.Count();
+    }
 }
 
 @section css {
@@ -208,36 +213,17 @@
                         <ul>
                             <li class="cat-item">
                                 <a href="">All</a>
-                                (3)
+                                (@productCount)
                             </li>
-                            <li class="cat-item">
-                                <a href="">Arts & Photography</a>
-                                (3)
-                            </li>
-                            <li class="cat-item">
-                                <a href="">Biographies</a>
-                                (3)
-                            </li>
-                            <li class="cat-item">
-                                <a href="">Business & Money</a>
-                                (3)
-                            </li>
-                            <li class="cat-item">
-                                <a href="">Children's Book</a>
-                                (3)
-                            </li>
-                            <li class="cat-item">
-                                <a href="">Cookbooks</a>
-                                (3)
-                            </li>
-                            <li class="cat-item">
-                                <a href="">Comics</a>
-                                (3)
-                            </li>
-                            <li class="cat-item">
-                                <a href="">Education</a>
-                                (3)
-                            </li>
+
+                            @foreach (var item in Model.Categories)
+                            {
+                                <li class="cat-item">
+                                    <a href="">@item.Name</a>
+                                    (@item.Products.Count())
+                                </li>
+
+                            }
                         </ul>
                     </div>
                     <div class="widget recent-posts">

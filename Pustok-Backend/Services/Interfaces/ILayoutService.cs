@@ -4,7 +4,7 @@ namespace Pustok_Backend.Services.Interfaces
 {
     public interface ILayoutService
     {
-        HeaderVM GetHeaderDatas();
+        Task<HeaderVM> GetHeaderDatas();
         Task<FooterVM> GetFooterDatas();
 
     }

@@ -10,28 +10,28 @@ namespace Pustok_Backend.Data
 
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Direction> Directions { get; set; }
-
         public DbSet<Service> Services { get; set; }
         public DbSet<Advert> Adverts { get; set; }
         public DbSet<Brand> Brands { get; set; }
-
         public DbSet<Setting>Settings { get; set; }
         public DbSet<Social> Socials { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
-
         public DbSet<ContactMessage> ContactMessages { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Tag> Tags { get; set; }
-
         public DbSet<BlogTag> BlogTags { get; set; }
-
         public DbSet<BlogComment> BlogComments { get; set; }
-
         public DbSet<BlogAuthor> BlogAuthors { get; set; }
-
         public DbSet<BlogImage> BlogImages { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<ProductComment> ProductComments { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
+        public DbSet<Discount> Discounts { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductTag> ProductTags { get; set; }
 
 
 
@@ -60,6 +60,19 @@ namespace Pustok_Backend.Data
 
             modelBuilder.Entity<BlogTag>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Tag>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ProductImage>().HasQueryFilter(m => !m.SoftDeleted);
+
+            modelBuilder.Entity<Product>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Author>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ProductComment>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ProductImage>().HasQueryFilter(m => !m.SoftDeleted);
+
+            modelBuilder.Entity<ProductTag>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Discount>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
+
+
+
 
 
             modelBuilder.Entity<Slider>().HasData(
@@ -408,7 +421,404 @@ namespace Pustok_Backend.Data
 
 
                 );
-             
+
+
+
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id=1,Name="Biographies"},
+                 new Category { Id = 2, Name = "Business & Money" },
+                  new Category { Id = 3, Name = "Children's Books" },
+                   new Category { Id = 4, Name = "Comics" },
+                    new Category { Id = 5, Name = "Cookbooks" },
+                     new Category { Id = 6, Name = "Education" },
+                      new Category { Id = 7, Name = "Arts & Photography" }
+                );
+
+            modelBuilder.Entity<Author>().HasData(
+             new Author { Id = 1, FullName = "Jane Austen" },
+             new Author { Id = 2, FullName = "Charles Dickens" },
+             new Author { Id = 3, FullName = "Agatha Christie" },
+             new Author { Id = 4, FullName = "F. Scott Fitzgerald" },
+             new Author { Id = 5, FullName = "J.K. Rowling" },
+             new Author { Id = 6, FullName = "Gabriel Garcia Marquez" },
+             new Author { Id = 7, FullName = "Harper Lee" },
+             new Author { Id = 8, FullName = "George Orwell" },
+             new Author { Id = 9, FullName = "Ernest Hemingway" },
+             new Author { Id = 10, FullName = "Toni Morrison" },
+             new Author { Id = 11, FullName = "Mark Twain" },
+             new Author { Id = 12, FullName = "J.R.R. Tolkien" },
+             new Author { Id = 13, FullName = "Virginia Woolf" },
+             new Author { Id = 14, FullName = "Leo Tolstoy" },
+             new Author { Id = 15, FullName = "Emily Brontë" }
+         );
+
+            modelBuilder.Entity<Discount>().HasData(
+                  new Discount { Id = 1, Name = "Spring Sale", Percent = 15 },
+                  new Discount { Id = 2, Name = "Back-to-School", Percent = 10 },
+                  new Discount { Id = 3, Name = "Holiday Special", Percent = 25 },
+                  new Discount { Id = 4, Name = "Summer Reading", Percent = 20 },
+                  new Discount { Id = 5, Name = "New Year's Clearance", Percent = 30 },
+                  new Discount { Id = 6, Name = "Weekend Flash Sale", Percent = 15 },
+                  new Discount { Id = 7, Name = "Member Exclusive", Percent = 10 },
+                  new Discount { Id = 8, Name = "Book Club Discount", Percent = 20 },
+                  new Discount { Id = 9, Name = "Black Friday", Percent = 40 },
+                  new Discount { Id = 10, Name = "Fall Frenzy", Percent = 15 }
+                 );
+
+            modelBuilder.Entity<Product>().HasData(
+                 new Product
+                 {
+                     Id = 1,
+                     Name = "The Enchanting Tale",
+                     Description = "In the magical realm of Eldoria, where dragons soar and wizards weave spells, embark on a mesmerizing journey with 'The Enchanting Tale.' This epic fantasy novel, written by the acclaimed author Jane Austen, unfolds a captivating narrative of courage, destiny, and enchantment. Join our young protagonist as they navigate through mystical landscapes, encountering mythical creatures and facing formidable challenges.",
+                     Price = 55,
+                     Rate = 3,
+                     SaleCount = 5,
+                     StockCount = 10,
+                     Sku = "ENCTLE123",
+                     AuthorId = 1,  
+                     DiscountId = 1,
+                     CategoryId = 1,
+                     CreatedDate = new DateTime(2022, 10, 18)
+                 },
+                   new Product
+                   {
+                       Id = 2,
+                       Name = "Whispers of the Cosmos",
+                       Description = "Delve into the cosmic mysteries with 'Whispers of the Cosmos,' a thought-provoking science fiction masterpiece. Written by the visionary J.R.R. Tolkien, this interstellar journey takes readers beyond the limits of space and time. Join a diverse cast of characters as they unravel the secrets of the universe, encountering extraterrestrial civilizations and confronting the profound questions that echo through the cosmos.",
+                       Price = 43,
+                       Rate = 4,
+                       SaleCount = 8,
+                       StockCount = 15,
+                       Sku = "COSMOS456",
+                       AuthorId = 2,  
+                       DiscountId = 3,
+                       CategoryId = 2,
+                       CreatedDate = new DateTime(2023, 11, 19)
+                   },
+
+                   new Product
+                   {
+                       Id = 3,
+                       Name = "Gourmet Adventures",
+                       Description = "Embark on a culinary journey with 'Gourmet Adventures,' a delightful cookbook filled with delectable recipes from renowned chefs worldwide. From exotic appetizers to mouth-watering desserts, savor the flavors of diverse cuisines and elevate your culinary skills.",
+                       Price = 30,
+                       Rate = 5,
+                       SaleCount = 12,
+                       StockCount = 20,
+                       Sku = "GOURMET789",
+                       AuthorId = 3,  
+                       DiscountId = 2,
+                       CategoryId = 5,
+                       CreatedDate = new DateTime(2021, 09, 10)
+                   },
+                    new Product
+                    {
+                        Id = 4,
+                        Name = "Historical Chronicles",
+                        Description = "Immerse yourself in the past with 'Historical Chronicles,' a collection of meticulously researched historical accounts. Written by F. Scott Fitzgerald, these narratives bring to life the events and characters that shaped our world.",
+                        Price = 46,
+                        Rate = 3,
+                        SaleCount = 7,
+                        StockCount = 18,
+                        Sku = "HISTCHRON101",
+                        AuthorId = 4,  
+                        DiscountId = 4,
+                        CategoryId = 6,
+                        CreatedDate = new DateTime(2023, 11, 08)
+                    },
+                    new Product
+                    {
+                        Id = 5,
+                        Name = "Magical Realms",
+                        Description = "Step into 'Magical Realms,' a enchanting compilation of short stories that blur the lines between reality and fantasy. Crafted by J.K. Rowling, each tale unfolds a world where magic and wonder coexist with the ordinary.",
+                        Price = 60,
+                        Rate = 5,
+                        SaleCount = 10,
+                        StockCount = 15,
+                        Sku = "MAGIREALM222",
+                        AuthorId = 5,  
+                        DiscountId = 1,
+                        CategoryId = 3,
+                        CreatedDate = new DateTime(2024, 01, 15)
+                    },
+                    new Product
+                    {
+                        Id = 6,
+                        Name = "Mindful Living",
+                        Description = "Discover the path to mindful living with 'Mindful Living,' a guide to wellness and self-discovery. In this insightful book by Gabriel Garcia Marquez, learn practical techniques and wisdom to cultivate a balanced and meaningful life.",
+                        Price = 50,
+                        Rate = 3,
+                        SaleCount = 15,
+                        StockCount = 25,
+                        Sku = "MINDLIVE333",
+                        AuthorId = 6,  
+                        DiscountId = 3,
+                        CategoryId = 7,
+                        CreatedDate = new DateTime(2023, 11, 30)
+                    },
+
+                        new Product
+                        {
+                            Id = 7,
+                            Name = "Harmony of Colors",
+                            Description = "Explore the world of art with 'Harmony of Colors,' a vibrant collection of paintings and photographs. Authored by Harper Lee, this book celebrates the beauty of visual expression and the emotional resonance of color.",
+                            Price = 55,
+                            Rate = 4,
+                            SaleCount = 8,
+                            StockCount = 20,
+                            Sku = "HARMCOLOR444",
+                            AuthorId = 7,  
+                            DiscountId = 5,
+                            CategoryId = 4,
+                            CreatedDate = new DateTime(2023, 06, 08)
+                        },
+
+                         new Product
+                         {
+                             Id = 8,
+                             Name = "Animal Kingdom",
+                             Description = "Dive into the wonders of the 'Animal Kingdom,' a captivating exploration of wildlife and ecosystems. Authored by George Orwell, this book showcases the beauty and diversity of the natural world.",
+                             Price = 30,
+                             Rate = 2,
+                             SaleCount = 10,
+                             StockCount = 15,
+                             Sku = "ANIMALKING555",
+                             AuthorId = 8,  
+                             DiscountId = 2,
+                             CategoryId = 6,
+                             CreatedDate = new DateTime(2023, 11, 12)
+                         },
+
+                          new Product
+                          {
+                              Id = 9,
+                              Name = "Culinary Adventures",
+                              Description = "Embark on 'Culinary Adventures,' a gastronomic journey through diverse cuisines and culinary traditions. Authored by Ernest Hemingway, this cookbook brings the joy of cooking to enthusiasts of all skill levels.",
+                              Price = 40,
+                              Rate = 5,
+                              SaleCount = 12,
+                              StockCount = 18,
+                              Sku = "CULADVENT666",
+                              AuthorId = 9,  
+                              DiscountId = 4,
+                              CategoryId = 5,
+                              CreatedDate = new DateTime(2022, 12, 25)
+                          },
+
+                           new Product
+                           {
+                               Id = 10,
+                               Name = "Exploring the Cosmos",
+                               Description = "Embark on a cosmic adventure with 'Exploring the Cosmos,' a journey into the mysteries of the universe. Authored by Toni Morrison, this science fiction odyssey takes readers on a mind-bending exploration of space and time.",
+                               Price = 60,
+                               Rate = 5,
+                               SaleCount = 15,
+                               StockCount = 22,
+                               Sku = "COSMOEXP777",
+                               AuthorId = 10,  
+                               DiscountId = 1,
+                               CategoryId = 2,
+                               CreatedDate = new DateTime(2023, 07, 18)
+                           },
+    new Product
+    {
+        Id = 11,
+        Name = "Surreal Dreams",
+        Description = "Enter the realm of 'Surreal Dreams,' a collection of imaginative short stories that defy conventional reality. Authored by Virginia Woolf, each tale invites readers to explore the boundaries of perception and dreamlike narratives.",
+        Price = 46,
+        Rate = 4,
+        SaleCount = 11,
+        StockCount = 16,
+        Sku = "SURREALDREAM888",
+        AuthorId = 11, 
+        DiscountId = 3,
+        CategoryId = 1,
+        CreatedDate = new DateTime(2023, 08, 18)
+    },
+    new Product
+    {
+        Id = 12,
+        Name = "The Art of Serenity",
+        Description = "Discover 'The Art of Serenity,' a guide to mindfulness and inner peace by Leo Tolstoy. This inspirational book offers timeless wisdom and practical insights to navigate the complexities of modern life.",
+        Price = 35,
+        Rate = 3,
+        SaleCount = 13,
+        StockCount = 19,
+        Sku = "SERENITY999",
+        AuthorId = 12,  
+        DiscountId = 2,
+        CategoryId = 7,
+        CreatedDate = new DateTime(2022, 09, 18)
+    },
+    new Product
+    {
+        Id = 13,
+        Name = "Epic Adventures",
+        Description = "Embark on 'Epic Adventures,' a thrilling compilation of action-packed stories from master storyteller Mark Twain. This riveting collection takes readers on a journey through daring escapades, uncharted territories, and the triumph of the human spirit.",
+        Price = 40,
+        Rate =3,
+        SaleCount = 9,
+        StockCount = 14,
+        Sku = "EPICADV1010",
+        AuthorId = 13,  
+        DiscountId = 4,
+        CategoryId = 3,
+        CreatedDate = new DateTime(2023, 10, 18)
+    },
+    new Product
+    {
+        Id = 14,
+        Name = "Poetic Musings",
+        Description = "Dive into the enchanting world of 'Poetic Musings,' a lyrical journey through the verses of Langston Hughes. This collection of poetry captures the essence of life, love, and the beauty found in the simple moments of existence.",
+        Price = 30,
+        Rate = 4,
+        SaleCount = 10,
+        StockCount = 17,
+        Sku = "POETICMUSE1111",
+        AuthorId = 14,  
+        DiscountId = 5,
+        CategoryId = 5,
+        CreatedDate = new DateTime(2022, 12, 18)
+    },
+
+    new Product
+    {
+        Id = 15,
+        Name = "Thrilling Escapes",
+        Description = "Immerse yourself in 'Thrilling Escapes,' a captivating collection of suspenseful tales from the brilliant mind of H.G. Wells. This anthology explores the boundaries of imagination and keeps readers on the edge of their seats.",
+        Price = 45,
+        Rate = 3,
+        SaleCount = 14,
+        StockCount = 21,
+        Sku = "THRILLESCAPE1212",
+        AuthorId = 15,  
+        DiscountId = 1,
+        CategoryId = 3,
+        CreatedDate = new DateTime(2023, 12, 29)
+    }
+   );
+
+            modelBuilder.Entity<ProductImage>().HasData(
+          new ProductImage { Id = 1, Image = "product-1.webp", IsMain = true, ProductId = 1, SoftDeleted = false },
+          new ProductImage { Id = 2, Image = "product-2.webp", IsMain = false, ProductId = 1, SoftDeleted = false },
+
+           new ProductImage { Id = 3, Image = "product-2.webp", IsMain = true, ProductId = 2, SoftDeleted = false },
+          new ProductImage { Id = 4, Image = "product-3.webp", IsMain = false, ProductId = 2, SoftDeleted = false },
+
+          new ProductImage { Id = 5, Image = "product-3.webp", IsMain = true, ProductId = 3, SoftDeleted = false },
+          new ProductImage { Id = 6, Image = "product-4.webp", IsMain = false, ProductId = 3, SoftDeleted = false },
+
+           new ProductImage { Id = 7, Image = "product-4.webp", IsMain = true, ProductId = 4, SoftDeleted = false },
+          new ProductImage { Id = 8, Image = "product-5.webp", IsMain = false, ProductId = 4, SoftDeleted = false },
+
+           new ProductImage { Id = 9, Image = "product-5.webp", IsMain = true, ProductId = 5, SoftDeleted = false },
+          new ProductImage { Id = 10, Image = "product-6.webp", IsMain = false, ProductId = 5, SoftDeleted = false },
+
+           new ProductImage { Id = 11, Image = "product-6.webp", IsMain = true, ProductId = 6, SoftDeleted = false },
+          new ProductImage { Id = 12, Image = "product-7.webp", IsMain = false, ProductId = 6, SoftDeleted = false },
+
+             new ProductImage { Id = 13, Image = "product-7.webp", IsMain = true, ProductId = 7, SoftDeleted = false },
+          new ProductImage { Id = 14, Image = "product-8.webp", IsMain = false, ProductId = 7, SoftDeleted = false },
+
+           new ProductImage { Id = 15, Image = "product-8.webp", IsMain = true, ProductId = 8, SoftDeleted = false },
+          new ProductImage { Id = 16, Image = "product-9.webp", IsMain = false, ProductId = 8, SoftDeleted = false },
+
+          new ProductImage { Id = 17, Image = "product-9.webp", IsMain = true, ProductId = 9, SoftDeleted = false },
+          new ProductImage { Id = 18, Image = "product-10.webp", IsMain = false, ProductId = 9, SoftDeleted = false },
+
+           new ProductImage { Id = 19, Image = "product-10.webp", IsMain = true, ProductId = 10, SoftDeleted = false },
+          new ProductImage { Id = 20, Image = "product-11.webp", IsMain = false, ProductId = 10, SoftDeleted = false },
+
+           new ProductImage { Id = 21, Image = "product-11.webp", IsMain = true, ProductId = 11, SoftDeleted = false },
+          new ProductImage { Id = 22, Image = "product-12.webp", IsMain = false, ProductId = 11, SoftDeleted = false },
+
+           new ProductImage { Id = 23, Image = "product-12.webp", IsMain = true, ProductId = 12, SoftDeleted = false },
+          new ProductImage { Id = 24, Image = "product-1.webp", IsMain = false, ProductId = 12, SoftDeleted = false },
+
+                 new ProductImage { Id = 25, Image = "product-3.webp", IsMain = true, ProductId = 13, SoftDeleted = false },
+          new ProductImage { Id = 26, Image = "product-5.webp", IsMain = false, ProductId = 13, SoftDeleted = false },
+
+           new ProductImage { Id = 27, Image = "product-7.webp", IsMain = true, ProductId = 14, SoftDeleted = false },
+          new ProductImage { Id = 28, Image = "product-4.webp", IsMain = false, ProductId = 14, SoftDeleted = false },
+
+           new ProductImage { Id = 29, Image = "product-6.webp", IsMain = true, ProductId = 15, SoftDeleted = false },
+          new ProductImage { Id = 30, Image = "product-4.webp", IsMain = false, ProductId = 15, SoftDeleted = false }
+          );
+
+            modelBuilder.Entity<ProductTag>().HasData(
+      new ProductTag { Id = 1, ProductId = 1, TagId = 1 },
+      new ProductTag { Id = 2, ProductId = 1, TagId = 5 },
+      new ProductTag { Id = 3, ProductId = 1, TagId = 8 },
+      new ProductTag { Id = 4, ProductId = 1, TagId = 4 },
+      new ProductTag { Id = 5, ProductId = 2, TagId = 1 },
+      new ProductTag { Id = 6, ProductId = 2, TagId = 7 },
+      new ProductTag { Id = 7, ProductId = 2, TagId = 3 },
+      new ProductTag { Id = 8, ProductId = 2, TagId = 6 },
+      new ProductTag { Id = 9, ProductId = 3, TagId = 1 },
+      new ProductTag { Id = 10, ProductId = 3, TagId = 2 },
+      new ProductTag { Id = 11, ProductId = 3, TagId = 5 },
+      new ProductTag { Id = 12, ProductId = 3, TagId = 3 },
+      new ProductTag { Id = 13, ProductId = 4, TagId = 1 },
+      new ProductTag { Id = 14, ProductId = 4, TagId = 5 },
+      new ProductTag { Id = 15, ProductId = 4, TagId = 6 },
+      new ProductTag { Id = 16, ProductId = 5, TagId = 4 },
+      new ProductTag { Id = 17, ProductId = 5, TagId = 1 },
+      new ProductTag { Id = 18, ProductId = 5, TagId = 4 },
+      new ProductTag { Id = 19, ProductId = 6, TagId = 3 },
+      new ProductTag { Id = 20, ProductId = 6, TagId = 6 },
+      new ProductTag { Id = 21, ProductId = 6, TagId = 1 },
+      new ProductTag { Id = 22, ProductId = 7, TagId = 7 },
+      new ProductTag { Id = 23, ProductId = 7, TagId = 5 },
+      new ProductTag { Id = 24, ProductId = 7, TagId = 3 },
+      new ProductTag { Id = 25, ProductId = 8, TagId = 6 },
+      new ProductTag { Id = 26, ProductId = 8, TagId = 8 },
+      new ProductTag { Id = 27, ProductId = 8, TagId = 2 },
+      new ProductTag { Id = 28, ProductId = 8, TagId = 5 },
+      new ProductTag { Id = 29, ProductId = 9, TagId = 1 },
+      new ProductTag { Id = 30, ProductId = 9, TagId = 7 },
+      new ProductTag { Id = 31, ProductId = 9, TagId = 2 },
+      new ProductTag { Id = 32, ProductId = 9, TagId = 4 },
+      new ProductTag { Id = 33, ProductId = 10, TagId = 3 },
+      new ProductTag { Id = 34, ProductId = 10, TagId = 6 },
+      new ProductTag { Id = 35, ProductId = 10, TagId = 5 },
+      new ProductTag { Id = 36, ProductId = 10, TagId = 7 },
+      new ProductTag { Id = 37, ProductId = 11, TagId = 1 },
+      new ProductTag { Id = 38, ProductId = 11, TagId = 3 },
+      new ProductTag { Id = 39, ProductId = 11, TagId = 2 },
+       new ProductTag { Id = 40, ProductId = 12, TagId = 3 },
+      new ProductTag { Id = 41, ProductId = 12, TagId = 4 },
+      new ProductTag { Id = 42, ProductId = 12, TagId = 8 },
+        new ProductTag { Id = 43, ProductId = 13, TagId = 1 },
+      new ProductTag { Id = 44, ProductId = 13, TagId = 3 },
+      new ProductTag { Id = 45, ProductId = 13, TagId = 5 },
+           new ProductTag { Id = 46, ProductId = 14, TagId = 2 },
+      new ProductTag { Id = 47, ProductId = 14, TagId = 6 },
+      new ProductTag { Id = 48, ProductId = 14, TagId = 8 },
+           new ProductTag { Id = 49, ProductId = 15, TagId = 3 },
+      new ProductTag { Id = 50, ProductId = 15, TagId = 5 },
+      new ProductTag { Id = 51, ProductId = 15, TagId = 8 }
+  );
+
+
+
+            modelBuilder.Entity<ProductComment>().HasData(
+    new ProductComment { Id = 1, Message = "The intricate plot and well-developed characters in this book kept me hooked from the first page. A must-read for anyone who loves a gripping story!", ProductId = 1, AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104" },
+    new ProductComment { Id = 2, Message = "I was pleasantly surprised by the unexpected twists and turns in this book. The author's storytelling style is captivating, making it a compelling read.", ProductId = 2, AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85" },
+    new ProductComment { Id = 3, Message = "The emotional depth and thought-provoking themes explored in this book left a lasting impact. I highly recommend it to fellow readers who appreciate profound storytelling.", ProductId = 3, AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7" },
+    new ProductComment { Id = 4, Message = "An engaging and well-written book that offers a unique perspective on its subject matter. The author's creativity shines through, making it a standout addition to my reading list.", ProductId = 4, AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" },
+    new ProductComment { Id = 5, Message = "This book has become one of my all-time favorites. The rich narrative and memorable characters make it a must-read for book enthusiasts. I look forward to exploring more works by the same author.", ProductId = 5, AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104" },
+    new ProductComment { Id = 6, Message = "The author's ability to weave together various storylines in this book is truly commendable. It kept me engrossed until the very end, and I can't wait to delve into their other literary creations.", ProductId = 6, AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85" },
+    new ProductComment { Id = 7, Message = "A thought-provoking and well-researched book that explores complex themes with clarity. The author's writing style adds a layer of authenticity to the narrative, making it a standout work in its genre.", ProductId = 7, AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7" },
+    new ProductComment { Id = 8, Message = "Kudos to the author for creating such a captivating story. This book is a testament to their storytelling prowess, and I eagerly await their future works.", ProductId = 8, AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" },
+    new ProductComment { Id = 9, Message = "The beautifully crafted prose and engaging narrative of this book make it a standout in contemporary literature. I recommend it to fellow readers who appreciate a well-told tale.", ProductId = 9, AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104" },
+    new ProductComment { Id = 10, Message = "An enthralling read that seamlessly blends elements of mystery and suspense. This book kept me on the edge of my seat, and I'm eager to explore more works by this talented author.", ProductId = 10, AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7" },
+    new ProductComment { Id = 11, Message = "I thoroughly enjoyed the immersive world created by the author in this book. The descriptive prose and well-defined characters added depth to the narrative, making it a standout read.", ProductId = 11, AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" },
+    new ProductComment { Id = 12, Message = "This book offers a fresh perspective on a familiar genre. The author's innovative approach and storytelling techniques make it a compelling addition to my collection. Highly recommended!", ProductId = 12, AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104" },
+    new ProductComment { Id = 13, Message = "A captivating journey through the pages of this book. The author's ability to create a vivid and atmospheric setting enhances the overall reading experience. A must-read for those who appreciate literary craftsmanship.", ProductId = 13, AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85" },
+    new ProductComment { Id = 14, Message = "I was pleasantly surprised by the unique plot twists in this book. The author's storytelling prowess shines through, keeping readers engaged until the final chapter. An enjoyable read that deserves a spot on every bookshelf.", ProductId = 14, AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7" },
+    new ProductComment { Id = 15, Message = "This book is a gem in contemporary literature. The author's exploration of complex themes and relatable characters resonated with me on a profound level. An enriching read that I'll cherish for years to come.", ProductId = 15, AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e" }
+);
 
 
 
