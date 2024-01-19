@@ -13,6 +13,8 @@ namespace Pustok_Backend.Services.Interfaces
         Task CreateAsync(TagCreateVM tag);
         Task EditAsync(TagEditVM tag);
         Task<TagVM> GetByNameWithoutTrackingAsync(string name);
-        List<SelectListItem> GetAllSelectedTagsAsync();
+        List<SelectListItem> GetAllTagsAsync();
+
+        List<SelectListItem> GetAllSelectedTagsAsync(List<int> selected);
     }
 }

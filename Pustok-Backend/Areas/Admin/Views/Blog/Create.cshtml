@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Create";
+    var currentPage = TempData["CurrentPage"] as int?;
+
 }
 
 <div class="container mt-5">
@@ -40,6 +42,6 @@
 
         </div>
         <button type="submit" class="btn btn-primary mr-2 mt-5">Submit</button>
-        <a class="btn btn-light mt-5" asp-action="Index">Back</a>
+        <a class="btn btn-light mt-5" asp-action="Index" asp-route-page="@currentPage">Back</a>
     </form>
 </div>

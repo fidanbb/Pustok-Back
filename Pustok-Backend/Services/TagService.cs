@@ -76,12 +76,23 @@ namespace Pustok_Backend.Services
                                                          .FirstOrDefaultAsync(m => m.Name.Trim().ToLower() == name.Trim().ToLower()));
         }
 
-        public List<SelectListItem> GetAllSelectedTagsAsync()
+        public List<SelectListItem> GetAllTagsAsync()
         {
             return _context.Tags.Select(m => new SelectListItem()
             {
                 Text = m.Name,
                 Value = m.Id.ToString(),
+
+            }).ToList();
+        }
+
+        public List<SelectListItem> GetAllSelectedTagsAsync(List<int> selected)
+        {
+            return _context.Tags.Select(m => new SelectListItem()
+            {
+                Text = m.Name,
+                Value = m.Id.ToString(),
+                Selected = selected.Contains(m.Id)
 
             }).ToList();
         }

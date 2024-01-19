@@ -16,5 +16,8 @@ namespace Pustok_Backend.Areas.Admin.ViewModels.Blog
         public List<Models.BlogComment> Comments { get; set; }
         public List<Models.Tag> Tags { get; set; }
 
+        public List<BlogTag> BlogTags { get; set; }
+
+
     }
 }

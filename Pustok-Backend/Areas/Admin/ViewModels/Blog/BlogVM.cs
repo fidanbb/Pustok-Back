@@ -1,4 +1,6 @@
-﻿namespace Pustok_Backend.Areas.Admin.ViewModels.Blog
+﻿using Pustok_Backend.Models;
+
+namespace Pustok_Backend.Areas.Admin.ViewModels.Blog
 {
     public class BlogVM
     {
@@ -10,6 +12,7 @@
         public string Author { get; set; }
         public string Title { get; set; }
         public string Image { get; set; }
-       
+
+
     }
 }

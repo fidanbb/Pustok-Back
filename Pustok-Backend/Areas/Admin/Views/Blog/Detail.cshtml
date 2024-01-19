@@ -1,6 +1,7 @@
 ﻿@model BlogDetailVM
 @{
     ViewData["Title"] = "Detail";
+    var currentPage = TempData["CurrentPage"] as int?;
 }
 
 <style>
@@ -79,7 +80,7 @@
        
     
     <div class="back mt-2">
-        <a class="btn btn-info text-white" asp-action="Index">Back</a>
+            <a class="btn btn-info text-white" asp-action="Index" asp-route-page="@currentPage">Back</a>
     </div>
 </div>
 </div>

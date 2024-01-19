@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LrHVBDpj5LtUwtpA2GRD7oBLPjKBpSVIMvIf2AIgFOo=",
+  "Hash": "dPOFOoOhMEFwCWzEc2Sko9jKbZnE5TFQ0RaXlAlkzBY=",
   "Source": "Pustok-Backend",
   "BasePath": "_content/Pustok-Backend",
   "Mode": "Default",
@@ -33609,12 +33609,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\pages\\wishlist.scss"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\1b65b7db-24a7-45f2-b00b-2e286fae2e80-blog-grid-3.webp",
+      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\3f0ff220-e0f8-4c6b-b067-c859f93303d0 - blog-grid-2.webp",
       "SourceId": "Pustok-Backend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\",
       "BasePath": "_content/Pustok-Backend",
-      "RelativePath": "assets/images/1b65b7db-24a7-45f2-b00b-2e286fae2e80-blog-grid-3.webp",
+      "RelativePath": "assets/images/3f0ff220-e0f8-4c6b-b067-c859f93303d0 - blog-grid-2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33625,26 +33625,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\1b65b7db-24a7-45f2-b00b-2e286fae2e80-blog-grid-3.webp"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\2473988f-048d-4d08-a482-8095fde25243-blog-grid-4.webp",
-      "SourceId": "Pustok-Backend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\",
-      "BasePath": "_content/Pustok-Backend",
-      "RelativePath": "assets/images/2473988f-048d-4d08-a482-8095fde25243-blog-grid-4.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\2473988f-048d-4d08-a482-8095fde25243-blog-grid-4.webp"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\3f0ff220-e0f8-4c6b-b067-c859f93303d0 - blog-grid-2.webp"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\44bac618-ee89-4c6e-970c-7680bb7c5792-promo-banner-full.webp",
@@ -33759,6 +33740,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\best-seller-bg.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\bfddeccf-59f1-4346-a964-bb380b9517d5-blog-grid-3.webp",
+      "SourceId": "Pustok-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\",
+      "BasePath": "_content/Pustok-Backend",
+      "RelativePath": "assets/images/bfddeccf-59f1-4346-a964-bb380b9517d5-blog-grid-3.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\bfddeccf-59f1-4346-a964-bb380b9517d5-blog-grid-3.webp"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\blog-grid-1.webp",

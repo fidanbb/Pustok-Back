@@ -84,6 +84,8 @@ namespace Pustok_Backend.Helpers.Mappings
             CreateMap<BlogAuthorEditVM, BlogAuthor>();
 
             CreateMap<Blog, BlogCreateVM>().ReverseMap();
+            CreateMap<BlogEditVM, Blog>();
+
 
         }
     }
