@@ -24,6 +24,7 @@ namespace Pustok_Backend.Helpers
             services.AddScoped<ITagService, TagService>();
             services.AddScoped<IBlogAuthorService, BlogAuthorService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
 
 
 

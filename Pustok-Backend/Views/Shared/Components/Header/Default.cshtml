@@ -236,27 +236,13 @@
                             <i class="fa-solid fa-angle-down"></i>
                         </a>
                         <ul class="category-menu">
-                            <li class="category-item">
-                                <a href="">Arts & Photography</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="">Biographies</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="">Business & Money</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="">Childrens's Books</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="">Comics</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="">Cookbooks</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="">Education</a>
-                            </li>
+                            @foreach (var item in Model.Categories)
+                            {
+                                <li class="category-item">
+                                    <a href="">@item.Name</a>
+                                </li>
+
+                            }
                         </ul>
                     </div>
                 </div>

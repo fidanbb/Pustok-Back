@@ -181,223 +181,48 @@
                      role="tabpanel"
                      aria-labelledby="pills-home-tab">
                     <div class="product-slider">
-                        <div class="product-card" data-id="1">
-                            <div class="product-header">
-                                <a class="author" href="">Cpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Beats EP Wired On-Ear Headphone-Black</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-4.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="1">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-5.webp" alt="" />
+                        
+                        @foreach (var item in Model.FeaturedProducts)
+                        {
+                            <div class="product-card" data-id="@item.Id">
+                                <div class="product-header">
+                                    <a class="author" href="">@item.AuthorName</a>
+                                    <h3>
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+                                    </h3>
+                                </div>
+                                <div class="product-card-body">
+                                    <div class="card-image">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                                         </a>
-                                        <div class="hover-btns" data-id="1">
-                                            <a class="added-cart" href="">
-                                                <i class="fas fa-shopping-basket"></i>
+                                        <div class="hover-content" data-id="@item.Id">
+                                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                             </a>
-                                            <a class="added-removed-wishlist" href="">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
+                                            <div class="hover-btns" data-id="@item.Id">
+                                                <a class="added-cart" href="">
+                                                    <i class="fas fa-shopping-basket"></i>
+                                                </a>
+                                                <a class="added-removed-wishlist" href="">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                                <a class="open-modal" href="">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£12.20</span>
-                                    <del class="price-old">£15.20</del>
-                                    <span class="price-discount">20%</span>
+                                    <div class="card-price">
+                                        <span class="price">$@(item.Price - ((item.Price*item.Discount)/100))</span>
+                                        <del class="price-old">$@item.Price</del>
+                                        <span class="price-discount">@item.Discount%</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="product-card" data-id="2">
-                            <div class="product-header">
-                                <a class="author" href="">Mpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Beats Solo3 Wireless On-Ear Headphones 2</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-3.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="2">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-2.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="1">
-                                            <a class="added-cart" href="">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a class="added-removed-wishlist" href="">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£49.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="3">
-                            <div class="product-header">
-                                <a class="author" href="">Mpple</a>
-                                <h3>
-                                    <a href="productdetail.html">In 10 Minutes, I'll Give You The Truth About</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-7.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="3">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-6.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="3">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="4">
-                            <div class="product-header">
-                                <a class="author" href="">Dpple</a>
-                                <h3>
-                                    <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-9.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="4">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-8.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="4">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="5">
-                            <div class="product-header">
-                                <a class="author" href="">Dpple</a>
-                                <h3>
-                                    <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-10.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="5">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-11.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="5">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="6">
-                            <div class="product-header">
-                                <a class="author" href="">Jpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Rpple iPad with Retina Display MD510LL/A</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-1.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="6">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-12.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="6">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
+                        }
+                       
                     </div>
                 </div>
                 <div class="tab-pane fade"
@@ -405,223 +230,46 @@
                      role="tabpanel"
                      aria-labelledby="pills-profile-tab">
                     <div class="product-slider-2">
-                        <div class="product-card" data-id="6">
-                            <div class="product-header">
-                                <a class="author" href="">Jpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Rpple iPad with Retina Display MD510LL/A</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-1.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="6">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-12.webp" alt="" />
+                        @foreach (var item in Model.NewArrivedProducts)
+                        {
+                            <div class="product-card" data-id="@item.Id">
+                                <div class="product-header">
+                                    <a class="author" href="">@item.AuthorName</a>
+                                    <h3>
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+                                    </h3>
+                                </div>
+                                <div class="product-card-body">
+                                    <div class="card-image">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                                         </a>
-                                        <div class="hover-btns" data-id="6">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
+                                        <div class="hover-content" data-id="@item.Id">
+                                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                             </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
+                                            <div class="hover-btns" data-id="@item.Id">
+                                                <a class="added-cart" href="">
+                                                    <i class="fas fa-shopping-basket"></i>
+                                                </a>
+                                                <a class="added-removed-wishlist" href="">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                                <a class="open-modal" href="">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="1">
-                            <div class="product-header">
-                                <a class="author" href="">Cpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Beats EP Wired On-Ear Headphone-Black</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-4.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="1">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-5.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="1">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
+                                    <div class="card-price">
+                                        <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
+                                        <del class="price-old">$@item.Price</del>
+                                        <span class="price-discount">@item.Discount%</span>
                                     </div>
                                 </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
                             </div>
-                        </div>
-                        <div class="product-card" data-id="4">
-                            <div class="product-header">
-                                <a class="author" href="">Dpple</a>
-                                <h3>
-                                    <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-9.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="4">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-8.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="4">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="5">
-                            <div class="product-header">
-                                <a class="author" href="">Dpple</a>
-                                <h3>
-                                    <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-10.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="5">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-11.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="5">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="product-card" data-id="2">
-                            <div class="product-header">
-                                <a class="author" href="">Mpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Beats Solo3 Wireless On-Ear Headphones 2</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-3.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="2">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-2.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="2">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="3">
-                            <div class="product-header">
-                                <a class="author" href="">Mpple</a>
-                                <h3>
-                                    <a href="productdetail.html">In 10 Minutes, I'll Give You The Truth About</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-7.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="3">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-6.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="3">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
+                        }
                     </div>
                 </div>
                 <div class="tab-pane fade"
@@ -629,222 +277,46 @@
                      role="tabpanel"
                      aria-labelledby="pills-contact-tab">
                     <div class="product-slider-3">
-                        <div class="product-card" data-id="6">
-                            <div class="product-header">
-                                <a class="author" href="">Jpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Rpple iPad with Retina Display MD510LL/A</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-1.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="6">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-12.webp" alt="" />
+                        @foreach (var item in Model.MostViewedProducts)
+                        {
+                            <div class="product-card" data-id="@item.Id">
+                                <div class="product-header">
+                                    <a class="author" href="">@item.AuthorName</a>
+                                    <h3>
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+                                    </h3>
+                                </div>
+                                <div class="product-card-body">
+                                    <div class="card-image">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                                         </a>
-                                        <div class="hover-btns" data-id="6">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
+                                        <div class="hover-content" data-id="@item.Id">
+                                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                             </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
+                                            <div class="hover-btns" data-id="@item.Id">
+                                                <a class="added-cart" href="">
+                                                    <i class="fas fa-shopping-basket"></i>
+                                                </a>
+                                                <a class="added-removed-wishlist" href="">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                                <a class="open-modal" href="">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="2">
-                            <div class="product-header">
-                                <a class="author" href="">Mpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Beats Solo3 Wireless On-Ear Headphones 2</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-3.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="2">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-2.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="2">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
+                                    <div class="card-price">
+                                        <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
+                                        <del class="price-old">$@item.Price</del>
+                                        <span class="price-discount">@item.Discount%</span>
                                     </div>
                                 </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
                             </div>
-                        </div>
-                        <div class="product-card" data-id="3">
-                            <div class="product-header">
-                                <a class="author" href="">Mpple</a>
-                                <h3>
-                                    <a href="productdetail.html">In 10 Minutes, I'll Give You The Truth About</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-7.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="3">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-6.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="3">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="5">
-                            <div class="product-header">
-                                <a class="author" href="">Dpple</a>
-                                <h3>
-                                    <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-10.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="5">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-11.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="5">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="1">
-                            <div class="product-header">
-                                <a class="author" href="">Cpple</a>
-                                <h3>
-                                    <a href="productdetail.html">Beats EP Wired On-Ear Headphone-Black</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-4.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="1">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-5.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="1">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card" data-id="4">
-                            <div class="product-header">
-                                <a class="author" href="">Dpple</a>
-                                <h3>
-                                    <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                                </h3>
-                            </div>
-                            <div class="product-card-body">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-9.webp" alt="" />
-                                    </a>
-                                    <div class="hover-content" data-id="4">
-                                        <a href="productdetail.html">
-                                            <img src="~/assets/images/product-8.webp" alt="" />
-                                        </a>
-                                        <div class="hover-btns" data-id="4">
-                                            <a href="cart.html">
-                                                <i class="fas fa-shopping-basket"></i>
-                                            </a>
-                                            <a href="wishlist.html">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a class="open-modal" href="">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-price">
-                                    <span class="price">£51.20</span>
-                                    <del class="price-old">£51.20</del>
-                                    <span class="price-discount">20%</span>
-                                </div>
-                            </div>
-                        </div>
+
+                        }
                     </div>
                 </div>
             </div>
@@ -863,223 +335,46 @@
 
     <div class="container">
         <div class="product-slider">
-            <div class="product-card" data-id="1">
-                <div class="product-header">
-                    <a class="author" href="">Cpple</a>
-                    <h3>
-                        <a href="productdetail.html">Beats EP Wired On-Ear Headphone-Black</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-4.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="1">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-5.webp" alt="" />
+            @foreach (var item in Model.DealOfTheDay)
+            {
+                <div class="product-card" data-id="@item.Id">
+                    <div class="product-header">
+                        <a class="author" href="">@item.AuthorName</a>
+                        <h3>
+                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+                        </h3>
+                    </div>
+                    <div class="product-card-body">
+                        <div class="card-image">
+                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                             </a>
-                            <div class="hover-btns" data-id="1">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
+                            <div class="hover-content" data-id="1">
+                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                    <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                 </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
+                                <div class="hover-btns" data-id="1">
+                                    <a class="added-cart" href="">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </a>
+                                    <a class="added-removed-wishlist" href="">
+                                        <i class="fas fa-heart"></i>
+                                    </a>
+                                    <a class="open-modal" href="">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
+                        <div class="card-price">
+                            <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
+                            <del class="price-old">$@item.Price</del>
+                            <span class="price-discount">@item.Discount%</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card" data-id="2">
-                <div class="product-header">
-                    <a class="author" href="">Mpple</a>
-                    <h3>
-                        <a href="productdetail.html">Beats Solo3 Wireless On-Ear Headphones 2</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-3.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="2">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-2.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="2">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="3">
-                <div class="product-header">
-                    <a class="author" href="">Mpple</a>
-                    <h3>
-                        <a href="productdetail.html">In 10 Minutes, I'll Give You The Truth About</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-7.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="3">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-6.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="3">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="4">
-                <div class="product-header">
-                    <a class="author" href="">Dpple</a>
-                    <h3>
-                        <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-9.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="4">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-8.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="4">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="5">
-                <div class="product-header">
-                    <a class="author" href="">Dpple</a>
-                    <h3>
-                        <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-10.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="5">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-11.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="5">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="6">
-                <div class="product-header">
-                    <a class="author" href="">Jpple</a>
-                    <h3>
-                        <a href="productdetail.html">Rpple iPad with Retina Display MD510LL/A</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-1.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="6">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-12.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="6">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -1088,10 +383,10 @@
 
 <!-- Best Seller Section Starts -->
 <section id="best-seller-section"
-         style="background-image: url(~/assets/images/best-seller-bg.webp)">
+         style="background-image: url(./assets/images/best-seller-bg.webp)">
     <div class="container">
         <div class="section-title">
-            <h2>Best BEST SELLER BOOKS</h2>
+            <h2>Best SELLER BOOKS</h2>
         </div>
 
         <div class="best-seller-content">
@@ -1104,148 +399,92 @@
                 <div class="col-lg-7 col-md-6">
                     <div class="bestselller-product-slider">
                         <div class="">
-                            <div class="product-card" data-id="1">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-7.webp" alt="" />
-                                    </a>
+                            @foreach (var item in Model.BestSellers.Take(2))
+                            {
+                                <div class="product-card" data-id="@item.Id">
+                                    <div class="card-image">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="product-card-body">
+                                        <div class="product-header">
+                                            <a class="author" href="">@item.AuthorName</a>
+                                            <h3>
+                                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                   @item.Name
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
+                                            <del class="price-old">$@item.Price</del>
+                                            <span class="price-discount">@item.Discount%</span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="product-card-body">
-                                    <div class="product-header">
-                                        <a class="author" href="">Cpple</a>
-                                        <h3>
-                                            <a href="productdetail.html">
-                                                Do You Really Need It? This Will Help You
-                                            </a>
-                                        </h3>
-                                    </div>
-                                    <div class="card-price">
-                                        <span class="price">£51.20</span>
-                                        <del class="price-old">£51.20</del>
-                                        <span class="price-discount">20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card" data-id="2">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-8.webp" alt="" />
-                                    </a>
-                                </div>
-
-                                <div class="product-card-body">
-                                    <div class="product-header">
-                                        <a class="author" href="">Cpple</a>
-                                        <h3>
-                                            <a href="productdetail.html">
-                                                Here Is Quick Cure BOOK This Will Help
-                                            </a>
-                                        </h3>
-                                    </div>
-                                    <div class="card-price">
-                                        <span class="price">£51.20</span>
-                                        <del class="price-old">£51.20</del>
-                                        <span class="price-discount">20%</span>
-                                    </div>
-                                </div>
-                            </div>
+                            }
+                   
                         </div>
                         <div class="">
-                            <div class="product-card" data-id="1">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-6.webp" alt="" />
-                                    </a>
+                            @foreach (var item in Model.BestSellers.Skip(2).Take(2))
+                            {
+                                <div class="product-card" data-id="@item.Id">
+                                    <div class="card-image">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="product-card-body">
+                                        <div class="product-header">
+                                            <a class="author" href="">@item.AuthorName</a>
+                                            <h3>
+                                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                    @item.Name
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
+                                            <del class="price-old">$@item.Price</del>
+                                            <span class="price-discount">@item.Discount%</span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="product-card-body">
-                                    <div class="product-header">
-                                        <a class="author" href="">Cpple</a>
-                                        <h3>
-                                            <a href="productdetail.html">
-                                                Do You Really Need It? This Will Help You
-                                            </a>
-                                        </h3>
-                                    </div>
-                                    <div class="card-price">
-                                        <span class="price">£51.20</span>
-                                        <del class="price-old">£51.20</del>
-                                        <span class="price-discount">20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card" data-id="2">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-5.webp" alt="" />
-                                    </a>
-                                </div>
-
-                                <div class="product-card-body">
-                                    <div class="product-header">
-                                        <a class="author" href="">Cpple</a>
-                                        <h3>
-                                            <a href="productdetail.html">
-                                                Very Simple Things You Can Save BOOK
-                                            </a>
-                                        </h3>
-                                    </div>
-                                    <div class="card-price">
-                                        <span class="price">£51.20</span>
-                                        <del class="price-old">£51.20</del>
-                                        <span class="price-discount">20%</span>
-                                    </div>
-                                </div>
-                            </div>
+                            }
                         </div>
                         <div class="">
-                            <div class="product-card" data-id="1">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-2.webp" alt="" />
-                                    </a>
+                            @foreach (var item in Model.BestSellers.Skip(4).Take(2))
+                            {
+                                <div class="product-card" data-id="@item.Id">
+                                    <div class="card-image">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="product-card-body">
+                                        <div class="product-header">
+                                            <a class="author" href="">@item.AuthorName</a>
+                                            <h3>
+                                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                    @item.Name
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="card-price">
+                                            <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
+                                            <del class="price-old">$@item.Price</del>
+                                            <span class="price-discount">@item.Discount%</span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="product-card-body">
-                                    <div class="product-header">
-                                        <a class="author" href="">Cpple</a>
-                                        <h3>
-                                            <a href="productdetail.html">
-                                                What You Can Learn From Bill Gates
-                                            </a>
-                                        </h3>
-                                    </div>
-                                    <div class="card-price">
-                                        <span class="price">£51.20</span>
-                                        <del class="price-old">£51.20</del>
-                                        <span class="price-discount">20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-card" data-id="2">
-                                <div class="card-image">
-                                    <a href="productdetail.html">
-                                        <img src="~/assets/images/product-1.webp" alt="" />
-                                    </a>
-                                </div>
-
-                                <div class="product-card-body">
-                                    <div class="product-header">
-                                        <a class="author" href="">Cpple</a>
-                                        <h3>
-                                            <a href="productdetail.html">
-                                                3 Ways Create Better BOOK With Help
-                                            </a>
-                                        </h3>
-                                    </div>
-                                    <div class="card-price">
-                                        <span class="price">£51.20</span>
-                                        <del class="price-old">£51.20</del>
-                                        <span class="price-discount">20%</span>
-                                    </div>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -1263,299 +502,34 @@
             <h2>Children's Books</h2>
         </div>
         <div class="products">
-            <!-- <div class="row">
-              <div class="col-lg-4">
-                <div class="product-card" data-id="1">
-                  <div class="card-image">
-                    <a href="productdetail.html">
-                      <img src="~/assets/images/product-7.webp" alt="" />
-                    </a>
-                  </div>
-
-                  <div class="product-card-body">
-                    <div class="product-header">
-                      <a class="author" href="">Cpple</a>
-                      <h3>
-                        <a href="productdetail.html"
-                          >Do You Really Need It? This Will Help You
+            @foreach (var item in Model.ChildrensBooks)
+            {
+                <div class="product-card" data-id="@item.Id">
+                    <div class="card-image">
+                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                            <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                         </a>
-                      </h3>
                     </div>
-                    <div class="card-price">
-                      <span class="price">£51.20</span>
-                      <del class="price-old">£51.20</del>
-                      <span class="price-discount">20%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="product-card" data-id="2">
-                  <div class="card-image">
-                    <a href="productdetail.html">
-                      <img src="~/assets/images/product-8.webp" alt="" />
-                    </a>
-                  </div>
 
-                  <div class="product-card-body">
-                    <div class="product-header">
-                      <a class="author" href="">Cpple</a>
-                      <h3>
-                        <a href="productdetail.html"
-                          >Here Is Quick Cure BOOK This Will Help
-                        </a>
-                      </h3>
+                    <div class="product-card-body">
+                        <div class="product-header">
+                            <a class="author" href="">@item.AuthorName</a>
+                            <h3>
+                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                   @item.Name
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
+                            <del class="price-old">$@item.Price</del>
+                            <span class="price-discount">@item.Discount%</span>
+                        </div>
                     </div>
-                    <div class="card-price">
-                      <span class="price">£51.20</span>
-                      <del class="price-old">£51.20</del>
-                      <span class="price-discount">20%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="product-card" data-id="1">
-                  <div class="card-image">
-                    <a href="productdetail.html">
-                      <img src="~/assets/images/product-6.webp" alt="" />
-                    </a>
-                  </div>
-
-                  <div class="product-card-body">
-                    <div class="product-header">
-                      <a class="author" href="">Cpple</a>
-                      <h3>
-                        <a href="productdetail.html"
-                          >Do You Really Need It? This Will Help You
-                        </a>
-                      </h3>
-                    </div>
-                    <div class="card-price">
-                      <span class="price">£51.20</span>
-                      <del class="price-old">£51.20</del>
-                      <span class="price-discount">20%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="product-card" data-id="1">
-                  <div class="card-image">
-                    <a href="productdetail.html">
-                      <img src="~/assets/images/product-12.webp" alt="" />
-                    </a>
-                  </div>
-
-                  <div class="product-card-body">
-                    <div class="product-header">
-                      <a class="author" href="">Cpple</a>
-                      <h3>
-                        <a href="productdetail.html"
-                          >Do You Really Need It? This Will Help You
-                        </a>
-                      </h3>
-                    </div>
-                    <div class="card-price">
-                      <span class="price">£51.20</span>
-                      <del class="price-old">£51.20</del>
-                      <span class="price-discount">20%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="product-card" data-id="1">
-                  <div class="card-image">
-                    <a href="productdetail.html">
-                      <img src="~/assets/images/product-2.webp" alt="" />
-                    </a>
-                  </div>
-
-                  <div class="product-card-body">
-                    <div class="product-header">
-                      <a class="author" href="">Cpple</a>
-                      <h3>
-                        <a href="productdetail.html"
-                          >What You Can Learn From Bill Gates
-                        </a>
-                      </h3>
-                    </div>
-                    <div class="card-price">
-                      <span class="price">£51.20</span>
-                      <del class="price-old">£51.20</del>
-                      <span class="price-discount">20%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="product-card" data-id="2">
-                  <div class="card-image">
-                    <a href="productdetail.html">
-                      <img src="~/assets/images/product-1.webp" alt="" />
-                    </a>
-                  </div>
-
-                  <div class="product-card-body">
-                    <div class="product-header">
-                      <a class="author" href="">Cpple</a>
-                      <h3>
-                        <a href="productdetail.html"
-                          >3 Ways Create Better BOOK With Help
-                        </a>
-                      </h3>
-                    </div>
-                    <div class="card-price">
-                      <span class="price">£51.20</span>
-                      <del class="price-old">£51.20</del>
-                      <span class="price-discount">20%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-            <div class="product-card" data-id="1">
-                <div class="card-image">
-                    <a href="productdetail.html">
-                        <img src="~/assets/images/product-7.webp" alt="" />
-                    </a>
                 </div>
 
-                <div class="product-card-body">
-                    <div class="product-header">
-                        <a class="author" href="">Cpple</a>
-                        <h3>
-                            <a href="productdetail.html">
-                                Do You Really Need It? This Will Help You
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="2">
-                <div class="card-image">
-                    <a href="productdetail.html">
-                        <img src="~/assets/images/product-8.webp" alt="" />
-                    </a>
-                </div>
-
-                <div class="product-card-body">
-                    <div class="product-header">
-                        <a class="author" href="">Cpple</a>
-                        <h3>
-                            <a href="productdetail.html">
-                                Here Is Quick Cure BOOK This Will Help
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card" data-id="1">
-                <div class="card-image">
-                    <a href="productdetail.html">
-                        <img src="~/assets/images/product-6.webp" alt="" />
-                    </a>
-                </div>
-
-                <div class="product-card-body">
-                    <div class="product-header">
-                        <a class="author" href="">Cpple</a>
-                        <h3>
-                            <a href="productdetail.html">
-                                Do You Really Need It? This Will Help You
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="2">
-                <div class="card-image">
-                    <a href="productdetail.html">
-                        <img src="~/assets/images/product-5.webp" alt="" />
-                    </a>
-                </div>
-
-                <div class="product-card-body">
-                    <div class="product-header">
-                        <a class="author" href="">Cpple</a>
-                        <h3>
-                            <a href="productdetail.html">
-                                Very Simple Things You Can Save BOOK
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card" data-id="1">
-                <div class="card-image">
-                    <a href="productdetail.html">
-                        <img src="~/assets/images/product-2.webp" alt="" />
-                    </a>
-                </div>
-
-                <div class="product-card-body">
-                    <div class="product-header">
-                        <a class="author" href="">Cpple</a>
-                        <h3>
-                            <a href="productdetail.html">
-                                What You Can Learn From Bill Gates
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="2">
-                <div class="card-image">
-                    <a href="productdetail.html">
-                        <img src="~/assets/images/product-1.webp" alt="" />
-                    </a>
-                </div>
-
-                <div class="product-card-body">
-                    <div class="product-header">
-                        <a class="author" href="">Cpple</a>
-                        <h3>
-                            <a href="productdetail.html">
-                                3 Ways Create Better BOOK With Help
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
+            }
+        
         </div>
     </div>
 </section>
@@ -1606,223 +580,47 @@
             <h2>Arts & Photography Books</h2>
         </div>
         <div class="art-product-slider">
-            <div class="product-card" data-id="1">
-                <div class="product-header">
-                    <a class="author" href="">Cpple</a>
-                    <h3>
-                        <a href="productdetail.html">Beats EP Wired On-Ear Headphone-Black</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-4.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="1">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-5.webp" alt="" />
+            @foreach (var item in Model.ArtPhorographyBooks)
+            {
+                <div class="product-card" data-id="@item.Id">
+                    <div class="product-header">
+                        <a class="author" href="">@item.AuthorName</a>
+                        <h3>
+                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+                        </h3>
+                    </div>
+                    <div class="product-card-body">
+                        <div class="card-image">
+                            <a asp-controller ="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                             </a>
-                            <div class="hover-btns" data-id="1">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
+                            <div class="hover-content" data-id="@item.Id">
+                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                    <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                 </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
+                                <div class="hover-btns" data-id="@item.Id">
+                                    <a  class="added-cart" href="">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </a>
+                                    <a  class="added-removed-wishlist" href="">
+                                        <i class="fas fa-heart"></i>
+                                    </a>
+                                    <a class="open-modal" href="">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
+                        <div class="card-price">
+                            <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
+                            <del class="price-old">$@item.Price</del>
+                            <span class="price-discount">@item.Discount%</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card" data-id="2">
-                <div class="product-header">
-                    <a class="author" href="">Mpple</a>
-                    <h3>
-                        <a href="productdetail.html">Beats Solo3 Wireless On-Ear Headphones 2</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-3.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="2">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-2.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="2">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="3">
-                <div class="product-header">
-                    <a class="author" href="">Mpple</a>
-                    <h3>
-                        <a href="productdetail.html">In 10 Minutes, I'll Give You The Truth About</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-7.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="3">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-6.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="3">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="4">
-                <div class="product-header">
-                    <a class="author" href="">Dpple</a>
-                    <h3>
-                        <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-9.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="4">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-8.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="4">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="5">
-                <div class="product-header">
-                    <a class="author" href="">Dpple</a>
-                    <h3>
-                        <a href="productdetail.html">What Can You Do To Save Your BOOK</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-10.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="5">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-11.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="5">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" data-id="6">
-                <div class="product-header">
-                    <a class="author" href="">Jpple</a>
-                    <h3>
-                        <a href="productdetail.html">Rpple iPad with Retina Display MD510LL/A</a>
-                    </h3>
-                </div>
-                <div class="product-card-body">
-                    <div class="card-image">
-                        <a href="productdetail.html">
-                            <img src="~/assets/images/product-1.webp" alt="" />
-                        </a>
-                        <div class="hover-content" data-id="6">
-                            <a href="productdetail.html">
-                                <img src="~/assets/images/product-12.webp" alt="" />
-                            </a>
-                            <div class="hover-btns" data-id="6">
-                                <a href="cart.html">
-                                    <i class="fas fa-shopping-basket"></i>
-                                </a>
-                                <a href="wishlist.html">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <a class="open-modal" href="">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-price">
-                        <span class="price">£51.20</span>
-                        <del class="price-old">£51.20</del>
-                        <span class="price-discount">20%</span>
-                    </div>
-                </div>
-            </div>
+            }
+
         </div>
     </div>
 </section>

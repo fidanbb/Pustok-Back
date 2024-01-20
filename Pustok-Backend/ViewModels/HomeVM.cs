@@ -1,6 +1,7 @@
 ﻿using Pustok_Backend.Areas.Admin.ViewModels.Advert;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
+using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
 using Pustok_Backend.Areas.Admin.ViewModels.Testimonial;
@@ -17,6 +18,16 @@ namespace Pustok_Backend.ViewModels
         public List<TestimonialVM> Testimonials { get; set; }
 
         public List<BlogVM> Blogs { get; set; }
+
+        public List<ProductVM> FeaturedProducts { get; set; }
+        public List<ProductVM> NewArrivedProducts { get; set; }
+
+        public List<ProductVM> MostViewedProducts { get; set; }
+        public List<ProductVM> DealOfTheDay { get; set; }
+        public List<ProductVM> BestSellers { get; set; }
+        public List<ProductVM> ChildrensBooks { get; set; }
+        public List<ProductVM> ArtPhorographyBooks { get; set; }
+
 
     }
 }

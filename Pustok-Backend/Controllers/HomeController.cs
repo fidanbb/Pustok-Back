@@ -2,6 +2,7 @@
 using Pustok_Backend.Areas.Admin.ViewModels.Advert;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
+using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
 using Pustok_Backend.Areas.Admin.ViewModels.Testimonial;
@@ -19,13 +20,15 @@ namespace Pustok_Backend.Controllers
         private readonly IBrandService _brandService;
         private readonly ITestimonialService _testimonialService;
         public readonly IBlogService _blogService;
+        private readonly IProductService _productService;
 
         public HomeController(ISliderService sliderService,
                                ISiteServicesService siteServicesService,
                                IAdvertService advertService,
                                IBrandService brandService,
                                ITestimonialService testimonialService,
-                               IBlogService blogService)
+                               IBlogService blogService,
+                               IProductService productService)
         {
                 _sliderService = sliderService;
             _siteServicesService = siteServicesService;
@@ -33,6 +36,7 @@ namespace Pustok_Backend.Controllers
             _brandService = brandService;
             _testimonialService = testimonialService;
             _blogService = blogService;
+            _productService = productService;
         }
 
 
@@ -47,6 +51,14 @@ namespace Pustok_Backend.Controllers
                 ICollection <BrandVM> brands =await _brandService.GetAllAsync();
                 List<TestimonialVM> testimonials = await _testimonialService.GetWithIncludesAndTakeAsync(4);
                 List<BlogVM> blogs= await _blogService.GetAllWithTakeInDescendingOrderAsync(3);
+                List<ProductVM> featuredProducts=await _productService.GetFeaturedProductsWithTakeAsync(6);
+                List<ProductVM> newArrivedProducts = await _productService.GetNewArrivedProductsWithTakeAsync(6);
+                List<ProductVM> mostViewedProducts = await _productService.GetMostViewedProductsWithTakeAsync(6);
+                List<ProductVM> dealOfTheDay = await _productService.GetDealOfTheDayProductsWithTakeAsync(6);
+                List<ProductVM> bestSellers = await _productService.GetBestSellerProductsAsync();
+                List<ProductVM> childrensBooks = await _productService.GetProductsByCategoryWithTakeAsync(6, "Children's Books");
+                List<ProductVM> artBooks = await _productService.GetProductsByCategoryWithTakeAsync(6, "Arts & Photography");
+
 
                 HomeVM model = new()
                 {
@@ -55,7 +67,14 @@ namespace Pustok_Backend.Controllers
                     Adverts = adverts,
                     Brands = brands,
                     Testimonials = testimonials,
-                    Blogs = blogs
+                    Blogs = blogs,
+                    FeaturedProducts = featuredProducts,
+                    NewArrivedProducts= newArrivedProducts,
+                    MostViewedProducts= mostViewedProducts,
+                    DealOfTheDay = dealOfTheDay,
+                    BestSellers = bestSellers,
+                    ChildrensBooks = childrensBooks,
+                    ArtPhorographyBooks = artBooks,
                 };
                 return View(model);
             }

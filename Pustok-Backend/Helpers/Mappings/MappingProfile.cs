@@ -6,6 +6,7 @@ using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
 using Pustok_Backend.Areas.Admin.ViewModels.Category;
 using Pustok_Backend.Areas.Admin.ViewModels.Contact;
+using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
 using Pustok_Backend.Areas.Admin.ViewModels.Setting;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
@@ -87,6 +88,9 @@ namespace Pustok_Backend.Helpers.Mappings
             CreateMap<Blog, BlogCreateVM>().ReverseMap();
             CreateMap<BlogEditVM, Blog>();
             CreateMap<Category, CategoryVM>();
+            CreateMap<Product, ProductVM>().ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.FullName))
+                                           .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.Discount.Percent));
+
 
 
 

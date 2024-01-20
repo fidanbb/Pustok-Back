@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pustok-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+446cc0b8ea32d9f5960332845f412423ed734b3f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc511176d2f17f2200671b1b4808f3394b2c162c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pustok-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pustok-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

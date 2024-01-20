@@ -6,6 +6,6 @@ namespace Pustok_Backend.Areas.Admin.ViewModels.Category
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<Product> Products { get; set; }
+        public List<Models.Product> Products { get; set; }
     }
 }
