@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Data;
+using Pustok_Backend.Models;
 using Pustok_Backend.Services.Interfaces;
 
 namespace Pustok_Backend.Services
@@ -25,6 +28,76 @@ namespace Pustok_Backend.Services
                                                                     .Include(m => m.Discount)
                                                                     .OrderByDescending(m => m.SaleCount)
                                                                     .ToListAsync());
+        }
+
+        public async Task<int> GetCountAsync(int? categoryId, string sortValue, string searchText, int? minValue, int? maxValue)
+        {
+            int count = await _context.Products.CountAsync();
+
+
+            if (searchText != null)
+            {
+                count = await _context.Products.Where(m => m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+                                               .CountAsync();
+                                                                      
+            }
+
+            if (categoryId != null)
+            {
+                count = await _context.Products.Where(m => m.CategoryId == categoryId)
+                                               .CountAsync();
+                                                                      
+            }
+
+            if (minValue != null && maxValue != null)
+            {
+                count = await _context.Products.Where(p => p.Price >= minValue && p.Price <= maxValue)
+                                               .CountAsync();
+                                                                     
+
+            }
+
+            if (sortValue != null)
+            {
+                switch (sortValue)
+                {
+
+                    case "2":
+                        {
+                            return await _context.Products.OrderBy(m => m.Name).CountAsync();
+                        }
+                    case "3":
+                        {
+                            return await _context.Products.OrderByDescending(m => m.Name).CountAsync();
+
+                        }
+
+                    case "4":
+                        {
+                           return await _context.Products.OrderByDescending(m => m.Rate).CountAsync();
+
+                        }
+
+                    case "5":
+                        {
+                           return await _context.Products.OrderBy(m => m.Price).CountAsync();
+
+                        }
+
+                    case "6":
+                        {
+                          return await _context.Products.OrderByDescending(m => m.Price).CountAsync();
+
+                        }
+                    default:
+                        {
+                           return await _context.Products.OrderByDescending(m => m.CreatedDate).CountAsync();
+
+                        }
+                }
+            }
+
+                return count;
         }
 
         public async Task<List<ProductVM>> GetDealOfTheDayProductsWithTakeAsync(int take)
@@ -67,6 +140,125 @@ namespace Pustok_Backend.Services
                                                                        .ToListAsync());
         }
 
+        public async Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take, int? categoryId, string sortValue, string searchText, int? minValue, int? maxValue)
+        {
+            List<ProductVM> products =_mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+
+            if (searchText != null)
+            {
+                products = _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .Where(m => m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+            }
+
+            if(categoryId != null)
+            {
+                return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .Where(m=>m.CategoryId==categoryId)
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+            }
+
+            if (minValue != null && maxValue != null)
+            {
+                products = _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .Where(p => p.Price >= minValue && p.Price <= maxValue)
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+
+            }
+
+            if (sortValue !=null)
+            {
+                switch (sortValue)
+                {
+                   
+                    case "2":
+                        {
+                            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .OrderBy(m => m.Name)
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+                        }
+                    case "3":
+                        {
+                            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .OrderByDescending(m => m.Name)
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+                        }
+
+                    case "4":
+                        {
+                            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .OrderByDescending(m => m.Rate)
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+                        }
+
+                    case "5":
+                        {
+                            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .OrderBy(m => m.Price)
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+                        }
+
+                    case "6":
+                        {
+                            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.Discount)
+                                                                       .OrderByDescending(m => m.Price)
+                                                                       .Skip((page * take) - take)
+                                                                       .Take(take)
+                                                                       .ToListAsync());
+                        }
+                    default:
+                        {
+                            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                      .Include(m => m.Author)
+                                                                      .Include(m => m.Discount)
+                                                                      .OrderByDescending(m => m.CreatedDate)
+                                                                      .Skip((page * take) - take)
+                                                                      .Take(take)
+                                                                      .ToListAsync());
+                        }
+                }
+            }
+
+
+
+            return products;
+        }
+
         public async Task<List<ProductVM>> GetProductsByCategoryWithTakeAsync(int take, string categoryName)
         {
             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
@@ -75,6 +267,11 @@ namespace Pustok_Backend.Services
                                                                     .Where(m => m.Category.Name.Trim().ToLower()==categoryName.Trim().ToLower())
                                                                     .Take(take)
                                                                     .ToListAsync());
+        }
+
+        public async Task<int> GetTotalProductCountAsync()
+        {
+           return await _context.Products.CountAsync();
         }
     }
 }

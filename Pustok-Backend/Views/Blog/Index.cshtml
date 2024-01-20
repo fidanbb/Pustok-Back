@@ -40,14 +40,14 @@
                         <h4 class="widget-title">Category</h4>
                         <ul>
                             <li class="cat-item">
-                                <a href="">All</a>
+                                <a asp-controller="Shop" asp-action="Index">All</a>
                                 (@productCount)
                             </li>
 
                             @foreach (var item in Model.Categories)
                             {
                                 <li class="cat-item">
-                                    <a href="">@item.Name</a>
+                                    <a asp-controller="Shop" asp-action="Index" asp-route-categoryId="@item.Id">@item.Name</a>
                                     (@item.Products.Count())
                                 </li>
 

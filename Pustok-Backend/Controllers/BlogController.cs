@@ -31,6 +31,7 @@ namespace Pustok_Backend.Controllers
             _categoryService = categoryService;
 
         }
+        [HttpGet]
         public async Task<IActionResult> Index(int page = 1, int take = 6,int? tagId=null,int? month=null,string searchText=null)
         {
             List<BlogVM> dbPaginatedDatas = await _blogService.GetPaginatedDatasAsync(page, take,tagId,month,searchText);
