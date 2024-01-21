@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
   // filter js
   let minValue = document.getElementById("min-value");
@@ -25,7 +27,29 @@ $(document).ready(function () {
     });
   });
 
-  validateRange(inputElements[0].value, inputElements[1].value);
+    validateRange(inputElements[0].value, inputElements[1].value);
+
+
+
+    $(document).on("submit", "#filter-form", function (e) {
+        e.preventDefault();
+        let minValue = $(".min-price").val();
+        let maxValue = $(".max-price").val();
+        let data = { minValue: minValue, maxValue: maxValue }
+
+        let parent = $(".product-list");
+        $.ajax({
+            url: "/Shop/GetProductsByRange",
+            type: "Get",
+            data: data,
+            success: function (res) {
+                $(parent).html(res);
+                console.log(minValue);
+                console.log(maxValue);
+               
+            }
+        })
+    })
 
   //   product icon js
 
@@ -103,4 +127,55 @@ $(document).ready(function () {
     $(".modal-overlay").addClass("d-none");
     $("body").removeClass("modal-is-open");
   });
+
+
+    //filter by category
+
+    function getProductsByFilter(clickedElem, url) {
+        $(document).on("click", clickedElem, function (e) {
+            e.preventDefault();
+            console.log("salam")
+            let id = $(this).attr("data-id");
+            let data = { id: id };
+            let parent = $(".product-list")
+            $.ajax({
+                url: url,
+                type: "Get",
+                data: data,
+                success: function (res) {
+                    $(parent).html(res);
+                }
+            })
+        })
+
+    }
+
+
+    getProductsByFilter(".prod-cat-item", "/Shop/GetProductsByCategory")
+    getProductsByFilter(".cat-item", "/Shop/GetAll")
+
+
+    //SORT
+    $(document).on("change", "#sort", function (e) {
+        e.preventDefault();
+        let sortValue = $(this).val();
+        console.log(sortValue)
+
+        let data = { sortValue: sortValue };
+        let parent = $(".product-list");
+
+        $.ajax({
+            url: "/Shop/GetProductsBySort",
+            type: "Get",
+            data: data,
+            success: function (res) {
+                console.log(sortValue)
+                $(parent).html(res);
+
+            }
+
+        })
+    })
+
+
 });

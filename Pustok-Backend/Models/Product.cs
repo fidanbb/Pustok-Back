@@ -11,6 +11,7 @@
         public string Sku { get; set; }
         public List<ProductImage> Images { get; set; }
         public ICollection<ProductComment> ProductComments { get; set; }
+        public ICollection<ProductTag> ProductTags { get; set; } = new HashSet<ProductTag>();
 
         public int AuthorId { get; set; }
         public Author Author { get; set; }

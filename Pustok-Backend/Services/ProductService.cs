@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
+using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Data;
 using Pustok_Backend.Models;
@@ -21,6 +22,20 @@ namespace Pustok_Backend.Services
             _mapper = mapper;
         }
 
+
+        public async Task<List<ProductVM>> GetRelatedDatasAsync(ProductDetailVM currentProduct, int take)
+        {
+            var tagIds = currentProduct.Tags.Select(t => t.Id);
+            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                          .Include(m => m.Author)
+                                                          .Include(m => m.ProductTags)
+                                                          .ThenInclude(m => m.Tag)
+                                                         .Where(product => product.Id != currentProduct.Id)
+                                                         .Where(product => product.ProductTags.Any(tag => tagIds.Contains(tag.Tag.Id)))
+                                                          .Take(take)
+                                                          .ToListAsync());
+        }
+
         public async Task<List<ProductVM>> GetBestSellerProductsAsync()
         {
             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
@@ -30,6 +45,19 @@ namespace Pustok_Backend.Services
                                                                     .ToListAsync());
         }
 
+        public async Task<ProductDetailVM> GetByIdWithoutTrackingAsync(int id)
+        {
+            return _mapper.Map<ProductDetailVM>(await _context.Products.Include(m => m.Images)
+                                                                       .Include(m => m.Discount)
+                                                                       .Include(m => m.Author)
+                                                                       .Include(m => m.ProductComments)
+                                                                       .Include(m=>m.Category)
+                                                                       .Include(m => m.ProductTags)
+                                                                       .ThenInclude(m => m.Tag)
+                                                                       .AsNoTracking()
+                                                                       .FirstOrDefaultAsync(m => m.Id == id));
+        }
+
         public async Task<int> GetCountAsync(int? categoryId, string sortValue, string searchText, int? minValue, int? maxValue)
         {
             int count = await _context.Products.CountAsync();
@@ -37,7 +65,9 @@ namespace Pustok_Backend.Services
 
             if (searchText != null)
             {
-                count = await _context.Products.Where(m => m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+                count = await _context.Products.Where(m => m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim())
+                                                       || m.Author.FullName.ToLower().Trim().Contains(searchText.ToLower().Trim())
+                                                       || m.Category.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
                                                .CountAsync();
                                                                       
             }
@@ -61,30 +91,33 @@ namespace Pustok_Backend.Services
             {
                 switch (sortValue)
                 {
-
                     case "2":
+                        {
+                            return await _context.Products.OrderByDescending(m => m.CreatedDate).CountAsync();
+                        }
+                    case "3":
                         {
                             return await _context.Products.OrderBy(m => m.Name).CountAsync();
                         }
-                    case "3":
+                    case "4":
                         {
                             return await _context.Products.OrderByDescending(m => m.Name).CountAsync();
 
                         }
 
-                    case "4":
+                    case "5":
                         {
                            return await _context.Products.OrderByDescending(m => m.Rate).CountAsync();
 
                         }
 
-                    case "5":
+                    case "6":
                         {
                            return await _context.Products.OrderBy(m => m.Price).CountAsync();
 
                         }
 
-                    case "6":
+                    case "7":
                         {
                           return await _context.Products.OrderByDescending(m => m.Price).CountAsync();
 
@@ -154,7 +187,9 @@ namespace Pustok_Backend.Services
                 products = _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
                                                                        .Include(m => m.Author)
                                                                        .Include(m => m.Discount)
-                                                                       .Where(m => m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+                                                                       .Where(m => m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim())
+                                                                        || m.Author.FullName.ToLower().Trim().Contains(searchText.ToLower().Trim())
+                                                                        || m.Category.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
                                                                        .Skip((page * take) - take)
                                                                        .Take(take)
                                                                        .ToListAsync());
@@ -187,8 +222,17 @@ namespace Pustok_Backend.Services
             {
                 switch (sortValue)
                 {
-                   
                     case "2":
+                        {
+                            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                     .Include(m => m.Author)
+                                                                     .Include(m => m.Discount)
+                                                                     .OrderByDescending(m => m.CreatedDate)
+                                                                     .Skip((page * take) - take)
+                                                                     .Take(take)
+                                                                     .ToListAsync());
+                        }
+                    case "3":
                         {
                             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
                                                                        .Include(m => m.Author)
@@ -198,7 +242,7 @@ namespace Pustok_Backend.Services
                                                                        .Take(take)
                                                                        .ToListAsync());
                         }
-                    case "3":
+                    case "4":
                         {
                             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
                                                                        .Include(m => m.Author)
@@ -209,7 +253,7 @@ namespace Pustok_Backend.Services
                                                                        .ToListAsync());
                         }
 
-                    case "4":
+                    case "5":
                         {
                             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
                                                                        .Include(m => m.Author)
@@ -220,7 +264,7 @@ namespace Pustok_Backend.Services
                                                                        .ToListAsync());
                         }
 
-                    case "5":
+                    case "6":
                         {
                             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
                                                                        .Include(m => m.Author)
@@ -231,7 +275,7 @@ namespace Pustok_Backend.Services
                                                                        .ToListAsync());
                         }
 
-                    case "6":
+                    case "7":
                         {
                             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
                                                                        .Include(m => m.Author)
@@ -265,6 +309,16 @@ namespace Pustok_Backend.Services
                                                                     .Include(m => m.Author)
                                                                     .Include(m => m.Discount)
                                                                     .Where(m => m.Category.Name.Trim().ToLower()==categoryName.Trim().ToLower())
+                                                                    .Take(take)
+                                                                    .ToListAsync());
+        }
+
+        public async Task<List<ProductVM>> GetTopProducts(int take)
+        {
+            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                    .Include(m => m.Author)
+                                                                    .Include(m => m.Discount)
+                                                                    .OrderByDescending(m=>m.Rate)
                                                                     .Take(take)
                                                                     .ToListAsync());
         }

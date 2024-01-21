@@ -74,8 +74,8 @@ $(document).ready(function () {
   });
 
   $(".category-menu").click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+   // e.preventDefault();
+   /* e.stopPropagation();*/
   });
 
   //mobile menu user trigger
@@ -88,6 +88,7 @@ $(document).ready(function () {
     // computer menu user trigger
 
     $(".current-user").click(function (e) {
+        e.preventDefault();
         console.log("salaml")
         $(".logout-btn").toggleClass("d-none");
         e.stopPropagation();
@@ -150,6 +151,51 @@ $(document).ready(function () {
     e.preventDefault();
     $("#sidebar").removeClass("transform-sidebar");
   });
+
+
+
+    // search
+
+    //$(document).on("click", ".search-btn", function (e) {
+    //    e.preventDefault();
+    //    console.log("salam")
+    //    let value = $(".search-text").val();
+    //    let parent = $(".product-list")
+    //    $.ajax({
+
+    //        url: `shop/SearchProducts?searchText=${value}`,
+
+    //        type: "Get",
+
+
+    //        success: function (res) {
+
+    //            $(parent).html(res);
+    //        }
+
+    //    })
+
+    //})
+
+    $(document).on("submit", ".search-form", function (e) {
+        e.preventDefault();
+        let value = $(".mobile-search .search-text").val();
+        console.log(value);
+        let url = `/shop/Index?searchText=${value}`;
+
+        window.location.assign(url);
+
+    })
+
+    $(document).on("submit", ".header-search-form", function (e) {
+        e.preventDefault();
+        let value = $(".header-search .search-text").val();
+        console.log(value);
+        let url = `/shop/Index?searchText=${value}`;
+
+        window.location.assign(url);
+
+    })
 
   // body js
   $($("body")).click(function () {

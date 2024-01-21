@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
+using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Category;
 using Pustok_Backend.Areas.Admin.ViewModels.Product;
+using Pustok_Backend.Areas.Admin.ViewModels.ProductComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Tag;
 using Pustok_Backend.Helpers;
+using Pustok_Backend.Models;
 using Pustok_Backend.Services;
 using Pustok_Backend.Services.Interfaces;
 using Pustok_Backend.ViewModels;
@@ -14,12 +18,15 @@ namespace Pustok_Backend.Controllers
     {
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
+        private readonly IProductCommentService _productCommentService;
 
         public ShopController(IProductService productService,
-                               ICategoryService categoryService)
+                               ICategoryService categoryService,
+                               IProductCommentService productCommentService)
         {
             _productService = productService;
             _categoryService = categoryService;
+            _productCommentService = productCommentService;
 
         }
         [HttpGet]
@@ -31,6 +38,7 @@ namespace Pustok_Backend.Controllers
 
             Paginate<ProductVM> paginatedDatas = new(dbPaginatedDatas, page, pageCount);
             List<CategoryVM> categories = await _categoryService.GetAllAsync();
+            List<ProductVM> topProducts = await _productService.GetTopProducts(3);
           
             ViewBag.take = take;
             ViewBag.TotalProduct = await _productService.GetTotalProductCountAsync();
@@ -38,7 +46,8 @@ namespace Pustok_Backend.Controllers
             ShopVM model = new()
             {
                 PaginatedDatas = paginatedDatas,
-                Categories = categories
+                Categories = categories,
+                TopProducts = topProducts,
              
             };
 
@@ -50,9 +59,187 @@ namespace Pustok_Backend.Controllers
             int productCount = await _productService.GetCountAsync(categoryId, sortValue, searchText,minValue,maxValue);
             return (int)Math.Ceiling((decimal)(productCount) / take);
         }
-        public IActionResult Detail()
+
+        [HttpGet]
+        public async Task<IActionResult> GetProductsByCategory(int? id, int page = 1, int take = 9)
         {
-            return View();
+            try
+            {
+                ViewBag.take = take;
+                ViewBag.TotalProduct = await _productService.GetTotalProductCountAsync();
+                if (id is null) throw new ArgumentNullException();
+
+                var products = await _productService.GetPaginatedDatasAsync(page, take, (int)id, null, null,null,null);
+
+                int pageCount = await GetPageCountAsync(take, (int)id, null, null,null,null);
+
+                Paginate<ProductVM> model = new(products, page, pageCount);
+
+                return PartialView("_ProductsPartial", model);
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetProductsByRange(int? minValue, int? maxValue, int page = 1, int take = 9)
+        {
+            try
+            {
+                ViewBag.take = take;
+                ViewBag.TotalProduct = await _productService.GetTotalProductCountAsync();
+                if (minValue is null || maxValue is null) throw new ArgumentNullException();
+
+                var products = await _productService.GetPaginatedDatasAsync(page, take, null, null, null, minValue, maxValue);
+
+                int pageCount = await GetPageCountAsync(take, null, null, null, minValue, maxValue);
+
+                Paginate<ProductVM> model = new(products, page, pageCount);
+
+                return PartialView("_ProductsPartial", model);
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetProductsBySort(string sortValue, int page = 1, int take = 9)
+        {
+            try
+            {
+                ViewBag.take = take;
+                ViewBag.TotalProduct = await _productService.GetTotalProductCountAsync();
+
+                var products = await _productService.GetPaginatedDatasAsync(page, take, null, sortValue, null, null, null);
+
+                int pageCount = await GetPageCountAsync(take, null, sortValue, null, null, null);
+
+                Paginate<ProductVM> model = new(products, page, pageCount);
+
+                return PartialView("_ProductsPartial", model);
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll(int page = 1, int take = 9)
+        {
+            try
+            {
+                ViewBag.take = take;
+                ViewBag.TotalProduct = await _productService.GetTotalProductCountAsync();
+
+                var products = await _productService.GetPaginatedDatasAsync(page, take, null, null, null, null, null);
+
+                int pageCount = await GetPageCountAsync(take, null, null, null, null, null);
+
+                Paginate<ProductVM> model = new(products, page, pageCount);
+
+                return PartialView("_ProductsPartial", model);
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
+        }
+
+
+        public async Task<IActionResult> Detail(int? id)
+        {
+            try
+            {
+                if(id is null) throw new ArgumentNullException();
+
+                ProductDetailVM product = await _productService.GetByIdWithoutTrackingAsync((int)id);
+                List<ProductVM> relatedProducts = await _productService.GetRelatedDatasAsync(product,3);
+
+                if(product is null) throw new NullReferenceException();
+
+                ProductDetailPageVM model = new()
+                {
+                    Product = product,
+                    RelatedProducts = relatedProducts
+                };
+
+                return View(model); 
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+
+        public async Task<IActionResult> PostComment(ProductCommentCreateVM productComment, string userId, int? productId)
+        {
+            try
+            {
+                if (userId is null || productId is null) throw new ArgumentNullException();
+
+                if (!ModelState.IsValid) return RedirectToAction(nameof(Detail), new { id = productId });
+
+                ProductComment newProductComment = new()
+                {
+                    AppUserId = userId,
+                    ProductId = (int)productId,
+                    Message = productComment.Message,
+                    Rate=productComment.Rate,
+                };
+
+                await _productCommentService.CreateAsync(newProductComment);
+
+                return RedirectToAction(nameof(Detail), new { id = productId });
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
+        }
+
     }
 }

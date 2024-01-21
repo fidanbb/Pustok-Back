@@ -1,6 +1,9 @@
-﻿
+﻿@model ProductDetailPageVM
+@inject UserManager<AppUser> _userManager;
 @{
     ViewData["Title"] = "Detail";
+    AppUser user = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
+
 }
 
 
@@ -21,38 +24,48 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-6 mb-5 mb-lg-0">
                             <div class="product-image">
-                                <img src="~/assets/images/product-1.webp" alt="" />
-                                <img src="~/assets/images/product-2.webp" alt="" />
+                                @foreach (var item in Model.Product.Images)
+                                {
+                                    <img src="~/assets/images/@item.Image" alt="" />
+
+                                }
+                              
                             </div>
                             <div class="slider-nav-thumbnails">
-                                <img src="~/assets/images/product-1.webp" alt="" />
-                                <img src="~/assets/images/product-2.webp" alt="" />
+                                @foreach (var item in Model.Product.Images)
+                                {
+                                    <img src="~/assets/images/@item.Image" alt="" />
+
+                                }
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6">
                             <div class="product-content">
                                 <h1 class="product-name">
-                                    In 10 Minutes, I'll Give You The Truth About
+                                   @Model.Product.Name
                                 </h1>
                                 <div class="price">
-                                    <span class="actial-price">$50</span>
-                                    <del class="discount-price">$80</del>
+                                    <span class="actial-price">$@(Model.Product.Price - (Model.Product.Price * Model.Product.Discount)/100)</span>
+                                    <del class="discount-price">$@Model.Product.Price</del>
                                 </div>
 
                                 <div class="review">
                                     <div class="stars">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                        @for (int i = 0; i < Model.Product.Rate; i++)
+                                        {
+                                            <i class="fa-solid fa-star"></i>
+                                        }
+                                        @for (int i = 0; i < (5-Model.Product.Rate); i++)
+                                        {
+                                            <i class="fa-regular fa-star"></i>
+                                        }
+                                  
+                                       
                                     </div>
-                                    <span>2 reviews</span>
+                                    <span>@Model.Product.ProductComments.Count() reviews</span>
                                 </div>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua.
+                                    @Model.Product.Description.Substring(0, (int)Math.Ceiling(Model.Product.Description.Length * 0.1))
                                 </p>
 
                                 <div class="add-to-cart">
@@ -80,9 +93,14 @@
                                 </div>
 
                                 <div class="product-meta">
-                                    <p>SKU: <span>BE45VGRT</span></p>
-                                    <p>Categories: <span>adventure, children</span></p>
-                                    <p>Tags: <span>news, strategy, bestseller</span></p>
+                                    <p>SKU: <span>@Model.Product.Sku</span></p>
+                                    <p>Category: <span>@Model.Product.CategoryName</span></p>
+                                    <p>Tags: 
+                                        @foreach (var item in Model.Product.Tags)
+                                        {
+                                            <span>@item.Name</span>
+                                        }
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -93,51 +111,26 @@
                 <div class="widget related-products">
                     <h4 class="widget-title">Related Products</h4>
                     <div class="products">
-                        <div class="product">
-                            <div class="image">
-                                <a href="./productdetail.html">
-                                    <img src="~/assets/images/product-1.webp" alt="" />
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">
-                                    <a href="./productdetail.html">
-                                        Here is a Quick Cure for the Book
+                        
+                        @foreach (var item in Model.RelatedProducts)
+                        {
+                            <div class="product">
+                                <div class="image">
+                                    <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                        <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                                     </a>
-                                </h6>
-                                <p class="price"><span>$</span>50</p>
+                                </div>
+                                <div class="content">
+                                    <h6 class="title">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            @item.Name
+                                        </a>
+                                    </h6>
+                                    <p class="price"><span>$</span>@(item.Price - (item.Price*item.Discount)/100)</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product">
-                            <div class="image">
-                                <a href="./productdetail.html">
-                                    <img src="~/assets/images/product-2.webp" alt="" />
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">
-                                    <a href="./productdetail.html">
-                                        Here is a Quick Cure for the Book
-                                    </a>
-                                </h6>
-                                <p class="price"><span>$</span>70</p>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="image">
-                                <a href="./productdetail.html">
-                                    <img src="~/assets/images/product-3.webp" alt="" />
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">
-                                    <a href="./productdetail.html">
-                                        Here is a Quick Cure for the Book
-                                    </a>
-                                </h6>
-                                <p class="price"><span>$</span>40</p>
-                            </div>
-                        </div>
+
+                        }
                     </div>
                 </div>
             </div>
@@ -180,15 +173,7 @@
                  role="tabpanel"
                  aria-labelledby="home-tab">
                 <p>
-                    Fashion has been creating well-designed collections since 2010.
-                    The brand offers feminine designs delivering stylish separates
-                    and statement dresses which have since evolved into a full
-                    ready-to-wear collection in which every item is a vital part of
-                    a woman's wardrobe. The result? Cool, easy, chic looks with
-                    youthful elegance and unmistakable signature style. All the
-                    beautiful pieces are made in Italy and manufactured with the
-                    greatest attention. Now Fashion extends to a range of
-                    accessories including shoes, hats, belts and more!
+                   @Model.Product.Description
                 </p>
             </div>
             <div class="tab-pane fade"
@@ -196,64 +181,127 @@
                  role="tabpanel"
                  aria-labelledby="profile-tab">
                 <div class="reviews">
-                    <h4 class="widget-title">1 Review</h4>
-                    <div class="single-review">
-                        <div class="review-image">
-                            <img src="~/assets/images/author-logo.webp" alt="" />
+                    <h4 class="widget-title">@Model.Product.ProductComments.Count() Review</h4>
+                    @foreach (var item in Model.Product.ProductComments.OrderByDescending(m => m.CreatedDate).Take(3))
+                    {
+                        <div class="single-review">
+                            <div class="review-image">
+                                @if (_userManager.Users.FirstOrDefault(m => m.Id == item.AppUserId).Image is null)
+                                {
+                                    <img src="~/assets/images/author-logo.webp" alt="" />
+
+                                }
+                                else
+                                {
+                                    <img style="width:95%" src="~/assets/images/@_userManager.Users.FirstOrDefault(m=>m.Id==item.AppUserId).Image" alt="" />
+                                }
+                            </div>
+
+                            <div class="text">
+                                <div class="stars">
+                                    @for (int i = 0; i < item.Rate; i++)
+                                    {
+                                        <i class="fa-solid fa-star"></i>
+                                    }
+                                    @for (int i = 0; i < (5 - item.Rate); i++)
+                                    {
+                                        <i class="fa-regular fa-star"></i>
+                                    }
+                                </div>
+                                <p>
+                                    <span class="author">
+                                        @_userManager.Users.FirstOrDefault(m => m.Id == item.AppUserId).Name @_userManager.Users.FirstOrDefault(m => m.Id == item.AppUserId).Surname
+
+                                    </span> -
+                                    <span class="date">@item.CreatedDate.ToString("MMMM") @item.CreatedDate.Day , @item.CreatedDate.Year</span>
+                                </p>
+                                <p class="desc">
+                                    @item.Message
+                                </p>
+                            </div>
                         </div>
 
-                        <div class="text">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <p>
-                                <span class="author">Michel Poe</span> -
-                                <span class="date">March 23, 2015</span>
-                            </p>
-                            <p class="desc">
-                                Donec suscipit porta lorem eget condimentum. Morbi vitae
-                                mauris in leo venenatis varius. Aliquam nunc enim, egestas
-                                ac dui in, aliquam vulputate erat.
-                            </p>
-                        </div>
-                    </div>
+                    }
                 </div>
                 <div class="add-review">
                     <h4 class="widget-title">Add a Review</h4>
-                    <div class="review-form">
-                        <form action="">
-                            <div class="stars">
-                                <span>Your Rating: </span>
-                                <input type="radio" name="star" id="star1" />
-                                <label for="star1"></label>
-                                <input type="radio" name="star" id="star2" />
-                                <label for="star2"></label>
-                                <input type="radio" name="star" id="star3" />
-                                <label for="star3"></label>
-                                <input type="radio" name="star" id="star4" />
-                                <label for="star4"></label>
-                                <input type="radio" name="star" id="star5" />
-                                <label for="star5"></label>
-                            </div>
-                            <input type="text"
-                                   class="form-control"
-                                   placeholder="Your Name" />
-                            <input type="email"
-                                   class="form-control"
-                                   placeholder="Your Email" />
-                            <textarea class="form-control"
-                                      name=""
-                                      id=""
-                                      cols="40"
-                                      rows="5"
-                                      placeholder="Your Message"></textarea>
-                            <button class="btn" type="submit">Submit</button>
-                        </form>
-                    </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="review-form">
+                            <form method="post" asp-controller="Shop" asp-action="PostComment" asp-route-userId="@user.Id" asp-route-productId="@Model.Product.Id">
+                                <div class="stars">
+                                    <span>Your Rating: </span>
+                                    <input type="radio" name="star" id="star1" value="1" />
+                                    <label for="star1"></label>
+                                    <input type="radio" name="star" id="star2" value="2" />
+                                    <label for="star2"></label>
+                                    <input type="radio" name="star" id="star3" value="3" />
+                                    <label for="star3"></label>
+                                    <input type="radio" name="star" id="star4" value="4" />
+                                    <label for="star4"></label>
+                                    <input type="radio" name="star" id="star5" value="5" />
+                                    <label for="star5"></label>
+                                    <input type="hidden"  id="rate" value="5" asp-for="@Model.ProductComment.Rate" />
+
+                                </div>
+                                <input type="text"
+                                       value="@user.Name @user.Surname"
+                                       readonly
+                                       class="form-control"
+                                       style="background-color:#fff!important"
+                                       placeholder="Your Name" />
+                                <input type="email"
+                                       value="@user.Email"
+                                       readonly
+                                       style="background-color:#fff!important"
+                                       class="form-control"
+                                       placeholder="Your Email" />
+                                <textarea class="form-control"
+                                          asp-for="@Model.ProductComment.Message"
+                                          cols="40"
+                                          rows="5"
+                                          placeholder="Your Message"></textarea>
+                                <span class="text-danger" asp-validation-for="@Model.ProductComment.Message"></span>
+                                <button class="btn" type="submit">Submit</button>
+                            </form>
+                        </div>
+
+                    }
+
+                    else
+                    {
+                        <div class="review-form">
+                            <form action="">
+                                <div class="stars">
+                                    <span>Your Rating: </span>
+                                    <input type="radio" name="star" id="star1" />
+                                    <label for="star1"></label>
+                                    <input type="radio" name="star" id="star2" />
+                                    <label for="star2"></label>
+                                    <input type="radio" name="star" id="star3" />
+                                    <label for="star3"></label>
+                                    <input type="radio" name="star" id="star4" />
+                                    <label for="star4"></label>
+                                    <input type="radio" name="star" id="star5" />
+                                    <label for="star5"></label>
+                                </div>
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Your Name" />
+                                <input type="email"
+                                       class="form-control"
+                                       placeholder="Your Email" />
+                                <textarea class="form-control"
+                                          name=""
+                                          id=""
+                                          cols="40"
+                                          rows="5"
+                                          placeholder="Your Message"></textarea>
+                                <a class="btn" asp-controller="Account" asp-action="Login">Submit</a>
+                            </form>
+                        </div>
+
+                    }
                 </div>
             </div>
         </div>

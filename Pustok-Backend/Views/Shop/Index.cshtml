@@ -19,57 +19,60 @@
 <section id="shop-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 order-lg-2">
+            <div class="col-lg-9 order-lg-2 product-list">
                 <partial name="_ProductsPartial" model="Model.PaginatedDatas" />
 
             </div>
             <div class="col-lg-3 mt-5 mt-lg-0">
                 <div class="left-side-shop">
-                    <div class="widget filter-widget">
-                        <h4 class="widget-title">Filter by Price</h4>
-                        <div class="range-slider">
-                            <input type="range"
-                                   class="min-price"
-                                   value="10"
-                                   min="10"
-                                   max="500"
-                                   step="10"
-                                   style="accent-color: #d8d8d8" />
-                            <input type="range"
-                                   class="max-price"
-                                   value="500"
-                                   min="10"
-                                   max="500"
-                                   step="10"
-                                   style="accent-color: #d8d8d8" />
-                        </div>
-                        <div class="price-area">
-                            <div style="color: gray">
-                                <p>Price:</p>
+                    <form id="filter-form">
+                        <div class="widget filter-widget">
+                            <h4 class="widget-title">Filter by Price</h4>
+                            <div class="range-slider">
+                                <input type="range"
+                                       class="min-price"
+                                       value="10"
+                                       min="10"
+                                       max="200"
+                                       step="5"
+                                       style="accent-color: #d8d8d8" />
+                                <input type="range"
+                                       class="max-price"
+                                       value="200"
+                                       min="10"
+                                       max="200"
+                                       step="5"
+                                       style="accent-color: #d8d8d8" />
                             </div>
-                            <div>
-                                <p id="min-value">10</p>
-                            </div>
+                            <div class="price-area">
+                                <div style="color: gray">
+                                    <p>Price:</p>
+                                </div>
+                                <div>
+                                    <p id="min-value">10</p>
+                                </div>
 
-                            <div>
-                                <p id="max-value">500</p>
-                            </div>
-                            <div class="filter-button">
-                                <button>FILTER</button>
+                                <div>
+                                    <p id="max-value">200</p>
+                                </div>
+                                <div class="filter-button">
+                                    <button type="submit" style="cursor:pointer">FILTER</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+                    </form>
                     <div class="widget categories-widget">
                         <h4 class="widget-title">Category</h4>
                         <ul>
-                            <li class="cat-item">
+                            <li class="cat-item cat-item-all">
                                 <a href="">All</a>
                                 (@productCount)
                             </li>
 
                             @foreach (var item in Model.Categories)
                             {
-                                <li class="cat-item">
+                                <li class="cat-item prod-cat-item" data-id="@item.Id" style="cursor:pointer">
                                     <a href="">@item.Name</a>
                                     (@item.Products.Count())
                                 </li>
@@ -81,51 +84,25 @@
                     <div class="widget top-products">
                         <h4 class="widget-title">Top Products</h4>
                         <div class="products">
-                            <div class="product">
-                                <div class="image">
-                                    <a href="./productdetail.html">
-                                        <img src="~/assets/images/product-1.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./productdetail.html">
-                                            Here is a Quick Cure for the Book
+                           @foreach (var item in Model.TopProducts)
+                            {
+                                <div class="product">
+                                    <div class="image">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                                         </a>
-                                    </h6>
-                                    <p class="price"><span>$</span>50</p>
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">
+                                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                @item.Name
+                                            </a>
+                                        </h6>
+                                        <p class="price"><span>$</span>@(item.Price -(item.Price*item.Discount)/100)</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="product">
-                                <div class="image">
-                                    <a href="./productdetail.html">
-                                        <img src="~/assets/images/product-2.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./productdetail.html">
-                                            Here is a Quick Cure for the Book
-                                        </a>
-                                    </h6>
-                                    <p class="price"><span>$</span>70</p>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <div class="image">
-                                    <a href="./productdetail.html">
-                                        <img src="~/assets/images/product-3.webp" alt="" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">
-                                        <a href="./productdetail.html">
-                                            Here is a Quick Cure for the Book
-                                        </a>
-                                    </h6>
-                                    <p class="price"><span>$</span>40</p>
-                                </div>
-                            </div>
+                            }
+                         
                         </div>
                     </div>
                 </div>

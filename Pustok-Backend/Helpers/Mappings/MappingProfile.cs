@@ -7,6 +7,7 @@ using Pustok_Backend.Areas.Admin.ViewModels.Brand;
 using Pustok_Backend.Areas.Admin.ViewModels.Category;
 using Pustok_Backend.Areas.Admin.ViewModels.Contact;
 using Pustok_Backend.Areas.Admin.ViewModels.Product;
+using Pustok_Backend.Areas.Admin.ViewModels.ProductComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
 using Pustok_Backend.Areas.Admin.ViewModels.Setting;
 using Pustok_Backend.Areas.Admin.ViewModels.Slider;
@@ -91,8 +92,17 @@ namespace Pustok_Backend.Helpers.Mappings
             CreateMap<Product, ProductVM>().ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.FullName))
                                            .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.Discount.Percent));
 
+            CreateMap<Product, ProductDetailVM>().ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.FullName))
+                                       .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.Discount.Percent))
+                                       .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+                                        .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.ProductTags.Select(m => m.Tag).ToList()));
 
 
+            CreateMap<ProductComment, ProductCommentVM>().ForMember(dest => dest.ProductTitle, opt => opt.MapFrom(src => src.Product.Name))
+                                       .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.AppUser.Name))
+                                       .ForMember(dest => dest.Surname, opt => opt.MapFrom(src => src.AppUser.Surname));
+
+            CreateMap<ProductCommentCreateVM, ProductComment>();
 
         }
     }

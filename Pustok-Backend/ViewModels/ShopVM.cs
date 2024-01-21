@@ -8,6 +8,8 @@ namespace Pustok_Backend.ViewModels
     {
         public Paginate<ProductVM> PaginatedDatas { get; set; }
         public List<CategoryVM> Categories { get; set; }
+        public List<ProductVM> TopProducts { get; set; }
+
 
     }
 }
