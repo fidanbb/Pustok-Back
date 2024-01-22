@@ -10,7 +10,8 @@
 }
 
 @section css {
-
+    <link rel="stylesheet" href="~/assets/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="~/assets/slick-1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="~/assets/css/pages/shop.css" />
 
 }
@@ -111,6 +112,8 @@
     </div>
 </section>
 <!-- Shop Detail Section Ends -->
+
+
 <!-- Product Detail Modal Section Starts -->
 <section id="product-detail-modal">
     <div class="container">
@@ -122,12 +125,8 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6 mb-5 mb-lg-0">
                         <div class="product-image">
-                            <img src="~/assets/images/product-1.webp" alt="" />
-                            <img src="~/assets/images/product-2.webp" alt="" />
                         </div>
                         <div class="slider-nav-thumbnails">
-                            <img src="~/assets/images/product-1.webp" alt="" />
-                            <img src="~/assets/images/product-2.webp" alt="" />
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
@@ -136,21 +135,12 @@
                                 In 10 Minutes, I'll Give You The Truth About
                             </h1>
                             <div class="price">
-                                <span class="actial-price">$50</span>
+                                <span class="actual-price">$</span>
                                 <del class="discount-price">$80</del>
                             </div>
 
-                            <div class="review">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <span>2 reviews</span>
-                            </div>
-                            <p>
+
+                            <p class="product-desc">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore
                                 magna aliqua.
@@ -181,9 +171,9 @@
                             </div>
 
                             <div class="product-meta">
-                                <p>SKU: <span>BE45VGRT</span></p>
-                                <p>Categories: <span>adventure, children</span></p>
-                                <p>Tags: <span>news, strategy, bestseller</span></p>
+                                <p>SKU: <span class="sku">BE45VGRT</span></p>
+                                <p>Category: <span class="category">adventure, children</span></p>
+                                <p>Tags: <span class="tags">news, strategy, bestseller</span></p>
                             </div>
                         </div>
                     </div>
@@ -192,11 +182,14 @@
         </div>
     </div>
     <div class="modal-overlay d-none"></div>
-    </div>
+
 </section>
 <!-- Product Detail Modal Section Ends -->
-@section script {
 
+
+@section script {
+    <script src="~/assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="~/assets/slick-1.8.1/slick/slick.js"></script>
     <script src="~/assets/js/shop.js"></script>
 
 }

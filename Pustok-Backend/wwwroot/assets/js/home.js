@@ -216,7 +216,7 @@ $(document).ready(function () {
     });
 
     $(".open-modal").click(function (e) {
-      e.preventDefault();
+     /* e.preventDefault();*/
       $(".detail-modal").removeClass("d-none");
       $(".modal-overlay").removeClass("d-none");
 
@@ -642,4 +642,82 @@ $(document).ready(function () {
     $(".modal-overlay").addClass("d-none");
     $("body").removeClass("modal-is-open");
   });
+
+
+
+    $(document).on("click", ".open-modal", function (e) {
+
+        let id = $(this).attr("data-id");
+        let name = $(".detail-modal .product-name")
+        let description = $(".detail-modal .product-desc")
+        let price = $(".detail-modal .actual-price")
+        let discountPrice = $(".detail-modal .discount-price")
+        let category = $(".detail-modal .category")
+        let sku = $(".detail-modal .sku")
+        let tags = $(".detail-modal .tags")
+        let imageContainer = document.querySelector(".detail-modal .product-image");
+        let thumbnailContainer = document.querySelector(".detail-modal .slider-nav-thumbnails");
+
+        if ($(".product-image").hasClass("slick-initialized")) {
+            $(".product-image").slick("unslick");
+        }
+
+        if ($(".slider-nav-thumbnails").hasClass("slick-initialized")) {
+            $(".slider-nav-thumbnails").slick("unslick");
+        }
+
+        $(".product-image").empty();
+        $(".slider-nav-thumbnails").empty();
+
+        $.ajax({
+            type: "Get",
+            url: `/Home/GetProductDatasModal/${id}`,
+            success: function (res) {
+                console.log("Salam")
+                let actualPrice = res.price - (((res.price * res.discount) / 100));
+                description.text(res.description)
+                name.text(res.name)
+                discountPrice.text("$" + res.price)
+                price.text("$" + actualPrice)
+                category.text(res.categoryName)
+                sku.text(res.sku)
+                tags.text(res.tags)
+                console.log(res.images.length)
+
+                for (let i = 0; i < res.images.length; i++) {
+                    let img = document.createElement("img");
+                    img.src = "/assets/images/" + res.images[i];
+                    imageContainer.appendChild(img);
+
+                    let thumbnailImg = document.createElement("img");
+                    thumbnailImg.src = "/assets/images/" + res.images[i];
+                    thumbnailContainer.appendChild(thumbnailImg);
+                }
+
+             
+
+                $(".product-image").slick({
+                    infinite: true,
+                    prevArrow: $(".prev"),
+                    nextArrow: $(".next"),
+                    asNavFor: ".slider-nav-thumbnails",
+                });
+
+                $(".slider-nav-thumbnails").slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    focusOnSelect: true,
+                    asNavFor: ".product-image",
+                });
+
+             
+
+
+            }
+        })
+
+
+    })
+
+
 });

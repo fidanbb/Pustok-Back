@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Pustok_Backend.Areas.Admin.ViewModels.Advert;
+using Pustok_Backend.Areas.Admin.ViewModels.Author;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.BlogAuthor;
 using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
@@ -104,6 +105,10 @@ namespace Pustok_Backend.Helpers.Mappings
 
             CreateMap<ProductCommentCreateVM, ProductComment>();
 
+            CreateMap<Author, AuthorVM>()
+                     .ForMember(dest => dest.ProductTitles, opt => opt.MapFrom(src => src.Products.Select(product => product.Name).ToList()));
+            CreateMap<AuthorCreateVM, Author>();
+            CreateMap<AuthorEditVM,Author>();
         }
     }
 }

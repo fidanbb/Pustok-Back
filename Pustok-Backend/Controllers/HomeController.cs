@@ -89,5 +89,45 @@ namespace Pustok_Backend.Controllers
             }
 
         }
+
+        public async Task<IActionResult> GetProductDatasModal(int? id)
+        {
+            try
+            {
+                if (id is null) throw new ArgumentNullException();
+                ProductDetailVM dbProduct = await _productService.GetByIdWithoutTrackingAsync((int)id);
+                if (dbProduct is null) throw new NullReferenceException();
+
+                List<string> images = dbProduct.Images.Select(m => m.Image).ToList();
+                List<string> tags = dbProduct.Tags.Select(m => m.Name).ToList();
+                ProductModalVM model = new()
+                {
+                    Name = dbProduct.Name,
+                    Description = dbProduct.Description,
+                    Price = dbProduct.Price,
+                    CategoryName = dbProduct.CategoryName,
+                    Image = dbProduct.Images.FirstOrDefault(m => m.IsMain).Image,
+                   Images = images,
+                   Sku=dbProduct.Sku,
+                   Tags = tags,
+                   Discount=dbProduct.Discount,
+
+                };
+
+                return Ok(model);
+            }
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
+
+        }
+
     }
 }

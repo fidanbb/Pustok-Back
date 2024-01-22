@@ -1,14 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Pustok_Backend.Areas.Admin.ViewModels.Blog;
-using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
+
 using Pustok_Backend.Areas.Admin.ViewModels.Category;
 using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Areas.Admin.ViewModels.ProductComment;
-using Pustok_Backend.Areas.Admin.ViewModels.Tag;
 using Pustok_Backend.Helpers;
 using Pustok_Backend.Models;
-using Pustok_Backend.Services;
 using Pustok_Backend.Services.Interfaces;
 using Pustok_Backend.ViewModels;
 
@@ -39,7 +36,8 @@ namespace Pustok_Backend.Controllers
             Paginate<ProductVM> paginatedDatas = new(dbPaginatedDatas, page, pageCount);
             List<CategoryVM> categories = await _categoryService.GetAllAsync();
             List<ProductVM> topProducts = await _productService.GetTopProducts(3);
-          
+            ProductDetailVM product = null;
+           
             ViewBag.take = take;
             ViewBag.TotalProduct = await _productService.GetTotalProductCountAsync();
 
