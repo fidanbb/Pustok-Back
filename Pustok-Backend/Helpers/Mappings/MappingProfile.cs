@@ -109,6 +109,9 @@ namespace Pustok_Backend.Helpers.Mappings
                      .ForMember(dest => dest.ProductTitles, opt => opt.MapFrom(src => src.Products.Select(product => product.Name).ToList()));
             CreateMap<AuthorCreateVM, Author>();
             CreateMap<AuthorEditVM,Author>();
+
+            CreateMap<CategoryCreateVM, Category>();
+            CreateMap<CategoryEditVM, Category>();
         }
     }
 }
