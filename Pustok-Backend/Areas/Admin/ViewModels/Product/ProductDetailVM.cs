@@ -10,6 +10,9 @@ namespace Pustok_Backend.Areas.Admin.ViewModels.Product
         public string Description { get; set; }
         public int Rate { get; set; }
         public string Sku { get; set; }
+
+        public int SaleCount { get; set; }
+        public int StockCount { get; set; }
         public string CategoryName { get; set; }
         public string AuthorName { get; set; }
         public List<ProductImage> Images { get; set; }

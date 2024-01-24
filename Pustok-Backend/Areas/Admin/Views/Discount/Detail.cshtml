@@ -1,0 +1,23 @@
+﻿@model DiscountVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container mt-5 " style="margin-left:30px">
+
+
+
+    <h3 class="mb-3">Discount Name - @Model.Name</h3>
+
+    <h3 class="mb-3">Percent - @Model.Percent</h3>
+
+
+    <p class="mb-3">Created Date - @Model.CreatedDate</p>
+    <p>Updated Date - @Model.UpdatedDate</p>
+
+
+
+    <div class="back mt-2">
+        <a class="btn btn-info text-white" asp-action="Index">Back</a>
+    </div>
+</div>

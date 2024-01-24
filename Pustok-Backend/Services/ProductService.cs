@@ -5,8 +5,10 @@ using Newtonsoft.Json.Linq;
 using Pustok_Backend.Areas.Admin.ViewModels.Blog;
 using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Data;
+using Pustok_Backend.Helpers.Extensions;
 using Pustok_Backend.Models;
 using Pustok_Backend.Services.Interfaces;
+using System.Reflection.Metadata;
 
 namespace Pustok_Backend.Services
 {
@@ -14,12 +16,16 @@ namespace Pustok_Backend.Services
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _env;
 
         public ProductService(AppDbContext context,
-                               IMapper mapper)
+                               IMapper mapper,
+                               IWebHostEnvironment env)
         {
             _context = context;
             _mapper = mapper;
+            _env = env;
+
         }
 
 
@@ -326,6 +332,162 @@ namespace Pustok_Backend.Services
         public async Task<int> GetTotalProductCountAsync()
         {
            return await _context.Products.CountAsync();
+        }
+
+        public async Task<List<ProductVM>> GetPaginatedProductDatasAsync(int page, int take)
+        {
+            return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Images)
+                                                                 .Include(m => m.Author)
+                                                                 .Include(m=>m.Category)
+                                                                 .Skip((page * take) - take)
+                                                                 .Take(take)
+                                                                 .ToListAsync());
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            Product dbProduct = await _context.Products.Include(m => m.Images).Include(m => m.ProductTags).Include(m => m.ProductComments).FirstOrDefaultAsync(m => m.Id == id);
+
+            _context.Products.Remove(dbProduct);
+
+            await _context.SaveChangesAsync();
+
+            foreach (var item in dbProduct.Images)
+            {
+                string path = _env.GetFilePath("assets/images", item.Image);
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+
+            }
+        }
+
+        public async Task DeleteProductImageAsync(int id)
+        {
+            ProductImage productImage = await _context.ProductImages.Where(m => m.Id == id).FirstOrDefaultAsync();
+
+            _context.Remove(productImage);
+
+            await _context.SaveChangesAsync();
+
+            string path = _env.GetFilePath("assets/images", productImage.Image);
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+
+        public async Task CreateAsync(ProductCreateVM product)
+        {
+            List<ProductImage> newImages = new();
+
+            foreach (var photo in product.Photos)
+            {
+                string fileName = $"{Guid.NewGuid()}-{photo.FileName}";
+
+                string path = _env.GetFilePath("assets/images", fileName);
+
+                await photo.SaveFileAsync(path);
+
+                newImages.Add(new ProductImage { Image = fileName });
+            }
+
+            newImages.FirstOrDefault().IsMain = true;
+
+
+
+            var selectedTags = product.Tags.Where(m => m.Selected).Select(m => m.Value).ToList();
+
+
+
+
+            var dbProduct = new Product()
+            {
+                Name = product.Name,
+                Description = product.Description,
+                Price =product.Price,
+                Sku=product.Sku,
+                StockCount=product.StockCount,
+                Images = newImages,
+                AuthorId = product.AuthorId,
+                CategoryId=product.CategoryId,
+                DiscountId=product.DiscountId,
+                
+            };
+
+            foreach (var item in selectedTags)
+            {
+                dbProduct.ProductTags.Add(new ProductTag()
+                {
+                    TagId = int.Parse(item)
+                });
+            }
+
+            await _context.ProductImages.AddRangeAsync(newImages);
+
+            await _context.Products.AddAsync(dbProduct);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<ProductVM> GetByNameWithoutTrackingAsync(string name)
+        {
+            Product product = await _context.Products.Where(m => m.Name.Trim().ToLower() == name.Trim().ToLower()).FirstOrDefaultAsync();
+
+            return _mapper.Map<ProductVM>(product);
+        }
+
+        public async Task EditAsync(ProductEditVM product)
+        {
+            List<ProductImage> newImages = new();
+
+            if (product.Photos != null)
+            {
+                foreach (var photo in product.Photos)
+                {
+                    string fileName = $"{Guid.NewGuid()} - {photo.FileName}";
+
+                    string path = _env.GetFilePath("assets/images", fileName);
+
+                    await photo.SaveFileAsync(path);
+
+                    newImages.Add(new ProductImage { Image = fileName });
+                }
+
+                await _context.ProductImages.AddRangeAsync(newImages);
+            }
+
+            newImages.AddRange(product.Images);
+
+
+            var productById = await _context.Products.Include(m => m.ProductTags).FirstOrDefaultAsync(m => m.Id == product.Id);
+
+            var existingIds = productById.ProductTags.Select(m => m.TagId).ToList();
+
+            var selectedIds = product.Tags.Where(m => m.Selected).Select(m => m.Value).Select(int.Parse).ToList();
+
+            var toAdd = selectedIds.Except(existingIds);
+            var toRemove = existingIds.Except(selectedIds);
+
+            productById.ProductTags = productById.ProductTags.Where(m => !toRemove.Contains(m.TagId)).ToList();
+
+            foreach (var item in toAdd)
+            {
+                productById.ProductTags.Add(new ProductTag
+                {
+                    TagId = item
+                });
+            }
+
+
+            product.Images = newImages;
+
+            _mapper.Map(product, productById);
+
+            _context.Products.Update(productById);
+
+            await _context.SaveChangesAsync();
         }
     }
 }

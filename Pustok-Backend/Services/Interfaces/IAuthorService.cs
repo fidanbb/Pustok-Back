@@ -13,5 +13,7 @@ namespace Pustok_Backend.Services.Interfaces
         Task CreateAsync(AuthorCreateVM author);
         Task EditAsync(AuthorEditVM author);
         Task<AuthorVM> GetByNameWithoutTrackingAsync(string name);
+
+        Task<List<AuthorVM>> GetAllAsync();
     }
 }

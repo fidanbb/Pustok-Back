@@ -79,8 +79,10 @@ namespace Pustok_Backend.Controllers
             {
                 emailHtml = reader.ReadToEnd();
             }
-
+            string base64 = "https://imageio.forbes.com/specials-images/imageserve/5f85be4ed0acaafe77436710/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds";
             emailHtml = emailHtml.Replace("{{link}}", url);
+            emailHtml = emailHtml.Replace("{{test}}", base64);
+
             emailHtml = emailHtml.Replace("{{name}}", user.Name);
             emailHtml = emailHtml.Replace("{{surname}}", user.Surname);
 

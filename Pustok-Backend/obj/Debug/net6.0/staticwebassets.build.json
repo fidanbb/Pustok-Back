@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GJEEINMou5H6gKVkTqsHPKWhfKhiV9rUii7Gtzr7KdE=",
+  "Hash": "KJdendCf9xG09rq/q8jGbguv/AzhLqwdVw/F62KmVgQ=",
   "Source": "Pustok-Backend",
   "BasePath": "_content/Pustok-Backend",
   "Mode": "Default",
@@ -33609,6 +33609,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\pages\\wishlist.scss"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\26b7a837-ae3e-4f40-bd04-f2b6b8f5133a-product-10.webp",
+      "SourceId": "Pustok-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\",
+      "BasePath": "_content/Pustok-Backend",
+      "RelativePath": "assets/images/26b7a837-ae3e-4f40-bd04-f2b6b8f5133a-product-10.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\26b7a837-ae3e-4f40-bd04-f2b6b8f5133a-product-10.webp"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\36a943cb-43df-4246-8325-1627416962f4 - brand-1.webp",
       "SourceId": "Pustok-Backend",
       "SourceType": "Discovered",
@@ -34063,6 +34082,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\client-5.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\d1b1aac2-fcaa-40cb-bc39-24b928d5e5cb-product-9.webp",
+      "SourceId": "Pustok-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\",
+      "BasePath": "_content/Pustok-Backend",
+      "RelativePath": "assets/images/d1b1aac2-fcaa-40cb-bc39-24b928d5e5cb-product-9.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\d1b1aac2-fcaa-40cb-bc39-24b928d5e5cb-product-9.webp"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\e3318d86-4841-4381-bec5-78602851c737 - blog-grid-4.webp",
@@ -34633,6 +34671,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\login.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\js\\product.js",
+      "SourceId": "Pustok-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\",
+      "BasePath": "_content/Pustok-Backend",
+      "RelativePath": "assets/js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\product.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\js\\productdetail.js",

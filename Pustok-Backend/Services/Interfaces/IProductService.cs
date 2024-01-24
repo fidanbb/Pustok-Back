@@ -1,4 +1,5 @@
-﻿using Pustok_Backend.Areas.Admin.ViewModels.Product;
+﻿using Pustok_Backend.Areas.Admin.ViewModels.Blog;
+using Pustok_Backend.Areas.Admin.ViewModels.Product;
 
 namespace Pustok_Backend.Services.Interfaces
 {
@@ -12,7 +13,6 @@ namespace Pustok_Backend.Services.Interfaces
         Task<int> GetTotalProductCountAsync();
         Task<List<ProductVM>> GetBestSellerProductsAsync();
         Task<List<ProductVM>> GetProductsByCategoryWithTakeAsync(int take,string categoryName);
-
         Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take, int? categoryId, string sortValue, string searchText, int? minValue, int? maxValue);
 
         Task<int> GetCountAsync(int? categoryId, string sortValue, string searchText, int? minValue, int? maxValue);
@@ -20,6 +20,19 @@ namespace Pustok_Backend.Services.Interfaces
         Task<List<ProductVM>> GetTopProducts(int take);
 
         Task<ProductDetailVM> GetByIdWithoutTrackingAsync(int id);
+        Task<List<ProductVM>> GetPaginatedProductDatasAsync(int page, int take);
+
+        Task DeleteAsync(int id);
+
+        Task DeleteProductImageAsync(int id);
+
+        Task CreateAsync(ProductCreateVM product);
+
+        Task<ProductVM> GetByNameWithoutTrackingAsync(string name);
+
+        Task EditAsync(ProductEditVM product);
+
+
 
     }
 }

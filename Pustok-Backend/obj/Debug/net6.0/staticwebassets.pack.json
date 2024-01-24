@@ -7069,6 +7069,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\pages\\wishlist.scss"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\26b7a837-ae3e-4f40-bd04-f2b6b8f5133a-product-10.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\26b7a837-ae3e-4f40-bd04-f2b6b8f5133a-product-10.webp"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\36a943cb-43df-4246-8325-1627416962f4 - brand-1.webp",
       "PackagePath": "staticwebassets\\assets\\images\\36a943cb-43df-4246-8325-1627416962f4 - brand-1.webp"
     },
@@ -7163,6 +7167,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\client-5.webp",
       "PackagePath": "staticwebassets\\assets\\images\\client-5.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\d1b1aac2-fcaa-40cb-bc39-24b928d5e5cb-product-9.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\d1b1aac2-fcaa-40cb-bc39-24b928d5e5cb-product-9.webp"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\e3318d86-4841-4381-bec5-78602851c737 - blog-grid-4.webp",
@@ -7283,6 +7291,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\js\\login.js",
       "PackagePath": "staticwebassets\\assets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\js\\product.js",
+      "PackagePath": "staticwebassets\\assets\\js\\product.js"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\js\\productdetail.js",

@@ -7,6 +7,7 @@ using Pustok_Backend.Areas.Admin.ViewModels.BlogComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Brand;
 using Pustok_Backend.Areas.Admin.ViewModels.Category;
 using Pustok_Backend.Areas.Admin.ViewModels.Contact;
+using Pustok_Backend.Areas.Admin.ViewModels.Discount;
 using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Areas.Admin.ViewModels.ProductComment;
 using Pustok_Backend.Areas.Admin.ViewModels.Service;
@@ -91,7 +92,9 @@ namespace Pustok_Backend.Helpers.Mappings
             CreateMap<BlogEditVM, Blog>();
             CreateMap<Category, CategoryVM>();
             CreateMap<Product, ProductVM>().ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.FullName))
-                                           .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.Discount.Percent));
+                                           .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.Discount.Percent))
+                                            .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
+
 
             CreateMap<Product, ProductDetailVM>().ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.FullName))
                                        .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.Discount.Percent))
@@ -112,6 +115,15 @@ namespace Pustok_Backend.Helpers.Mappings
 
             CreateMap<CategoryCreateVM, Category>();
             CreateMap<CategoryEditVM, Category>();
+
+            CreateMap<DiscountCreateVM, Discount>();
+            CreateMap<DiscountEditVM, Discount>();
+            CreateMap<Discount, DiscountVM>();
+
+            CreateMap<ProductCreateVM, Product>();
+
+            CreateMap<ProductEditVM, Product>();
+            CreateMap<ProductDetailVM, ProductEditVM>();
         }
     }
 }

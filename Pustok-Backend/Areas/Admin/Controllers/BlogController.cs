@@ -254,7 +254,7 @@ namespace Pustok_Backend.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Edit(int? id, BlogEditVM request,int currentPage)
+        public async Task<IActionResult> Edit(int? id, BlogEditVM request)
         {
             try
             {
@@ -318,7 +318,7 @@ namespace Pustok_Backend.Areas.Admin.Controllers
 
                 //var currentPage = TempData["CurrentPageForAction"];
 
-                return RedirectToAction(nameof(Index), new { page=currentPage});
+                return RedirectToAction(nameof(Index));
             }
             catch (ArgumentNullException)
             {

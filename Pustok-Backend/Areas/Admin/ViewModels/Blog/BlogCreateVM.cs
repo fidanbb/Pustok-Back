@@ -5,7 +5,6 @@ namespace Pustok_Backend.Areas.Admin.ViewModels.Blog
 {
     public class BlogCreateVM
     {
-        public int Id { get; set; }
         [Required]
         public string Description { get; set; }
         [Required]

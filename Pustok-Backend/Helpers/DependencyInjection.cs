@@ -27,6 +27,7 @@ namespace Pustok_Backend.Helpers
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IProductCommentService, ProductCommentService>();
             services.AddScoped<IAuthorService, AuthorService>();
+            services.AddScoped<IDiscountService, DiscountService>();
 
 
 

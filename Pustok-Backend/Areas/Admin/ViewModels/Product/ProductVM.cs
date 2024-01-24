@@ -11,6 +11,9 @@ namespace Pustok_Backend.Areas.Admin.ViewModels.Product
         public string AuthorName { get; set; }
         public List<ProductImage> Images { get; set; }
 
+        public string Image { get; set; }
+
+        public DateTime CreatedDate { get; set; }
         public int Discount { get; set; }
     }
 }

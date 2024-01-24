@@ -66,6 +66,11 @@ namespace Pustok_Backend.Services
             await _context.SaveChangesAsync();
         }
 
+        public async Task<List<AuthorVM>> GetAllAsync()
+        {
+            return _mapper.Map<List<AuthorVM>>(await _context.Authors.ToListAsync());
+        }
+
         public async Task<AuthorVM> GetByIdWithoutTrackingAsync(int id)
         {
             return _mapper.Map<AuthorVM>(await _context.Authors.Include(m => m.Products).AsNoTracking()
