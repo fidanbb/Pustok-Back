@@ -201,15 +201,31 @@
                                                 <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                             </a>
                                             <div class="hover-btns" data-id="@item.Id">
-                                                <a class="added-cart" href="">
-                                                    <i class="fas fa-shopping-basket"></i>
-                                                </a>
-                                                <a class="added-removed-wishlist" href="">
-                                                    <i class="fas fa-heart"></i>
-                                                </a>
+                                               
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <a class="added-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </a>
+                                                    <a @* class="wislist-add" *@>
+                                                        <i class="fas fa-heart wishlist-add"></i>
+                                                    </a>
+                                                  
+                                                }
+                                                else
+                                                {
+                                                    <a asp-controller="Account" asp-action="Login">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </a>
+                                                    <a asp-controller="Account" asp-action="Login">
+                                                        <i class="fas fa-heart"></i>
+                                                    </a>
+                                                   
+                                                }
                                                 <a class="open-modal" data-id="@item.Id" href="">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
+
                                             </div>
                                         </div>
                                     </div>
@@ -249,15 +265,31 @@
                                                 <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                             </a>
                                             <div class="hover-btns" data-id="@item.Id">
-                                                <a class="added-cart" href="">
-                                                    <i class="fas fa-shopping-basket"></i>
-                                                </a>
-                                                <a class="added-removed-wishlist" href="">
-                                                    <i class="fas fa-heart"></i>
-                                                </a>
+
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <a class="added-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </a>
+                                                    <a @* class="wislist-add" *@>
+                                                        <i class="fas fa-heart wishlist-add"></i>
+                                                    </a>
+
+                                                }
+                                                else
+                                                {
+                                                    <a asp-controller="Account" asp-action="Login">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </a>
+                                                    <a asp-controller="Account" asp-action="Login">
+                                                        <i class="fas fa-heart"></i>
+                                                    </a>
+
+                                                }
                                                 <a class="open-modal" data-id="@item.Id" href="">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
+
                                             </div>
                                         </div>
                                     </div>
@@ -296,15 +328,31 @@
                                                 <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                             </a>
                                             <div class="hover-btns" data-id="@item.Id">
-                                                <a class="added-cart" href="">
-                                                    <i class="fas fa-shopping-basket"></i>
-                                                </a>
-                                                <a class="added-removed-wishlist" href="">
-                                                    <i class="fas fa-heart"></i>
-                                                </a>
+
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <a class="added-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </a>
+                                                    <a @* class="wislist-add" *@>
+                                                        <i class="fas fa-heart wishlist-add"></i>
+                                                    </a>
+
+                                                }
+                                                else
+                                                {
+                                                    <a asp-controller="Account" asp-action="Login">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </a>
+                                                    <a asp-controller="Account" asp-action="Login">
+                                                        <i class="fas fa-heart"></i>
+                                                    </a>
+
+                                                }
                                                 <a class="open-modal" data-id="@item.Id" href="">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
+
                                             </div>
                                         </div>
                                     </div>
@@ -315,6 +363,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
                         }
                     </div>
@@ -349,20 +398,36 @@
                             <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
                                 <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                             </a>
-                            <div class="hover-content" data-id="1">
+                            <div class="hover-content" data-id="@item.Id">
                                 <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
                                     <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                 </a>
-                                <div class="hover-btns" data-id="1">
-                                    <a class="added-cart" href="">
-                                        <i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                    <a class="added-removed-wishlist" href="">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
+                                <div class="hover-btns" data-id="@item.Id">
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a class="added-cart">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </a>
+                                        <a @* class="wislist-add" *@>
+                                            <i class="fas fa-heart wishlist-add"></i>
+                                        </a>
+
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </a>
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+
+                                    }
                                     <a class="open-modal" data-id="@item.Id" href="">
                                         <i class="fas fa-eye"></i>
                                     </a>
+
                                 </div>
                             </div>
                         </div>
@@ -373,6 +438,7 @@
                         </div>
                     </div>
                 </div>
+
 
             }
         </div>
@@ -591,7 +657,7 @@
                     </div>
                     <div class="product-card-body">
                         <div class="card-image">
-                            <a asp-controller ="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
                                 <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                             </a>
                             <div class="hover-content" data-id="@item.Id">
@@ -599,15 +665,31 @@
                                     <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                 </a>
                                 <div class="hover-btns" data-id="@item.Id">
-                                    <a  class="added-cart" href="">
-                                        <i class="fas fa-shopping-basket"></i>
-                                    </a>
-                                    <a  class="added-removed-wishlist" href="">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a class="added-cart">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </a>
+                                        <a @* class="wislist-add" *@>
+                                            <i class="fas fa-heart wishlist-add"></i>
+                                        </a>
+
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </a>
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+
+                                    }
                                     <a class="open-modal" data-id="@item.Id" href="">
                                         <i class="fas fa-eye"></i>
                                     </a>
+
                                 </div>
                             </div>
                         </div>
@@ -618,6 +700,8 @@
                         </div>
                     </div>
                 </div>
+
+
 
             }
 
@@ -772,7 +856,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                        <div class="product-content">
+                        <div class="product-content" data-id="0">
                             <h1 class="product-name">
                                 In 10 Minutes, I'll Give You The Truth About
                             </h1>
@@ -802,10 +886,23 @@
                             </div>
 
                             <div class="product-extra-buttons">
-                                <div class="add-to-wishlist">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <span>Add to Wishlist</span>
-                                </div>
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <div class="add-to-wishlist wishlist-add">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>Add to Wishlist</span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <a asp-controller="Account" asp-action="Login">
+                                        <div class="add-to-wishlist wishlist-add">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>Add to Wishlist</span>
+                                        </div>
+                                    </a>
+                                }
                                 <a href="">
                                     <i class="fa-solid fa-arrow-up-from-bracket"></i>
                                     Share this Product
@@ -827,9 +924,32 @@
  
 </section>
 <!-- Product Detail Modal Section Ends -->
+
+<!-- product succesfully added to wishlist popup -->
+<div class="added-item-wishlist ">
+    <p><i class="ion-checkmark"></i>Product added to wishlist.</p>
+</div>
+
+<!-- product is already in  wishlist popup -->
+<div class="remove-item-wishlist">
+    <p><i class="ion-alert"></i>This product is already in wishlist.</p>
+</div>
+
+<!-- product added to basket popup -->
+
+<div class="added-item-basket d-none ">
+    <i class="ion-checkmark"></i>
+    <p>
+        Cogratulations! Your item has been <br />
+        added.
+    </p>
+</div>
+
 @section script {
     <script src="~/assets/slick-1.8.1/slick/slick.min.js"></script>
     <script src="~/assets/slick-1.8.1/slick/slick.js"></script>
     <script src="~/assets/js/home.js"></script>
+    <script src="~/assets/js/wishlist.js"></script>
+
 
 }

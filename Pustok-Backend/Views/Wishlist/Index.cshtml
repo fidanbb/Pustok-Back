@@ -1,0 +1,154 @@
+﻿@model List<WishlistDetailVM>
+@{
+    ViewData["Title"] = "Index";
+   
+}
+
+@section css {
+
+    <link rel="stylesheet" href="~/assets/css/pages/wishlist.css" />
+
+}
+
+
+<!-- Wishlist Table Section Starts -->
+<section id="wishlist">
+    <div class="container">
+        <div class="tiny-header @(Model.Count == 0 ? "d-none":"")">
+            <h2>Your wishlist</h2>
+        </div>
+        <div class="empty-wishlist @(Model.Count == 0 ? "":"d-none")">
+            <!-- <p>Your Wishlist is currently empty.</p> -->
+            <div class="alert alert-success" role="alert">
+                Your Wishlist is currently empty.
+            </div>
+            <a href="./shop.html">Return to Shop</a>
+        </div>
+        <div style="overflow-x: auto" class="wishlist-table @(Model.Count == 0 ? "d-none":"")">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="product-remove"></th>
+                        <th class="product-image">Image</th>
+                        <th class="product-name">Product Name</th>
+                        <th class="product-price">Unit Price</th>
+                        <th class="prdocut-date">Date Added</th>
+                        <th class="product-status">Stock Status</th>
+                        <th class="product-action"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="product-remove">
+                                <span class="delete-wishlist-item" data-id="@item.Id">x</span>
+                            </td>
+                            <td class="product-image">
+                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                    <img src="~/assets/images/@item.Image" alt="" />
+                                </a>
+                            </td>
+                            <td class="product-name">
+                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+                            </td>
+                            <td class="product-price"><span>$</span><span>
+                                @(item.Price - (item.Price*item.Discount)/100)
+                            </span></td>
+                            <td class="prdocut-date">@item.CreatedDate.ToString("MM/dd/yyyy")</td>
+                            <td class="product-status">
+                                @if(item.StockCount!=0){
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>In Stock</span>
+                                }
+                                else
+                                {
+                                    <span>Not In Stock</span>
+                                }
+
+                            </td>
+                            <td class="product-action">
+                                <button type="submit" data-id="@item.Id" class="cart-add-basket">Add to Cart</button>
+                            </td>
+                        </tr>
+                    }
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- Wishlist Table Section Ends -->
+<!-- Mobile Wishlist Starts -->
+
+<section id="mobile-wishlist">
+    <div class="container">
+        <div class="tiny-header @(Model.Count == 0 ? "d-none":"")">
+            <h2>Your wishlist</h2>
+        </div>
+        <div class="empty-wishlist @(Model.Count == 0 ? "":"d-none")">
+            <!-- <p>Your Wishlist is currently empty.</p> -->
+            <div class="alert alert-success" role="alert">
+                Your Wishlist is currently empty.
+            </div>
+            <a href="./shop.html">Return to Shop</a>
+        </div>
+        <div class="wishlist-table @(Model.Count == 0 ? "d-none":"")">
+            @foreach (var item in Model)
+            {
+                <div class="product">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="product-image">
+                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                    <img src="~/assets/images/@item.Image" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="product-detail">
+                                <div class="product-name">
+                                    <h3><a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a></h3>
+                                </div>
+                                <div class="product-status">
+                                    @if (item.StockCount != 0)
+                                    {
+                                        <i class="fa-solid fa-check"></i>
+                                        <span>In Stock</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Not In Stock</span>
+                                    }
+                                </div>
+
+                                <div class="product-price">
+                                    <p>
+                                        $@(item.Price - (item.Price * item.Discount) / 100)
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="product-btns">
+                                <i class="fa-regular fa-trash-can delete-wishlist-item" data-id="@item.Id"></i>
+                                <button type="submit" data-id="@item.Id" class="cart-add-basket">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        
+        </div>
+    </div>
+</section>
+<!-- Mobile Wishlist Ends -->
+
+@section script {
+
+    <script src="~/assets/js/wishlist.js"></script>
+
+}
+

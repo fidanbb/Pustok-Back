@@ -6,6 +6,7 @@ using Pustok_Backend.Areas.Admin.ViewModels.Product;
 using Pustok_Backend.Areas.Admin.ViewModels.ProductComment;
 using Pustok_Backend.Helpers;
 using Pustok_Backend.Models;
+using Pustok_Backend.Services;
 using Pustok_Backend.Services.Interfaces;
 using Pustok_Backend.ViewModels;
 
@@ -16,15 +17,17 @@ namespace Pustok_Backend.Controllers
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
         private readonly IProductCommentService _productCommentService;
+        private readonly IWishlistService _wishlistService;
 
         public ShopController(IProductService productService,
                                ICategoryService categoryService,
-                               IProductCommentService productCommentService)
+                               IProductCommentService productCommentService,
+                               IWishlistService wishlistService)
         {
             _productService = productService;
             _categoryService = categoryService;
             _productCommentService = productCommentService;
-
+            _wishlistService = wishlistService;
         }
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1, int take = 9, int? categoryId=null, string sortValue = null, string searchText = null, int? minValue = null, int? maxValue=null)
@@ -237,6 +240,36 @@ namespace Pustok_Backend.Controllers
                 return NotFound();
             }
 
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> AddWishlist(int? id)
+        {
+
+            try
+            {
+                if (id is null) throw new ArgumentNullException();
+
+                ProductDetailVM product = await _productService.GetByIdWithoutTrackingAsync((int)id);
+
+                if (product is null) throw new NullReferenceException();
+
+                bool isInWishlist = _wishlistService.AddWishlist((int)id, product);
+
+                return Ok(isInWishlist);
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
+           
         }
 
     }

@@ -83,30 +83,47 @@
                             <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
                                 <img src="~/assets/images/@item.Images.FirstOrDefault(m=>m.IsMain).Image" alt="" />
                             </a>
-                            <div class="hover-content" data-id="1">
+                            <div class="hover-content" data-id="@item.Id">
                                 <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
                                     <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
                                 </a>
                                 <div class="hover-btns" data-id="@item.Id">
-                                    <a class="added-cart" href="">
-                                        <i class="fas fa-shopping-basket"></i>
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a class="added-cart">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </a>
+                                        <a @* class="wislist-add" *@>
+                                            <i class="fas fa-heart wishlist-add"></i>
+                                        </a>
+
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </a>
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <i class="fas fa-heart"></i>
+                                        </a>
+
+                                    }
+                                    <a class="open-modal" data-id="@item.Id" href="">
+                                        <i class="fas fa-eye"></i>
                                     </a>
-                                    <a class="added-removed-wishlist" href="">
-                                        <i class="fas fa-heart"></i>
-                                    </a>
-                                    <a class="open-modal" data-id="@item.Id">
-                                        <i class="fas fa-eye "></i>
-                                    </a>
+
                                 </div>
                             </div>
                         </div>
                         <div class="card-price">
-                            <span class="price">$ @(item.Price - ((item.Price * item.Discount) / 100))</span>
+                            <span class="price">$@(item.Price - ((item.Price * item.Discount) / 100))</span>
                             <del class="price-old">$@item.Price</del>
                             <span class="price-discount">@item.Discount%</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         }
 

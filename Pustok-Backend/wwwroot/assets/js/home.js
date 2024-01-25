@@ -657,6 +657,8 @@ $(document).ready(function () {
         let tags = $(".detail-modal .tags")
         let imageContainer = document.querySelector(".detail-modal .product-image");
         let thumbnailContainer = document.querySelector(".detail-modal .slider-nav-thumbnails");
+        let productContent = $(".product-content");
+
 
         if ($(".product-image").hasClass("slick-initialized")) {
             $(".product-image").slick("unslick");
@@ -673,7 +675,6 @@ $(document).ready(function () {
             type: "Get",
             url: `/Home/GetProductDatasModal/${id}`,
             success: function (res) {
-                console.log("Salam")
                 let actualPrice = res.price - (((res.price * res.discount) / 100));
                 description.text(res.description)
                 name.text(res.name)
@@ -682,7 +683,8 @@ $(document).ready(function () {
                 category.text(res.categoryName)
                 sku.text(res.sku)
                 tags.text(res.tags)
-                console.log(res.images.length)
+                productContent.attr("data-id", id)
+
 
                 for (let i = 0; i < res.images.length; i++) {
                     let img = document.createElement("img");

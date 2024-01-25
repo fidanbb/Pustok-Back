@@ -1,9 +1,14 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using Pustok_Backend.Areas.Admin.ViewModels.Account;
+using Pustok_Backend.Data;
 using Pustok_Backend.Helpers.Enums;
 using Pustok_Backend.Models;
 using Pustok_Backend.Services.Interfaces;
 using Pustok_Backend.ViewModels.Account;
+using Pustok_Backend.ViewModels.Wishlist;
 
 namespace Pustok_Backend.Controllers
 {
@@ -13,16 +18,22 @@ namespace Pustok_Backend.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IEmailService _emailService;
+        private readonly IWishlistService _wishlistService;
+        private readonly AppDbContext _context;
 
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
                                  RoleManager<IdentityRole> roleManager,
-                                 IEmailService emailService)
+                                 IEmailService emailService,
+                                 IWishlistService wishlistService,
+                                 AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _emailService = emailService;
+            _wishlistService = wishlistService;
+            _context = context;
         }
 
 
@@ -161,15 +172,89 @@ namespace Pustok_Backend.Controllers
                 ModelState.AddModelError(string.Empty, "Login informations is wrong");
                 return View();
             }
+            List<WishlistVM> wishlist = new();
+            Wishlist dbWishlist = await _wishlistService.GetWishlistByUserIdAsync(dbUser.Id);
+
+            if (dbWishlist is not null)
+            {
+                List<WishlistProduct> wishlistProducts = await _wishlistService.GetAllByWishlistIdAsync(dbWishlist.Id);
+
+                foreach (var item in wishlistProducts)
+                {
+                    wishlist.Add(new WishlistVM
+                    {
+                        ProductId = item.ProductId
+                    });
+                } 
+
+                Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(wishlist));
+
+            }
 
             return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> Logout(string userId)
         {
             await _signInManager.SignOutAsync();
+            List<WishlistVM> wishlist = _wishlistService.GetDatasFromCookies();
+            Wishlist dbWishlist = await _wishlistService.GetWishlistByUserIdAsync(userId);
+
+            if (wishlist.Count != 0)
+            {
+                if (dbWishlist == null)
+                {
+                    dbWishlist = new()
+                    {
+                        AppUserId = userId,
+                        WishlistProducts = new List<WishlistProduct>()
+
+                    };
+
+                    foreach (var item in wishlist)
+                    {
+                        dbWishlist.WishlistProducts.Add(new WishlistProduct()
+                        {
+                            ProductId = item.ProductId,
+                            WishlistId = dbWishlist.Id
+                        });
+                    }
+
+                    await _context.Wishlists.AddAsync(dbWishlist);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    List<WishlistProduct> wishlistProducts = new();
+
+                    foreach (var item in wishlist)
+                    {
+                        wishlistProducts.Add(new WishlistProduct()
+                        {
+                            ProductId = item.ProductId,
+                            WishlistId = dbWishlist.Id
+                        });
+                    }
+
+                    dbWishlist.WishlistProducts = wishlistProducts;
+
+                    _context.SaveChanges();
+
+                }
+
+                Response.Cookies.Delete("wishlist");
+            }
+            else
+            {
+                if (dbWishlist is not null)
+                {
+                    _context.Wishlists.Remove(dbWishlist);
+                    _context.SaveChanges();
+                }
+
+            }
             return RedirectToAction("Index", "Home");
         }
 

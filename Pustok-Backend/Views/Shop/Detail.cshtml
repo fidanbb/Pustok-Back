@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6">
-                            <div class="product-content">
+                            <div class="product-content" data-id="@Model.Product.Id">
                                 <h1 class="product-name">
                                    @Model.Product.Name
                                 </h1>
@@ -81,11 +81,23 @@
                                     <button type="submit">Add to cart</button>
                                 </div>
 
-                                <div class="product-extra-buttons">
-                                    <div class="add-to-wishlist">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <span>Add to Wishlist</span>
-                                    </div>
+                                <div class="product-extra-buttons" data-id="@Model.Product.Id">
+                                    @if(User.Identity.IsAuthenticated){
+                                        <div class="add-to-wishlist wishlist-add">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>Add to Wishlist</span>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Account" asp-action="Login">
+                                            <div class="add-to-wishlist wishlist-add">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <span>Add to Wishlist</span>
+                                            </div>
+                                        </a>
+                                    }
+
                                     <a href="">
                                         <i class="fa-solid fa-arrow-up-from-bracket"></i>
                                         Share this Product
@@ -308,10 +320,33 @@
     </div>
 </section>
 <!-- Description Revies section ends -->
+
+<!-- product succesfully added to wishlist popup -->
+<div class="added-item-wishlist ">
+    <p><i class="ion-checkmark"></i>Product added to wishlist.</p>
+</div>
+
+<!-- product is already in  wishlist popup -->
+<div class="remove-item-wishlist">
+    <p><i class="ion-alert"></i>This product is already in wishlist.</p>
+</div>
+
+<!-- product added to basket popup -->
+
+<div class="added-item-basket d-none ">
+    <i class="ion-checkmark"></i>
+    <p>
+        Cogratulations! Your item has been <br />
+        added.
+    </p>
+</div>
+
 @section script {
     <script src="~/assets/slick-1.8.1/slick/slick.min.js"></script>
     <script src="~/assets/slick-1.8.1/slick/slick.js"></script>
     <script src="~/assets/js/productdetail.js"></script>
+    <script src="~/assets/js/wishlist.js"></script>
+
 
 }
 

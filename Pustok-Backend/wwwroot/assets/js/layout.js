@@ -35,35 +35,35 @@ $(document).ready(function () {
 
   // check this while writing backend !!!!
 
-  const wishlistBtns = document.querySelectorAll(".added-removed-wishlist");
-  const addedItemWishlist = document.querySelector(".added-item-wishlist");
-  const removeItemWishlist = document.querySelector(".remove-item-wishlist");
+  //const wishlistBtns = document.querySelectorAll(".added-removed-wishlist");
+  //const addedItemWishlist = document.querySelector(".added-item-wishlist");
+  //const removeItemWishlist = document.querySelector(".remove-item-wishlist");
 
-  let isAddedToWishlist = false;
+  //let isAddedToWishlist = false;
 
-  wishlistBtns.forEach(function (wishlistBtn) {
-    wishlistBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (!isAddedToWishlist) {
-        // Show "Product added to wishlist" message
-        addedItemWishlist.style.display = "block";
-        wishlistBtn.style.color = "#63ab00"; // Change heart icon color
-        setTimeout(function () {
-          addedItemWishlist.style.display = "none";
-        }, 2000);
-      } else {
-        // Show "Product removed from wishlist" message
-        removeItemWishlist.style.display = "block";
-        wishlistBtn.style.color = ""; // Reset heart icon color
-        setTimeout(function () {
-          removeItemWishlist.style.display = "none";
-        }, 2000);
-      }
+  //wishlistBtns.forEach(function (wishlistBtn) {
+  //  wishlistBtn.addEventListener("click", function (e) {
+  //    e.preventDefault();
+  //    if (!isAddedToWishlist) {
+  //      // Show "Product added to wishlist" message
+  //      addedItemWishlist.style.display = "block";
+  //      wishlistBtn.style.color = "#63ab00"; // Change heart icon color
+  //      setTimeout(function () {
+  //        addedItemWishlist.style.display = "none";
+  //      }, 2000);
+  //    } else {
+  //      // Show "Product removed from wishlist" message
+  //      removeItemWishlist.style.display = "block";
+  //      wishlistBtn.style.color = ""; // Reset heart icon color
+  //      setTimeout(function () {
+  //        removeItemWishlist.style.display = "none";
+  //      }, 2000);
+  //    }
 
-      // Toggle the state
-      isAddedToWishlist = !isAddedToWishlist;
-    });
-  });
+  //    // Toggle the state
+  //    isAddedToWishlist = !isAddedToWishlist;
+  //  });
+  //});
 
   //  category menu trigger
   $(".category-trigger").click(function (e) {

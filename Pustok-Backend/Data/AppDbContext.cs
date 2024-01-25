@@ -32,7 +32,8 @@ namespace Pustok_Backend.Data
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
-
+        public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<WishlistProduct> WishlistProducts { get; set; }
 
 
 
@@ -70,7 +71,8 @@ namespace Pustok_Backend.Data
             modelBuilder.Entity<ProductTag>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Discount>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
-
+            modelBuilder.Entity<Wishlist>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<WishlistProduct>().HasQueryFilter(m => !m.SoftDeleted);
 
 
 
