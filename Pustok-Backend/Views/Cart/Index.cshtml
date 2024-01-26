@@ -1,0 +1,151 @@
+﻿@model List<CartDetailVM>
+
+@{
+    ViewData["Title"] = "Index";
+    decimal grandTotal = Model.Sum(m => m.Total);
+    int totalCount = Model.Sum(m => m.Count);
+}
+
+@section css {
+
+    <link rel="stylesheet" href="~/assets/css/pages/cart.css" />
+
+}
+
+<section id="basket" class="@(Model.Count == 0 ? "d-none":"")">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+                <div class="free-shipping">
+                    <div class="free-shipping-notice">
+                        Add
+                        <span>$</span><span class="price-amount">0</span>
+                        to cart and get free shipping!
+                    </div>
+
+                    <div class="free-shipping-progressbar">
+                        <div class="progress">
+                            <div class="progress-done" data-done="0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="product-remove"></th>
+                                <th class="product-image"></th>
+                                <th class="product-name">Product</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quatity">Quantity</th>
+                                <th class="product-subtotal">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="product-remove">
+                                        <i data-id="@item.Id" class="fa-solid fa-xmark delete-basket-item"></i>
+                                    </td>
+                                    <td class="product-image">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                            <img src="~/assets/images/@item.Image" alt="" />
+                                        </a>
+                                    </td>
+                                    <td class="product-name">
+                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+                                    </td>
+                                    <td class="product-price">
+                                        <span>$<span>@item.Price</span> </span>
+                                    </td>
+                                    <td class="product-quantity">
+                                        <div class="quantity">
+                                            <i data-id="@item.Id" class="fa-solid fa-minus"></i>
+                                            <span>@item.Count</span>
+                                            <i data-id="@item.Id" class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </td>
+                                    <td class="product-subtotal">
+                                        <span><span>$</span>@item.Total</span>
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="100">
+                                    <div class="actions">
+                                        <div class="update-cart">
+                                            <a asp-controller="Shop" asp-action="Index">Continue Shopping</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="cart-collaterals">
+                    <div class="cart-totals">
+                        <h2 style="padding-bottom:10px;margin-bottom:0px;border-bottom:none">Order Summary</h2>
+                        <div class="subtotal">
+                            <p style="color:#333333;font-weight:400;font-size:12px"> <span class="total-count">@totalCount</span> product</p>
+                            @* <span>$<span class="price">0</span></span> *@
+                        </div>
+@*                         <div class="shipping">
+                            <p>Shipping</p>
+                            <div class="shipping-details">
+                                <div class="shipping-option">
+                                    <input type="radio"
+                                           id="flat-rate"
+                                           name="shippind-method"
+                                           checked />
+                                    <label class="shipping-1" for="flat-rate">
+                                        Flat rate:
+                                        <span>$15.00</span>
+                                    </label>
+                                </div>
+                                <div class="shipping-option">
+                                    <input type="radio"
+                                           id="local-pickup"
+                                           name="shippind-method" />
+                                    <label for="local-pickup">Local Pickup </label>
+                                </div>
+                                <p>Shipping to <span>AL</span></p>
+                                <a href="">Change Address</a>
+                            </div>
+                        </div>
+ *@
+                        <div class="total">
+                            <p>Total</p>
+                            <h3>$<span class="last-price">@grandTotal</span></h3>
+                        </div>
+                        <a class="checkout" href=""> Proceed to checkout </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="empty-basket" class="@(Model.Count == 0 ? "":"d-none")">
+    <div class="container">
+        <!-- <p>Your Cart is currently empty.</p> -->
+        <div class="alert alert-success" role="alert">
+            Your Cart is currently empty.
+        </div>
+        <a asp-controller="Shop" asp-action="Index">Return to Shop</a>
+    </div>
+</section>
+
+
+@section script {
+
+    <script src="~/assets/js/cart.js"></script>
+
+}
+

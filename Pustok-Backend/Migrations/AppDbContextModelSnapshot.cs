@@ -189,48 +189,48 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1268),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4464),
                             Image = "promo-banner-with-text.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1269)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4465)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1269),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4466),
                             Image = "promo-banner-with-text-2.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1270)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4467)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1271),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4467),
                             Header = "Buy 3. Get Free 1.",
                             Image = "promo-banner-mid.webp",
                             SoftDeleted = false,
                             Title = "50% off for selected products in Pustok.",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1271)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4468)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1273),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4470),
                             Header = "$26.00",
                             Image = "promo-banner-small.webp",
                             SoftDeleted = false,
                             Title = "Praise for The Night Child",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1274)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4471)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1274),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4472),
                             Header = "I Love This Idea!",
                             Image = "promo-banner-full.webp",
                             SoftDeleted = false,
                             Title = "Cover up front of book and leave summary",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1275)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4472)
                         });
                 });
 
@@ -339,122 +339,122 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1646),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4979),
                             FullName = "Jane Austen",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1647)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4979)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1647),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4980),
                             FullName = "Charles Dickens",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1648)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4981)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1649),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4982),
                             FullName = "Agatha Christie",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1649)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4982)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1650),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4983),
                             FullName = "F. Scott Fitzgerald",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1650)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4984)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1651),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4985),
                             FullName = "J.K. Rowling",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1651)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4985)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1652),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4986),
                             FullName = "Gabriel Garcia Marquez",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1652)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4986)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1653),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4987),
                             FullName = "Harper Lee",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1654)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4988)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1654),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4988),
                             FullName = "George Orwell",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1655)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4989)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1655),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4989),
                             FullName = "Ernest Hemingway",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1656)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4990)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1657),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4991),
                             FullName = "Toni Morrison",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1657)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4991)
                         },
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1658),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4992),
                             FullName = "Mark Twain",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1658)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4992)
                         },
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1683),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4993),
                             FullName = "J.R.R. Tolkien",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1684)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4994)
                         },
                         new
                         {
                             Id = 13,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1684),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4994),
                             FullName = "Virginia Woolf",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1685)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4995)
                         },
                         new
                         {
                             Id = 14,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1685),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4995),
                             FullName = "Leo Tolstoy",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1686)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4996)
                         },
                         new
                         {
                             Id = 15,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1687),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4997),
                             FullName = "Emily Brontë",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1687)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4997)
                         });
                 });
 
@@ -499,7 +499,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Embark on an extraordinary literary odyssey that transcends the boundaries of time and space. Join us as we delve deep into the profound realms of storytelling, where the power of words transforms into mesmerizing tales of wonder and introspection. From classic masterpieces to contemporary gems, this blog is a celebration of the magic that books bring into our lives, inviting readers to navigate worlds of boundless imagination and endless discovery.\r\n\r\n            The journey begins with the exploration of timeless classics that have stood the test of time, serving as pillars of literary achievement. Dive into the intricacies of character development, thematic richness, and the enduring relevance of stories that have captured the hearts of generations. Discover the nuances of narrative techniques and the artistry behind crafting immersive worlds that leave a lasting impact on the literary landscape.\r\n\r\n            As we traverse through the literary cosmos, we'll unravel the threads of storytelling that connect cultures, generations, and the shared human experience. Each blog post is an invitation to explore the intersections of literature and life, where stories become a mirror reflecting the diversity and complexity of the human condition.\r\n\r\n            Join us on this literary odyssey where words become vessels of imagination, emotion, and insight. Whether you're a seasoned bibliophile or a newcomer to the world of literature, there's something extraordinary waiting to be discovered in every chapter. Let the odyssey begin, and may the pages of your literary journey be filled with wonder, inspiration, and the joy of discovering the limitless possibilities of the written word.",
                             SoftDeleted = false,
                             Title = "The Literary Odyssey: Navigating Worlds of Wonder",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1458)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4642)
                         },
                         new
                         {
@@ -509,7 +509,7 @@ namespace Pustok_Backend.Migrations
                             Description = "In the quiet corners of the imagination, stories come to life like whispers in the wind. Join us on a profound journey through the whispers of the imagination, where words weave tales of wonder, reflection, and captivating narratives. Explore the profound impact of books on our minds and the limitless realms they unveil, unraveling mysteries within each carefully chosen word.\r\n\r\n            This blog is an invitation to engage with the profound artistry of storytelling, where the echoes of imagination resonate through the ages. Immerse yourself in the exploration of literary techniques that give life to characters, evoke emotions, and transport readers to faraway lands. From character-driven sagas to plot-twisting mysteries, every genre becomes a gateway to new dimensions of understanding and appreciation.\r\n\r\n            Whispers of the Imagination seeks to unravel the layers of meaning embedded in the written word. It's not just about reading; it's about experiencing the magic of literature in its purest form. Join us in this exploration of literary craftsmanship, where every sentence is a brushstroke on the canvas of the reader's mind, creating vivid images and lasting impressions.\r\n\r\n            Through discussions on symbolism, narrative structure, and the evolving landscape of literature, this blog aims to deepen the connection between readers and the stories that shape our collective imagination. Let the whispers of the imagination guide you through the enchanting world of literature, where each book is a doorway to discovery.",
                             SoftDeleted = false,
                             Title = "Whispers of the Imagination: Unraveling Mysteries Within Words",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1465)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4647)
                         },
                         new
                         {
@@ -519,7 +519,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Delve into the pages of history and savor the rich narratives that have shaped civilizations across time. This blog is a literary feast of the past, where every story becomes a portal to a bygone era. From ancient chronicles to modern historical epics, we invite you to discover the power of storytelling in preserving and transmitting the essence of our shared history.\r\n\r\n            Savoring the Pages of History is a journey through time, exploring the vivid tapestry of human experiences, triumphs, and challenges. Each blog post unfolds like a chapter in a grand historical novel, shedding light on events, personalities, and cultural shifts that have left an indelible mark on the world.\r\n\r\n            Join us in savoring the flavors of history, where the narrative becomes a banquet of knowledge and insight. From the rise and fall of empires to the untold stories of everyday heroes, this blog celebrates the diversity of historical literature. Engage with the complexities of historical interpretation, the art of storytelling, and the ongoing dialogue between the past and the present.\r\n\r\n            As we navigate the pages of history, let the stories resonate with you, providing not only a glimpse into the past but also a deeper understanding of the present. Savoring the Pages of History is an exploration of the written word as a time machine, inviting readers to partake in a literary feast that transcends the boundaries of time and enriches our understanding of the world.",
                             SoftDeleted = false,
                             Title = "Savoring the Pages of History: A Literary Feast of the Past",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1467)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4649)
                         },
                         new
                         {
@@ -529,7 +529,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Step into the shadowy realms of mystery as we unveil secrets, solve puzzles, and traverse the suspenseful landscapes of thrilling narratives. This blog is a journey into the unknown, where every twist and turn keeps readers on the edge of their seats. Join us in exploring the art of mystery writing and the timeless appeal of stories that captivate the mind, leaving a trail of intrigue and excitement in their wake.\r\n\r\n            Unveiling the Secrets of Mystery delves into the psychology of suspense, the intricacies of plot construction, and the art of crafting memorable characters in the mystery genre. From classic whodunits to psychological thrillers, every subgenre becomes a gateway to understanding the various facets of mystery literature.\r\n\r\n            Engage with discussions on detective fiction, crime thrillers, and the evolving nature of mystery narratives in contemporary literature. The blog seeks to unravel the secrets behind creating a compelling mystery, inviting readers to appreciate the craftsmanship of authors who keep them guessing until the final page.\r\n\r\n            Let the journey into the unknown begin, where every shadow conceals a clue, and every revelation opens new possibilities. Unveiling the Secrets of Mystery is not just a blog; it's an exploration of the enigmatic and a celebration of the enduring allure of mystery in the world of literature.",
                             SoftDeleted = false,
                             Title = "Unveiling the Secrets of Mystery: Journey into the Unknown",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1469)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4727)
                         },
                         new
                         {
@@ -539,7 +539,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Embark on an enchanting journey through fantastical realms where dragons soar, wizards cast spells, and heroes rise. This blog is a magical portal to worlds where dreams take flight, and the boundaries of reality are stretched to their limits. Explore the wonders of fantasy literature, where imagination knows no bounds, and epic adventures unfold with every turn of the page.\r\n\r\n            Journeying Through Fantasy Realms is an invitation to explore the diverse landscapes of fantasy fiction, from high fantasy epics to urban fantasy adventures. Immerse yourself in discussions on world-building, mythical creatures, and the timeless themes that define the fantasy genre. Whether you're a seasoned fantasy enthusiast or a newcomer to the realms of magic and wonder, there's something captivating waiting to be discovered.\r\n\r\n            Engage with explorations of legendary quests, magical systems, and the enduring appeal of fantastical storytelling. The blog seeks to unravel the threads that connect fantasy literature with our deepest desires for adventure, heroism, and the extraordinary. Join us in this journey where every page turns into a gateway to realms where dreams take flight, and the impossible becomes a reality in the hands of visionary authors.\r\n\r\n            Let the magic of fantasy unfold before you, as we embark on a journey through realms where the boundaries between reality and imagination blur, and the fantastical becomes an integral part of the literary landscape.",
                             SoftDeleted = false,
                             Title = "Journeying Through Fantasy Realms: Where Dreams Take Flight",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1470)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4729)
                         },
                         new
                         {
@@ -549,7 +549,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Explore the nuanced landscapes of love and romance as portrayed through the written word. This blog is a celebration of the exquisite artistry found in tales of love and romance, where emotions unfold like a symphony of hearts. From timeless classics to contemporary tales, join us in a journey that delves into the complexities of human relationships, passion, and the enduring allure of stories that resonate with the deepest corners of the heart.\r\n\r\n            Love and Romance in Written Words seeks to unravel the intricacies of romantic literature, exploring the varying shades of love, heartbreak, and the transformative power of emotional connection. Engage with discussions on romantic archetypes, narrative tropes, and the evolving representation of love in literature across different cultures and time periods.\r\n\r\n            This blog is not merely about exploring love stories; it's an invitation to dissect the anatomy of romantic narratives, examining the elements that make them timeless and universally relatable. Join us in the exploration of love as a literary theme, where every novel becomes a unique note in the symphony of hearts that resonates across the pages of written words.\r\n\r\n            Whether you're a hopeless romantic or a curious reader intrigued by the complexities of human emotion, Love and Romance in Written Words promises a journey through literary landscapes where love unfolds in its many forms, leaving an indelible mark on the reader's heart.",
                             SoftDeleted = false,
                             Title = "Love and Romance in Written Words: A Symphony of Hearts",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1472)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4730)
                         },
                         new
                         {
@@ -559,7 +559,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Chart a course through the galaxies of science fiction literature. This blog is an invitation to explore tomorrow's frontiers, where futuristic worlds, advanced technologies, and thought-provoking speculations on the future of humanity come to life. Join us in unraveling the limitless possibilities that science fiction offers to the curious reader, charting a course through the cosmos of imagination and innovation.\r\n\r\n            Charting the Course of Science Fiction delves into the ever-evolving landscape of sci-fi literature, from classic space operas to speculative visions of the future. Engage with discussions on the intersection of science, technology, and storytelling, as we navigate the ethical dilemmas, utopian visions, and dystopian nightmares that define the genre.\r\n\r\n            The blog seeks to explore the influence of science fiction on societal perspectives, technological advancements, and the shaping of possible futures. Join us in contemplating the 'what if' scenarios, where authors envision worlds that challenge our understanding of reality and push the boundaries of human potential.\r\n\r\n            Whether you're a seasoned science fiction enthusiast or a newcomer to the genre, Charting the Course of Science Fiction promises an exploration of literary frontiers that expand the mind and spark the imagination. Let the journey through the galaxies of science fiction literature begin, where every novel becomes a star in the vast constellation of speculative storytelling.",
                             SoftDeleted = false,
                             Title = "Charting the Course of Science Fiction: Exploring Tomorrow's Frontiers",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1473)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4732)
                         },
                         new
                         {
@@ -569,7 +569,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Embark on intellectual voyages through the realms of non-fiction literature. This blog is a journey of illumination into real-world narratives that enlighten, challenge, and expand our understanding of the world. From thought-provoking essays to insightful biographies, we invite readers to delve into the vast landscape of non-fiction, where every page holds a treasure trove of knowledge waiting to be discovered.\r\n\r\n            Literary Explorations in Non-Fiction delves into the diverse realms of factual storytelling, from historical accounts to contemporary analyses of global issues. Engage with discussions on the impact of non-fiction literature on society, the role of the author as a guide through complex subjects, and the ethical considerations inherent in documenting real-world events.\r\n\r\n            The blog seeks to bridge the gap between the worlds of fiction and non-fiction, exploring the ways in which narrative techniques and storytelling conventions are employed to convey real-world truths. Join us in the exploration of literary explorations, where every non-fiction book becomes a window into the complexities, wonders, and challenges of the world we inhabit.\r\n\r\n            Whether you're passionate about history, social issues, or scientific discoveries, Literary Explorations in Non-Fiction promises a curated journey through the vast expanse of non-fiction literature, where every book is a beacon of knowledge waiting to be discovered and shared.",
                             SoftDeleted = false,
                             Title = "Literary Explorations in Non-Fiction: Illuminating Real-World Narratives",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1475)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4734)
                         },
                         new
                         {
@@ -579,7 +579,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Celebrate the art of brevity and depth in the world of short stories. This blog is an exploration of the intricate craft of short-form fiction, where every word carries weight, and concise narratives unfold powerful emotions, vivid characters, and thought-provoking themes. Join us in appreciating the beauty of crafting emotional microcosms within the limited canvas of short stories, where the essence of storytelling is distilled into its purest form.\r\n\r\n            The Art of Short Stories delves into the profound impact of brevity, exploring how concise narratives have the power to evoke deep emotions, spark contemplation, and leave a lasting imprint on the reader's imagination. Engage with discussions on the art of pacing, character development, and thematic resonance within the unique structure of short stories.\r\n\r\n            This blog is not just an exploration of the short story as a literary form; it's an invitation to discover the diverse voices and styles that contribute to the richness of short-form fiction. Join us in celebrating the storytellers who masterfully navigate the delicate balance between conciseness and depth, creating emotional landscapes that linger in the minds of readers long after the final sentence.\r\n\r\n            Whether you're a seasoned admirer of short stories or a newcomer curious about the potential within brevity, The Art of Short Stories promises a curated journey through the captivating world of succinct narratives, where every story is a testament to the enduring power of concise and emotionally resonant storytelling.",
                             SoftDeleted = false,
                             Title = "The Art of Short Stories: Crafting Emotional Microcosms",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1476)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4736)
                         },
                         new
                         {
@@ -589,7 +589,7 @@ namespace Pustok_Backend.Migrations
                             Description = "Navigate the landscapes of self-discovery and personal growth through the lens of literature. This blog offers reflective insights into the wisdom embedded in self-help books, exploring the ways in which written words can guide, inspire, and empower individuals on their journey towards a fulfilling life.\r\n\r\n            In a world filled with challenges and complexities, the pursuit of personal development becomes a transformative journey. Each blog post is a thoughtful exploration of self-help literature, delving into the profound teachings and transformative narratives that have the potential to shape perspectives and ignite positive change.\r\n\r\n            Discover the power of mindset shifts, goal setting, and resilience through the lens of renowned self-help authors. From timeless classics to contemporary guides, this blog aims to curate a collection of insights that resonate with readers seeking inspiration, motivation, and practical strategies for personal and professional growth.\r\n\r\n            Through literary reflections, we will explore the intersection of literature and self-help, examining how the written word becomes a guiding light in moments of uncertainty and a source of strength during life's transitions. Whether you're embarking on a quest for mindfulness, resilience, or purpose, join us on this exploration of self-help literature as we navigate the path to personal growth together.\r\n\r\n            The journey unfolds with each turn of the page, offering readers a roadmap to self-discovery, empowerment, and a renewed sense of purpose. May these literary reflections serve as companions on your quest for a more meaningful and fulfilling life.",
                             SoftDeleted = false,
                             Title = "Literary Reflections on Self-Help: Navigating the Path to Personal Growth",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1478)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4738)
                         });
                 });
 
@@ -621,82 +621,82 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1435),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4614),
                             FullName = "Alice Johnson",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1435)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4614)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1436),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4615),
                             FullName = "Daniel Smith",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1436)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4616)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1437),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4616),
                             FullName = "Emily Davis",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1438)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4617)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1438),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4618),
                             FullName = "Michael Anderson",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1439)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4618)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1439),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4619),
                             FullName = "Olivia Brown",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1440)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4620)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1440),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4620),
                             FullName = "William Taylor",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1441)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4621)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1441),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4621),
                             FullName = "Sophia White",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1442)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4622)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1442),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4623),
                             FullName = "James Miller",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1443)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4623)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1444),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4624),
                             FullName = "Ava Wilson",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1444)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4624)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1445),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4625),
                             FullName = "Ethan Moore",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1445)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4626)
                         });
                 });
 
@@ -740,100 +740,100 @@ namespace Pustok_Backend.Migrations
                             Id = 1,
                             AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104",
                             BlogId = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1607),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4862),
                             Message = "The book recommendations on this blog are like a treasure map for bibliophiles! 🗺️📚 Each review is a journey into a new literary world. I recently picked up a suggested novel, and it completely captivated me. Thanks for being my guide in the vast realm of books!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1607)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4863)
                         },
                         new
                         {
                             Id = 2,
                             AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85",
                             BlogId = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1609),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4864),
                             Message = "This blog is my go-to source for discovering hidden gems in the book world. The recent post on Naoki Urasawa's latest work was spot-on! The storytelling is phenomenal, and the blog's insights added a new layer to my reading experience. Can't wait for the next recommendation!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1609)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4865)
                         },
                         new
                         {
                             Id = 3,
                             AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7",
                             BlogId = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1610),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4866),
                             Message = "Kudos to the blog for introducing me to fantastic books I never thought I'd enjoy. The thoughtful reviews make it easy to step out of my comfort zone. I picked up one of the recommended titles, and it turned out to be a pleasant surprise. Keep broadening our literary horizons!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1610)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4867)
                         },
                         new
                         {
                             Id = 4,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
                             BlogId = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1611),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4868),
                             Message = "I appreciate the diverse range of books covered on this blog. The variety in genres and themes keeps my reading list exciting and unpredictable. The recent review on No Longer Human was enlightening. It's evident that the blogger has a genuine passion for literature. Bravo!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1612)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4868)
                         },
                         new
                         {
                             Id = 5,
                             AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104",
                             BlogId = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1612),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4933),
                             Message = "I've been following this blog for months, and it never disappoints. The reviews are like a sneak peek into the soul of each book. The latest post on Jack London's novel left me eager to explore more of their work. Thanks for consistently providing such enriching content!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1613)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4934)
                         },
                         new
                         {
                             Id = 6,
                             AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85",
                             BlogId = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1614),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4936),
                             Message = "The blog's reviews are like a beacon guiding me to the most intriguing plots and characters. I enjoyed the recent discussion on Romance. The analysis was thought-provoking and added a new layer of appreciation for the books in that category. An intellectual oasis for bookworms!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1614)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4936)
                         },
                         new
                         {
                             Id = 7,
                             AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7",
                             BlogId = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1615),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4937),
                             Message = "This blog is a haven for those seeking literary escapades. The recent post on Fourth Wing resonated with me deeply. The emotional nuances explored in the review mirrored my own experience with the book. It's wonderful to find a community that shares the love for storytelling.",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1615)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4938)
                         },
                         new
                         {
                             Id = 8,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
                             BlogId = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1616),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4939),
                             Message = "The book recommendations here are like a curated collection of literary wonders. I recently picked up a novel highlighted in a post, and it became an instant favorite. Thank you for helping me discover gems I might have overlooked otherwise. Looking forward to the next revelation!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1616)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4939)
                         },
                         new
                         {
                             Id = 9,
                             AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104",
                             BlogId = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1617),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4940),
                             Message = "This blog has become my literary compass. The reviews not only provide insights into the books but also ignite interesting discussions in the comments section. It's a community where book lovers unite. The recent post on detective sparked engaging conversations. Cheers to a blog that fosters a love for reading!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1618)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4941)
                         },
                         new
                         {
                             Id = 10,
                             AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7",
                             BlogId = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1618),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4941),
                             Message = "I'm constantly impressed by the range of genres covered on this blog. The recent spotlight on Madeline MIller's works was a delightful surprise. I've now added their entire bibliography to my to-be-read list. The blog consistently delivers exciting discoveries for avid readers. Much appreciated!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1619)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4942)
                         });
                 });
 
@@ -874,201 +874,201 @@ namespace Pustok_Backend.Migrations
                         {
                             Id = 1,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1489),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4753),
                             Image = "blog-grid-1.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1490)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4754)
                         },
                         new
                         {
                             Id = 2,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1491),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4755),
                             Image = "blog-grid-2.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1491)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4756)
                         },
                         new
                         {
                             Id = 3,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1492),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4757),
                             Image = "blog-grid-2.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1493)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4758)
                         },
                         new
                         {
                             Id = 4,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1494),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4759),
                             Image = "blog-grid-3.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1494)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4759)
                         },
                         new
                         {
                             Id = 5,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1495),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4760),
                             Image = "blog-grid-3.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1495)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4761)
                         },
                         new
                         {
                             Id = 6,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1496),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4762),
                             Image = "blog-grid-4.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1497)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4763)
                         },
                         new
                         {
                             Id = 7,
                             BlogId = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1498),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4764),
                             Image = "blog-grid-4.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1498)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4764)
                         },
                         new
                         {
                             Id = 8,
                             BlogId = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1499),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4765),
                             Image = "blog-grid-1.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1500)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4765)
                         },
                         new
                         {
                             Id = 9,
                             BlogId = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1500),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4766),
                             Image = "blog-grid-2.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1501)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4767)
                         },
                         new
                         {
                             Id = 10,
                             BlogId = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1502),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4768),
                             Image = "blog-grid-4.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1502)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4768)
                         },
                         new
                         {
                             Id = 11,
                             BlogId = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1503),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4769),
                             Image = "blog-grid-1.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1503)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4770)
                         },
                         new
                         {
                             Id = 12,
                             BlogId = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1504),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4771),
                             Image = "blog-grid-3.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1505)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4771)
                         },
                         new
                         {
                             Id = 13,
                             BlogId = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1529),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4772),
                             Image = "blog-grid-3.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1529)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4773)
                         },
                         new
                         {
                             Id = 14,
                             BlogId = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1530),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4773),
                             Image = "blog-grid-4.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1531)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4774)
                         },
                         new
                         {
                             Id = 15,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1532),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4775),
                             Image = "blog-grid-4.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1532)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4775)
                         },
                         new
                         {
                             Id = 16,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1533),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4776),
                             Image = "blog-grid-1.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1533)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4777)
                         },
                         new
                         {
                             Id = 17,
                             BlogId = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1534),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4778),
                             Image = "blog-grid-2.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1535)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4778)
                         },
                         new
                         {
                             Id = 18,
                             BlogId = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1535),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4779),
                             Image = "blog-grid-4.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1536)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4780)
                         },
                         new
                         {
                             Id = 19,
                             BlogId = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1537),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4781),
                             Image = "blog-grid-1.webp",
                             IsMain = true,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1537)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4781)
                         },
                         new
                         {
                             Id = 20,
                             BlogId = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1538),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4782),
                             Image = "blog-grid-3.webp",
                             IsMain = false,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1539)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4783)
                         });
                 });
 
@@ -1108,325 +1108,325 @@ namespace Pustok_Backend.Migrations
                         {
                             Id = 1,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1552),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4798),
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1553)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4799)
                         },
                         new
                         {
                             Id = 2,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1554),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4800),
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1554)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4800)
                         },
                         new
                         {
                             Id = 3,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1555),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4801),
                             SoftDeleted = false,
                             TagId = 8,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1555)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4802)
                         },
                         new
                         {
                             Id = 4,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1556),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4803),
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1557)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4803)
                         },
                         new
                         {
                             Id = 5,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1557),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4804),
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1558)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4805)
                         },
                         new
                         {
                             Id = 6,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1558),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4806),
                             SoftDeleted = false,
                             TagId = 7,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1559)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4806)
                         },
                         new
                         {
                             Id = 7,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1559),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4807),
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1560)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4808)
                         },
                         new
                         {
                             Id = 8,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1560),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4808),
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1561)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4809)
                         },
                         new
                         {
                             Id = 9,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1562),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4810),
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1562)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4810)
                         },
                         new
                         {
                             Id = 10,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1563),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4811),
                             SoftDeleted = false,
                             TagId = 2,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1563)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4812)
                         },
                         new
                         {
                             Id = 11,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1564),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4812),
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1564)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4813)
                         },
                         new
                         {
                             Id = 12,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1565),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4814),
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1565)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4814)
                         },
                         new
                         {
                             Id = 13,
                             BlogId = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1566),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4815),
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1566)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4816)
                         },
                         new
                         {
                             Id = 14,
                             BlogId = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1567),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4816),
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1568)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4817)
                         },
                         new
                         {
                             Id = 15,
                             BlogId = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1568),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4818),
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1569)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4818)
                         },
                         new
                         {
                             Id = 16,
                             BlogId = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1569),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4819),
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1570)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4819)
                         },
                         new
                         {
                             Id = 17,
                             BlogId = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1570),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4820),
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1571)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4821)
                         },
                         new
                         {
                             Id = 18,
                             BlogId = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1571),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4821),
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1572)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4822)
                         },
                         new
                         {
                             Id = 19,
                             BlogId = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1573),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4823),
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1573)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4823)
                         },
                         new
                         {
                             Id = 20,
                             BlogId = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1574),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4824),
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1574)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4825)
                         },
                         new
                         {
                             Id = 21,
                             BlogId = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1575),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4825),
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1575)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4826)
                         },
                         new
                         {
                             Id = 22,
                             BlogId = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1576),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4827),
                             SoftDeleted = false,
                             TagId = 7,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1576)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4827)
                         },
                         new
                         {
                             Id = 23,
                             BlogId = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1577),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4828),
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1577)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4828)
                         },
                         new
                         {
                             Id = 24,
                             BlogId = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1578),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4829),
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1578)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4830)
                         },
                         new
                         {
                             Id = 25,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1579),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4830),
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1579)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4831)
                         },
                         new
                         {
                             Id = 26,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1580),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4831),
                             SoftDeleted = false,
                             TagId = 8,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1581)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4832)
                         },
                         new
                         {
                             Id = 27,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1581),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4833),
                             SoftDeleted = false,
                             TagId = 2,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1582)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4833)
                         },
                         new
                         {
                             Id = 28,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1582),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4834),
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1583)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4834)
                         },
                         new
                         {
                             Id = 29,
                             BlogId = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1583),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4835),
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1584)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4836)
                         },
                         new
                         {
                             Id = 30,
                             BlogId = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1584),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4836),
                             SoftDeleted = false,
                             TagId = 7,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1585)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4837)
                         },
                         new
                         {
                             Id = 31,
                             BlogId = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1586),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4838),
                             SoftDeleted = false,
                             TagId = 2,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1586)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4838)
                         },
                         new
                         {
                             Id = 32,
                             BlogId = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1587),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4839),
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1587)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4839)
                         },
                         new
                         {
                             Id = 33,
                             BlogId = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1588),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4840),
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1588)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4841)
                         },
                         new
                         {
                             Id = 34,
                             BlogId = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1589),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4841),
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1589)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4842)
                         },
                         new
                         {
                             Id = 35,
                             BlogId = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1590),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4843),
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1590)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4843)
                         },
                         new
                         {
                             Id = 36,
                             BlogId = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1591),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4844),
                             SoftDeleted = false,
                             TagId = 7,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1592)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4844)
                         });
                 });
 
@@ -1458,51 +1458,113 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1285),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4484),
                             Image = "brand-1.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1286)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4485)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1287),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4486),
                             Image = "brand-2.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1287)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4487)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1288),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4488),
                             Image = "brand-3.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1288)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4488)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1289),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4489),
                             Image = "brand-4.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1289)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4490)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1290),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4490),
                             Image = "brand-5.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1290)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4491)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1291),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4492),
                             Image = "brand-6.webp",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1291)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4492)
                         });
+                });
+
+            modelBuilder.Entity("Pustok_Backend.Models.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("Pustok_Backend.Models.CartProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartProducts");
                 });
 
             modelBuilder.Entity("Pustok_Backend.Models.Category", b =>
@@ -1533,58 +1595,58 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1630),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4956),
                             Name = "Biographies",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1630)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4957)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1631),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4958),
                             Name = "Business & Money",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1631)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4958)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1632),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4959),
                             Name = "Children's Books",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1632)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4960)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1633),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4961),
                             Name = "Comics",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1634)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4961)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1634),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4962),
                             Name = "Cookbooks",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1635)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4963)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1635),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4964),
                             Name = "Education",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1636)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4964)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1636),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4965),
                             Name = "Arts & Photography",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1637)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4965)
                         });
                 });
 
@@ -1622,12 +1684,12 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1383),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4559),
                             Email = "fidanbb@code.edu.az",
                             Message = "Helllooo",
                             Name = "Fidan Bashirova",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1383)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4559)
                         });
                 });
 
@@ -1690,92 +1752,92 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1699),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5012),
                             Name = "Spring Sale",
                             Percent = 15,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1699)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5012)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1700),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5014),
                             Name = "Back-to-School",
                             Percent = 10,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1701)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5014)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1702),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5015),
                             Name = "Holiday Special",
                             Percent = 25,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1702)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5016)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1703),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5017),
                             Name = "Summer Reading",
                             Percent = 20,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1703)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5017)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1704),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5018),
                             Name = "New Year's Clearance",
                             Percent = 30,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1704)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5018)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1705),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5019),
                             Name = "Weekend Flash Sale",
                             Percent = 15,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1705)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5020)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1706),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5020),
                             Name = "Member Exclusive",
                             Percent = 10,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1707)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5021)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1707),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5022),
                             Name = "Book Club Discount",
                             Percent = 20,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1708)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5022)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1708),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5023),
                             Name = "Black Friday",
                             Percent = 40,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1709)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5024)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1709),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5024),
                             Name = "Fall Frenzy",
                             Percent = 15,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1710)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5025)
                         });
                 });
 
@@ -1852,7 +1914,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "ENCTLE123",
                             SoftDeleted = false,
                             StockCount = 10,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1723)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5040)
                         },
                         new
                         {
@@ -1869,7 +1931,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "COSMOS456",
                             SoftDeleted = false,
                             StockCount = 15,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1728)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5046)
                         },
                         new
                         {
@@ -1886,7 +1948,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "GOURMET789",
                             SoftDeleted = false,
                             StockCount = 20,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1731)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5048)
                         },
                         new
                         {
@@ -1903,7 +1965,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "HISTCHRON101",
                             SoftDeleted = false,
                             StockCount = 18,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1733)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5051)
                         },
                         new
                         {
@@ -1920,7 +1982,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "MAGIREALM222",
                             SoftDeleted = false,
                             StockCount = 15,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1735)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5053)
                         },
                         new
                         {
@@ -1937,7 +1999,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "MINDLIVE333",
                             SoftDeleted = false,
                             StockCount = 25,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1737)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5056)
                         },
                         new
                         {
@@ -1954,7 +2016,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "HARMCOLOR444",
                             SoftDeleted = false,
                             StockCount = 20,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1739)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5058)
                         },
                         new
                         {
@@ -1971,7 +2033,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "ANIMALKING555",
                             SoftDeleted = false,
                             StockCount = 15,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1741)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5060)
                         },
                         new
                         {
@@ -1988,7 +2050,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "CULADVENT666",
                             SoftDeleted = false,
                             StockCount = 18,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1743)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5062)
                         },
                         new
                         {
@@ -2005,7 +2067,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "COSMOEXP777",
                             SoftDeleted = false,
                             StockCount = 22,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1745)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5065)
                         },
                         new
                         {
@@ -2022,7 +2084,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "SURREALDREAM888",
                             SoftDeleted = false,
                             StockCount = 16,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1747)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5067)
                         },
                         new
                         {
@@ -2039,7 +2101,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "SERENITY999",
                             SoftDeleted = false,
                             StockCount = 19,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1749)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5069)
                         },
                         new
                         {
@@ -2056,7 +2118,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "EPICADV1010",
                             SoftDeleted = false,
                             StockCount = 14,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1750)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5072)
                         },
                         new
                         {
@@ -2073,7 +2135,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "POETICMUSE1111",
                             SoftDeleted = false,
                             StockCount = 17,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1752)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5074)
                         },
                         new
                         {
@@ -2090,7 +2152,7 @@ namespace Pustok_Backend.Migrations
                             Sku = "THRILLESCAPE1212",
                             SoftDeleted = false,
                             StockCount = 21,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1754)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5076)
                         });
                 });
 
@@ -2136,166 +2198,166 @@ namespace Pustok_Backend.Migrations
                         {
                             Id = 1,
                             AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1927),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5331),
                             Message = "The intricate plot and well-developed characters in this book kept me hooked from the first page. A must-read for anyone who loves a gripping story!",
                             ProductId = 1,
                             Rate = 3,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1927)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5331)
                         },
                         new
                         {
                             Id = 2,
                             AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1929),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5333),
                             Message = "I was pleasantly surprised by the unexpected twists and turns in this book. The author's storytelling style is captivating, making it a compelling read.",
                             ProductId = 2,
                             Rate = 2,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1929)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5334)
                         },
                         new
                         {
                             Id = 3,
                             AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1930),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5335),
                             Message = "The emotional depth and thought-provoking themes explored in this book left a lasting impact. I highly recommend it to fellow readers who appreciate profound storytelling.",
                             ProductId = 3,
                             Rate = 5,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1931)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5336)
                         },
                         new
                         {
                             Id = 4,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1932),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5337),
                             Message = "An engaging and well-written book that offers a unique perspective on its subject matter. The author's creativity shines through, making it a standout addition to my reading list.",
                             ProductId = 4,
                             Rate = 4,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1932)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5337)
                         },
                         new
                         {
                             Id = 5,
                             AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1933),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5338),
                             Message = "This book has become one of my all-time favorites. The rich narrative and memorable characters make it a must-read for book enthusiasts. I look forward to exploring more works by the same author.",
                             ProductId = 5,
                             Rate = 1,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1933)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5339)
                         },
                         new
                         {
                             Id = 6,
                             AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1934),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5340),
                             Message = "The author's ability to weave together various storylines in this book is truly commendable. It kept me engrossed until the very end, and I can't wait to delve into their other literary creations.",
                             ProductId = 6,
                             Rate = 1,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1935)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5340)
                         },
                         new
                         {
                             Id = 7,
                             AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1935),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5341),
                             Message = "A thought-provoking and well-researched book that explores complex themes with clarity. The author's writing style adds a layer of authenticity to the narrative, making it a standout work in its genre.",
                             ProductId = 7,
                             Rate = 2,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1936)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5342)
                         },
                         new
                         {
                             Id = 8,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1937),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5343),
                             Message = "Kudos to the author for creating such a captivating story. This book is a testament to their storytelling prowess, and I eagerly await their future works.",
                             ProductId = 8,
                             Rate = 3,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1937)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5343)
                         },
                         new
                         {
                             Id = 9,
                             AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1938),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5344),
                             Message = "The beautifully crafted prose and engaging narrative of this book make it a standout in contemporary literature. I recommend it to fellow readers who appreciate a well-told tale.",
                             ProductId = 9,
                             Rate = 4,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1938)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5345)
                         },
                         new
                         {
                             Id = 10,
                             AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1939),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5346),
                             Message = "An enthralling read that seamlessly blends elements of mystery and suspense. This book kept me on the edge of my seat, and I'm eager to explore more works by this talented author.",
                             ProductId = 10,
                             Rate = 5,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1940)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5346)
                         },
                         new
                         {
                             Id = 11,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1940),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5347),
                             Message = "I thoroughly enjoyed the immersive world created by the author in this book. The descriptive prose and well-defined characters added depth to the narrative, making it a standout read.",
                             ProductId = 11,
                             Rate = 5,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1941)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5348)
                         },
                         new
                         {
                             Id = 12,
                             AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1942),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5348),
                             Message = "This book offers a fresh perspective on a familiar genre. The author's innovative approach and storytelling techniques make it a compelling addition to my collection. Highly recommended!",
                             ProductId = 12,
                             Rate = 4,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1942)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5349)
                         },
                         new
                         {
                             Id = 13,
                             AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1943),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5350),
                             Message = "A captivating journey through the pages of this book. The author's ability to create a vivid and atmospheric setting enhances the overall reading experience. A must-read for those who appreciate literary craftsmanship.",
                             ProductId = 13,
                             Rate = 3,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1943)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5350)
                         },
                         new
                         {
                             Id = 14,
                             AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1944),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5351),
                             Message = "I was pleasantly surprised by the unique plot twists in this book. The author's storytelling prowess shines through, keeping readers engaged until the final chapter. An enjoyable read that deserves a spot on every bookshelf.",
                             ProductId = 14,
                             Rate = 3,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1945)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5352)
                         },
                         new
                         {
                             Id = 15,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1945),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5352),
                             Message = "This book is a gem in contemporary literature. The author's exploration of complex themes and relatable characters resonated with me on a profound level. An enriching read that I'll cherish for years to come.",
                             ProductId = 15,
                             Rate = 2,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1946)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5353)
                         });
                 });
 
@@ -2335,302 +2397,302 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1766),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5121),
                             Image = "product-1.webp",
                             IsMain = true,
                             ProductId = 1,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1767)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5122)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1769),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5124),
                             Image = "product-2.webp",
                             IsMain = false,
                             ProductId = 1,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1769)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5125)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1770),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5126),
                             Image = "product-2.webp",
                             IsMain = true,
                             ProductId = 2,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1771)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5127)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1772),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5128),
                             Image = "product-3.webp",
                             IsMain = false,
                             ProductId = 2,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1772)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5128)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1773),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5129),
                             Image = "product-3.webp",
                             IsMain = true,
                             ProductId = 3,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1773)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5130)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1774),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5131),
                             Image = "product-4.webp",
                             IsMain = false,
                             ProductId = 3,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1774)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5132)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1775),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5132),
                             Image = "product-4.webp",
                             IsMain = true,
                             ProductId = 4,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1776)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5133)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1776),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5134),
                             Image = "product-5.webp",
                             IsMain = false,
                             ProductId = 4,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1777)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5134)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1778),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5135),
                             Image = "product-5.webp",
                             IsMain = true,
                             ProductId = 5,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1778)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5136)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1779),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5137),
                             Image = "product-6.webp",
                             IsMain = false,
                             ProductId = 5,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1779)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5137)
                         },
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1780),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5138),
                             Image = "product-6.webp",
                             IsMain = true,
                             ProductId = 6,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1780)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5139)
                         },
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1781),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5140),
                             Image = "product-7.webp",
                             IsMain = false,
                             ProductId = 6,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1782)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5140)
                         },
                         new
                         {
                             Id = 13,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1782),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5141),
                             Image = "product-7.webp",
                             IsMain = true,
                             ProductId = 7,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1783)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5142)
                         },
                         new
                         {
                             Id = 14,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1784),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5142),
                             Image = "product-8.webp",
                             IsMain = false,
                             ProductId = 7,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1784)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5143)
                         },
                         new
                         {
                             Id = 15,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1785),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5144),
                             Image = "product-8.webp",
                             IsMain = true,
                             ProductId = 8,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1785)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5144)
                         },
                         new
                         {
                             Id = 16,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1786),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5145),
                             Image = "product-9.webp",
                             IsMain = false,
                             ProductId = 8,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1787)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5146)
                         },
                         new
                         {
                             Id = 17,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1787),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5147),
                             Image = "product-9.webp",
                             IsMain = true,
                             ProductId = 9,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1788)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5147)
                         },
                         new
                         {
                             Id = 18,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1789),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5148),
                             Image = "product-10.webp",
                             IsMain = false,
                             ProductId = 9,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1789)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5149)
                         },
                         new
                         {
                             Id = 19,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1790),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5150),
                             Image = "product-10.webp",
                             IsMain = true,
                             ProductId = 10,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1790)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5150)
                         },
                         new
                         {
                             Id = 20,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1791),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5151),
                             Image = "product-11.webp",
                             IsMain = false,
                             ProductId = 10,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1791)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5152)
                         },
                         new
                         {
                             Id = 21,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1792),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5152),
                             Image = "product-11.webp",
                             IsMain = true,
                             ProductId = 11,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1792)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5153)
                         },
                         new
                         {
                             Id = 22,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1793),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5154),
                             Image = "product-12.webp",
                             IsMain = false,
                             ProductId = 11,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1794)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5154)
                         },
                         new
                         {
                             Id = 23,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1794),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5155),
                             Image = "product-12.webp",
                             IsMain = true,
                             ProductId = 12,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1795)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5156)
                         },
                         new
                         {
                             Id = 24,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1796),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5157),
                             Image = "product-1.webp",
                             IsMain = false,
                             ProductId = 12,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1796)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5157)
                         },
                         new
                         {
                             Id = 25,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1797),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5158),
                             Image = "product-3.webp",
                             IsMain = true,
                             ProductId = 13,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1797)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5159)
                         },
                         new
                         {
                             Id = 26,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1798),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5160),
                             Image = "product-5.webp",
                             IsMain = false,
                             ProductId = 13,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1799)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5160)
                         },
                         new
                         {
                             Id = 27,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1799),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5161),
                             Image = "product-7.webp",
                             IsMain = true,
                             ProductId = 14,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1800)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5162)
                         },
                         new
                         {
                             Id = 28,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1801),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5163),
                             Image = "product-4.webp",
                             IsMain = false,
                             ProductId = 14,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1801)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5163)
                         },
                         new
                         {
                             Id = 29,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1802),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5164),
                             Image = "product-6.webp",
                             IsMain = true,
                             ProductId = 15,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1802)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5165)
                         },
                         new
                         {
                             Id = 30,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1803),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5165),
                             Image = "product-4.webp",
                             IsMain = false,
                             ProductId = 15,
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1804)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5166)
                         });
                 });
 
@@ -2669,461 +2731,461 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1857),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5184),
                             ProductId = 1,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1858)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5184)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1859),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5186),
                             ProductId = 1,
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1859)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5186)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1860),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5187),
                             ProductId = 1,
                             SoftDeleted = false,
                             TagId = 8,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1860)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5188)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1861),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5188),
                             ProductId = 1,
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1861)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5189)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1862),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5190),
                             ProductId = 2,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1863)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5190)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1863),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5191),
                             ProductId = 2,
                             SoftDeleted = false,
                             TagId = 7,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1864)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5192)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1864),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5193),
                             ProductId = 2,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1865)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5193)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1865),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5194),
                             ProductId = 2,
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1866)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5194)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1866),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5195),
                             ProductId = 3,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1867)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5196)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1868),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5197),
                             ProductId = 3,
                             SoftDeleted = false,
                             TagId = 2,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1868)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5197)
                         },
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1869),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5198),
                             ProductId = 3,
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1869)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5198)
                         },
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1870),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5199),
                             ProductId = 3,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1870)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5200)
                         },
                         new
                         {
                             Id = 13,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1871),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5200),
                             ProductId = 4,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1871)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5201)
                         },
                         new
                         {
                             Id = 14,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1872),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5202),
                             ProductId = 4,
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1872)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5202)
                         },
                         new
                         {
                             Id = 15,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1873),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5203),
                             ProductId = 4,
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1873)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5203)
                         },
                         new
                         {
                             Id = 16,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1874),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5204),
                             ProductId = 5,
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1875)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5205)
                         },
                         new
                         {
                             Id = 17,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1875),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5205),
                             ProductId = 5,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1876)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5206)
                         },
                         new
                         {
                             Id = 18,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1876),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5207),
                             ProductId = 5,
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1877)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5207)
                         },
                         new
                         {
                             Id = 19,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1877),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5208),
                             ProductId = 6,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1878)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5209)
                         },
                         new
                         {
                             Id = 20,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1878),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5209),
                             ProductId = 6,
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1879)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5210)
                         },
                         new
                         {
                             Id = 21,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1879),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5211),
                             ProductId = 6,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1880)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5211)
                         },
                         new
                         {
                             Id = 22,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1881),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5212),
                             ProductId = 7,
                             SoftDeleted = false,
                             TagId = 7,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1881)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5212)
                         },
                         new
                         {
                             Id = 23,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1882),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5213),
                             ProductId = 7,
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1882)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5214)
                         },
                         new
                         {
                             Id = 24,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1883),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5214),
                             ProductId = 7,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1883)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5215)
                         },
                         new
                         {
                             Id = 25,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1884),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5216),
                             ProductId = 8,
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1884)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5216)
                         },
                         new
                         {
                             Id = 26,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1885),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5217),
                             ProductId = 8,
                             SoftDeleted = false,
                             TagId = 8,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1885)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5218)
                         },
                         new
                         {
                             Id = 27,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1886),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5218),
                             ProductId = 8,
                             SoftDeleted = false,
                             TagId = 2,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1886)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5219)
                         },
                         new
                         {
                             Id = 28,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1887),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5220),
                             ProductId = 8,
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1888)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5220)
                         },
                         new
                         {
                             Id = 29,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1888),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5221),
                             ProductId = 9,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1889)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5221)
                         },
                         new
                         {
                             Id = 30,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1889),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5222),
                             ProductId = 9,
                             SoftDeleted = false,
                             TagId = 7,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1890)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5223)
                         },
                         new
                         {
                             Id = 31,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1890),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5223),
                             ProductId = 9,
                             SoftDeleted = false,
                             TagId = 2,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1891)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5224)
                         },
                         new
                         {
                             Id = 32,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1891),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5225),
                             ProductId = 9,
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1892)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5225)
                         },
                         new
                         {
                             Id = 33,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1892),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5226),
                             ProductId = 10,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1893)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5226)
                         },
                         new
                         {
                             Id = 34,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1894),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5227),
                             ProductId = 10,
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1894)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5228)
                         },
                         new
                         {
                             Id = 35,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1895),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5228),
                             ProductId = 10,
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1895)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5229)
                         },
                         new
                         {
                             Id = 36,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1896),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5230),
                             ProductId = 10,
                             SoftDeleted = false,
                             TagId = 7,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1896)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5230)
                         },
                         new
                         {
                             Id = 37,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1897),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5231),
                             ProductId = 11,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1897)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5231)
                         },
                         new
                         {
                             Id = 38,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1898),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5232),
                             ProductId = 11,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1899)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5233)
                         },
                         new
                         {
                             Id = 39,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1899),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5234),
                             ProductId = 11,
                             SoftDeleted = false,
                             TagId = 2,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1900)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5234)
                         },
                         new
                         {
                             Id = 40,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1900),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5235),
                             ProductId = 12,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1901)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5235)
                         },
                         new
                         {
                             Id = 41,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1901),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5236),
                             ProductId = 12,
                             SoftDeleted = false,
                             TagId = 4,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1902)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5237)
                         },
                         new
                         {
                             Id = 42,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1902),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5237),
                             ProductId = 12,
                             SoftDeleted = false,
                             TagId = 8,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1903)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5238)
                         },
                         new
                         {
                             Id = 43,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1903),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5239),
                             ProductId = 13,
                             SoftDeleted = false,
                             TagId = 1,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1904)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5239)
                         },
                         new
                         {
                             Id = 44,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1904),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5240),
                             ProductId = 13,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1905)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5240)
                         },
                         new
                         {
                             Id = 45,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1905),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5241),
                             ProductId = 13,
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1906)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5242)
                         },
                         new
                         {
                             Id = 46,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1907),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5242),
                             ProductId = 14,
                             SoftDeleted = false,
                             TagId = 2,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1907)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5243)
                         },
                         new
                         {
                             Id = 47,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1908),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5244),
                             ProductId = 14,
                             SoftDeleted = false,
                             TagId = 6,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1908)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5244)
                         },
                         new
                         {
                             Id = 48,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1909),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5245),
                             ProductId = 14,
                             SoftDeleted = false,
                             TagId = 8,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1909)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5245)
                         },
                         new
                         {
                             Id = 49,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1910),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5246),
                             ProductId = 15,
                             SoftDeleted = false,
                             TagId = 3,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1910)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5247)
                         },
                         new
                         {
                             Id = 50,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1911),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5247),
                             ProductId = 15,
                             SoftDeleted = false,
                             TagId = 5,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1911)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5248)
                         },
                         new
                         {
                             Id = 51,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1912),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5249),
                             ProductId = 15,
                             SoftDeleted = false,
                             TagId = 8,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1912)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(5249)
                         });
                 });
 
@@ -3161,42 +3223,42 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1251),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4445),
                             Description = "Orders over $500",
                             IconName = "fas fa-shipping-fast",
                             SoftDeleted = false,
                             Title = "Free Shipping Item",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1251)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4446)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1253),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4447),
                             Description = "100% money back",
                             IconName = "fas fa-redo-alt",
                             SoftDeleted = false,
                             Title = "Money Back Guarantee",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1253)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4448)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1254),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4449),
                             Description = "Lorem ipsum dolor amet",
                             IconName = "fas fa-piggy-bank",
                             SoftDeleted = false,
                             Title = "Cash On Delivery",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1255)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4449)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1256),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4450),
                             Description = "Call us : + 0123.4567.89",
                             IconName = "fas fa-life-ring",
                             SoftDeleted = false,
                             Title = "Help & Support",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1256)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4451)
                         });
                 });
 
@@ -3231,82 +3293,82 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1303),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4505),
                             Key = "HeaderLogo",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1303),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4505),
                             Value = "logo.webp"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1306),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4507),
                             Key = "FooterLogo",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1306),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4507),
                             Value = "logo--footer.webp"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1307),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4508),
                             Key = "Address",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1307),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4509),
                             Value = "7/135 Saint St. London"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1308),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4510),
                             Key = "Phone",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1308),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4510),
                             Value = "+18088 234 5678"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1337),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4512),
                             Key = "Email",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1338),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4512),
                             Value = "support@hastech.com"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1339),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4513),
                             Key = "PaymentMethod",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1339),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4514),
                             Value = "payment.webp"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1340),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4514),
                             Key = "Address2",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1340),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4515),
                             Value = "1130/5 Louis III St. New York"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1341),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4516),
                             Key = "Phone2",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1342),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4516),
                             Value = "+18088 625 4251"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1342),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4517),
                             Key = "Email2",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1343),
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4517),
                             Value = "info@lawyersattorneys.com"
                         });
                 });
@@ -3353,26 +3415,26 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1114),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4248),
                             Description = " Cover Up Front Of Books and Leave Summary",
                             DirectionId = 1,
                             Header = "J.D. Kurtness",
                             Image = "home-slider-1-ai.webp",
                             SoftDeleted = false,
                             Title = "De Vengeance",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1124)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4259)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1129),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4263),
                             Description = "Cover Up Front Of Books and Leave Summary",
                             DirectionId = 2,
                             Header = "H.G. Wells",
                             Image = "home-slider-2-ai.webp",
                             SoftDeleted = false,
                             Title = "De Vengeance",
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1129)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4263)
                         });
                 });
 
@@ -3407,38 +3469,38 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1355),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4529),
                             IconName = "fa-brands fa-facebook-f",
                             Link = "https://www.facebook.com/",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1355)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4530)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1357),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4531),
                             IconName = "fa-brands fa-twitter",
                             Link = "https://twitter.com/",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1357)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4532)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1358),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4533),
                             IconName = "fa-brands fa-google",
                             Link = "https://www.google.com/",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1358)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4533)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1359),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4534),
                             IconName = "fa-brands fa-youtube",
                             Link = "https://www.youtube.com/",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1359)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4535)
                         });
                 });
 
@@ -3470,18 +3532,18 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1370),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4547),
                             Email = "surac@gmail.com",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1371)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4547)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1373),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4548),
                             Email = "kubra@gmail.com",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1373)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4549)
                         });
                 });
 
@@ -3513,66 +3575,66 @@ namespace Pustok_Backend.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1414),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4591),
                             Name = "Fiction",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1415)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4591)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1416),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4592),
                             Name = "Non-Fiction",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1416)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4593)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1417),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4594),
                             Name = "Mystery",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1418)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4594)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1419),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4595),
                             Name = "History",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1419)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4596)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1420),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4596),
                             Name = "Fantasy",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1420)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4597)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1421),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4598),
                             Name = "Science Fiction",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1421)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4598)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1422),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4599),
                             Name = "Biography",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1422)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4599)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1423),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4601),
                             Name = "Self-Help",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1423)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4601)
                         });
                 });
 
@@ -3610,55 +3672,55 @@ namespace Pustok_Backend.Migrations
                         {
                             Id = 1,
                             AppUserId = "0efd01de-4eec-45ff-9de4-f03f9abdf104",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1395),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4570),
                             Review = " Discovered Pustok, a reader's paradise! Vast collection caters to every literary taste. User-friendly interface made browsing a delight. Quick shipping, excellent customer service – my go-to online bookstore.",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1396)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4571)
                         },
                         new
                         {
                             Id = 2,
                             AppUserId = "122ee49a-1c09-45ba-a6a5-4e94b3be7c85",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1397),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4572),
                             Review = "Explored numerous online bookstores, but this one stands out. Curated selection, easy navigation – a reader's haven. Intuitive layout, discover new titles effortlessly. Timely delivery, well-packaged books – highly recommended satisfaction!.",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1398)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4573)
                         },
                         new
                         {
                             Id = 3,
                             AppUserId = "4e8b3ae2-4358-4d32-8fdf-d9a95df929e7",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1398),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4574),
                             Review = "Exceeded expectations, Pustok website. Robust search functionality, find what I wanted easily. Seamless checkout process, orders arrive promptly. Attention to detail, quality service keeps me coming back for more literary treasures.",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1399)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4575)
                         },
                         new
                         {
                             Id = 4,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1400),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4575),
                             Review = "Can't say enough good things about Pustok! Vast array of genres, inclusion of hard-to-find titles. Aesthetically pleasing and highly functional design. Orders accurate, well-packaged, delivered on time – a gem in online book retail!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1400)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4576)
                         },
                         new
                         {
                             Id = 5,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1401),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4577),
                             Review = " hard-to-find titles. Aesthetically pleasing and highly functional design. Orders accurate, well-packaged, delivered on time – a gem in online book retail!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1401)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4577)
                         },
                         new
                         {
                             Id = 6,
                             AppUserId = "8dce53a3-4394-46c3-8ebd-dbb06801e22e",
-                            CreatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1402),
+                            CreatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4578),
                             Review = "Can't say enough good things aboard-to-find e book retail!",
                             SoftDeleted = false,
-                            UpdatedDate = new DateTime(2024, 1, 25, 17, 47, 57, 47, DateTimeKind.Local).AddTicks(1402)
+                            UpdatedDate = new DateTime(2024, 1, 26, 18, 11, 37, 463, DateTimeKind.Local).AddTicks(4579)
                         });
                 });
 
@@ -3830,6 +3892,34 @@ namespace Pustok_Backend.Migrations
                     b.Navigation("Tag");
                 });
 
+            modelBuilder.Entity("Pustok_Backend.Models.Cart", b =>
+                {
+                    b.HasOne("Pustok_Backend.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Pustok_Backend.Models.CartProduct", b =>
+                {
+                    b.HasOne("Pustok_Backend.Models.Cart", "Cart")
+                        .WithMany("CartProducts")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Pustok_Backend.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Pustok_Backend.Models.Product", b =>
                 {
                     b.HasOne("Pustok_Backend.Models.Author", "Author")
@@ -3974,6 +4064,11 @@ namespace Pustok_Backend.Migrations
             modelBuilder.Entity("Pustok_Backend.Models.BlogAuthor", b =>
                 {
                     b.Navigation("Blogs");
+                });
+
+            modelBuilder.Entity("Pustok_Backend.Models.Cart", b =>
+                {
+                    b.Navigation("CartProducts");
                 });
 
             modelBuilder.Entity("Pustok_Backend.Models.Category", b =>

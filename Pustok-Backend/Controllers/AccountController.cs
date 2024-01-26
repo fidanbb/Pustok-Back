@@ -8,6 +8,7 @@ using Pustok_Backend.Helpers.Enums;
 using Pustok_Backend.Models;
 using Pustok_Backend.Services.Interfaces;
 using Pustok_Backend.ViewModels.Account;
+using Pustok_Backend.ViewModels.Cart;
 using Pustok_Backend.ViewModels.Wishlist;
 
 namespace Pustok_Backend.Controllers
@@ -20,13 +21,15 @@ namespace Pustok_Backend.Controllers
         private readonly IEmailService _emailService;
         private readonly IWishlistService _wishlistService;
         private readonly AppDbContext _context;
+        private readonly ICartService _cartService;
 
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
                                  RoleManager<IdentityRole> roleManager,
                                  IEmailService emailService,
                                  IWishlistService wishlistService,
-                                 AppDbContext context)
+                                 AppDbContext context,
+                                 ICartService cartService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -34,6 +37,7 @@ namespace Pustok_Backend.Controllers
             _emailService = emailService;
             _wishlistService = wishlistService;
             _context = context;
+            _cartService = cartService;
         }
 
 
@@ -191,6 +195,26 @@ namespace Pustok_Backend.Controllers
 
             }
 
+            List<CartVM> basket = new();
+            Cart dbBasket = await _cartService.GetCartByUserIdAsync(dbUser.Id);
+
+            if (dbBasket is not null)
+            {
+                List<CartProduct> basketProducts = await _cartService.GetAllByBasketIdAsync(dbBasket.Id);
+
+                foreach (var item in basketProducts)
+                {
+                    basket.Add(new CartVM
+                    {
+                        Id = item.ProductId,
+                        Count = item.Count
+                    });
+                }
+
+                Response.Cookies.Append("basket", JsonConvert.SerializeObject(basket));
+
+            }
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -255,6 +279,65 @@ namespace Pustok_Backend.Controllers
                 }
 
             }
+
+
+            List<CartVM> basket = _cartService.GetDatasFromCookies();
+            Cart dbBasket = await _cartService.GetCartByUserIdAsync(userId);
+
+            if (basket.Count != 0)
+            {
+                if (dbBasket == null)
+                {
+                    dbBasket = new()
+                    {
+                        AppUserId = userId,
+                        CartProducts = new List<CartProduct>()
+                    };
+
+                    foreach (var item in basket)
+                    {
+                        dbBasket.CartProducts.Add(new CartProduct()
+                        {
+                            ProductId = item.Id,
+                            CartId = dbBasket.Id,
+                            Count = item.Count
+                        });
+                    }
+                    await _context.Carts.AddAsync(dbBasket);
+                    await _context.SaveChangesAsync();
+
+                }
+                else
+                {
+                    List<CartProduct> basketProducts = new();
+
+                    foreach (var item in basket)
+                    {
+                        basketProducts.Add(new CartProduct()
+                        {
+                            ProductId = item.Id,
+                            CartId = dbBasket.Id,
+                            Count = item.Count
+                        });
+                    }
+
+                    dbBasket.CartProducts = basketProducts;
+                    _context.SaveChanges();
+                }
+
+                Response.Cookies.Delete("basket");
+            }
+            else
+            {
+                if (dbBasket is not null)
+                {
+                    _context.Carts.Remove(dbBasket);
+                    _context.SaveChanges();
+                }
+
+            }
+
+
             return RedirectToAction("Index", "Home");
         }
 

@@ -22,7 +22,7 @@
             <div class="alert alert-success" role="alert">
                 Your Wishlist is currently empty.
             </div>
-            <a href="./shop.html">Return to Shop</a>
+            <a asp-controller="Shop" asp-action="Index">Return to Shop</a>
         </div>
         <div style="overflow-x: auto" class="wishlist-table @(Model.Count == 0 ? "d-none":"")">
             <table>
@@ -91,7 +91,7 @@
             <div class="alert alert-success" role="alert">
                 Your Wishlist is currently empty.
             </div>
-            <a href="./shop.html">Return to Shop</a>
+            <a asp-controller="Shop" asp-action="Index">Return to Shop</a>
         </div>
         <div class="wishlist-table @(Model.Count == 0 ? "d-none":"")">
             @foreach (var item in Model)

@@ -204,8 +204,8 @@
                                                
                                                 @if (User.Identity.IsAuthenticated)
                                                 {
-                                                    <a class="added-cart">
-                                                        <i class="fas fa-shopping-basket"></i>
+                                                    <a @* class="added-cart" *@>
+                                                        <i class="fas fa-shopping-basket cart-add"></i>
                                                     </a>
                                                     <a @* class="wislist-add" *@>
                                                         <i class="fas fa-heart wishlist-add"></i>
@@ -268,8 +268,8 @@
 
                                                 @if (User.Identity.IsAuthenticated)
                                                 {
-                                                    <a class="added-cart">
-                                                        <i class="fas fa-shopping-basket"></i>
+                                                    <a @* class="added-cart" *@>
+                                                        <i class="fas fa-shopping-basket cart-add"></i>
                                                     </a>
                                                     <a @* class="wislist-add" *@>
                                                         <i class="fas fa-heart wishlist-add"></i>
@@ -331,8 +331,8 @@
 
                                                 @if (User.Identity.IsAuthenticated)
                                                 {
-                                                    <a class="added-cart">
-                                                        <i class="fas fa-shopping-basket"></i>
+                                                    <a @* class="added-cart" *@>
+                                                        <i class="fas fa-shopping-basket cart-add"></i>
                                                     </a>
                                                     <a @* class="wislist-add" *@>
                                                         <i class="fas fa-heart wishlist-add"></i>
@@ -406,8 +406,8 @@
 
                                     @if (User.Identity.IsAuthenticated)
                                     {
-                                        <a class="added-cart">
-                                            <i class="fas fa-shopping-basket"></i>
+                                        <a @* class="added-cart" *@>
+                                            <i class="fas fa-shopping-basket cart-add"></i>
                                         </a>
                                         <a @* class="wislist-add" *@>
                                             <i class="fas fa-heart wishlist-add"></i>
@@ -438,6 +438,7 @@
                         </div>
                     </div>
                 </div>
+
 
 
             }
@@ -668,8 +669,8 @@
 
                                     @if (User.Identity.IsAuthenticated)
                                     {
-                                        <a class="added-cart">
-                                            <i class="fas fa-shopping-basket"></i>
+                                        <a @* class="added-cart" *@>
+                                            <i class="fas fa-shopping-basket cart-add"></i>
                                         </a>
                                         <a @* class="wislist-add" *@>
                                             <i class="fas fa-heart wishlist-add"></i>
@@ -882,7 +883,7 @@
                                         <i class="fa-solid fa-plus"></i>
                                     </span>
                                 </div>
-                                <button type="submit">Add to cart</button>
+                                <button type="submit" class="cart-add">Add to cart</button>
                             </div>
 
                             <div class="product-extra-buttons">
@@ -937,7 +938,7 @@
 
 <!-- product added to basket popup -->
 
-<div class="added-item-basket d-none ">
+<div class="added-item-basket">
     <i class="ion-checkmark"></i>
     <p>
         Cogratulations! Your item has been <br />
@@ -950,6 +951,7 @@
     <script src="~/assets/slick-1.8.1/slick/slick.js"></script>
     <script src="~/assets/js/home.js"></script>
     <script src="~/assets/js/wishlist.js"></script>
+    <script src="~/assets/js/cart.js"></script>
 
 
 }

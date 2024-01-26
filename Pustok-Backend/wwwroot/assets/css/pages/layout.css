@@ -842,7 +842,7 @@ footer #footer-down p a {
 
 .added-item-basket {
     text-align: left;
-    display: flex;
+    display: none;
     align-items: center;
     width: 360px;
     font-size: 14px;

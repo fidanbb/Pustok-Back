@@ -8,15 +8,18 @@ namespace Pustok_Backend.Services
         private readonly ISettingService _settingService;
         private readonly ISocialService _socialService;
         private readonly ICategoryService _categoryService;
+        private readonly ICartService _cartService;
 
         public LayoutService( ISettingService settingService,
                               ISocialService socialService,
-                              ICategoryService categoryService)
+                              ICategoryService categoryService,
+                              ICartService cartService)
         {
            
             _settingService = settingService;
             _socialService = socialService;
             _categoryService = categoryService;
+            _cartService = cartService;
         }
         public async Task< FooterVM> GetFooterDatas()
         {
@@ -40,8 +43,10 @@ namespace Pustok_Backend.Services
                 HeaderLogo = settingDatas["HeaderLogo"],
                 Phone = settingDatas["Phone"],
                 Email = settingDatas["Email"],
-                Categories =await _categoryService.GetAllAsync()
-                
+                Categories = await _categoryService.GetAllAsync(),
+                BasketCount =  _cartService.GetCount(),
+                TotalPrice =await _cartService.GetGrandTotal()
+     
             };
         }
     }

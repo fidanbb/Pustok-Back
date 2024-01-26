@@ -18,16 +18,20 @@ namespace Pustok_Backend.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IProductCommentService _productCommentService;
         private readonly IWishlistService _wishlistService;
+        private readonly ICartService _cartService;
 
         public ShopController(IProductService productService,
                                ICategoryService categoryService,
                                IProductCommentService productCommentService,
-                               IWishlistService wishlistService)
+                               IWishlistService wishlistService,
+                               ICartService cartService)
         {
             _productService = productService;
             _categoryService = categoryService;
             _productCommentService = productCommentService;
             _wishlistService = wishlistService;
+            _cartService = cartService;
+
         }
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1, int take = 9, int? categoryId=null, string sortValue = null, string searchText = null, int? minValue = null, int? maxValue=null)
@@ -258,6 +262,36 @@ namespace Pustok_Backend.Controllers
                 bool isInWishlist = _wishlistService.AddWishlist((int)id, product);
 
                 return Ok(isInWishlist);
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
+           
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> AddBasket(int? id)
+        {
+            try
+            {
+                if (id is null) throw new ArgumentNullException();
+
+                ProductDetailVM product = await _productService.GetByIdWithoutTrackingAsync((int)id);
+
+                if (product is null) throw new NullReferenceException();
+
+                decimal grandTotal= await _cartService.AddBasket((int)id, product);
+
+
+                return Ok(grandTotal);
             }
             catch (ArgumentNullException)
             {

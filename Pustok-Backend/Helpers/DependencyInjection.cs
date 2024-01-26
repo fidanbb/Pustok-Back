@@ -30,6 +30,7 @@ namespace Pustok_Backend.Helpers
             services.AddScoped<IDiscountService, DiscountService>();
             services.AddScoped<IWishlistService, WishlistService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<ICartService, CartService>();
 
 
 

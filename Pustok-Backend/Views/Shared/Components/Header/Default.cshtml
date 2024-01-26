@@ -129,12 +129,12 @@
 
 
                             <div class="cart-item d-flex align-items-center">
-                                <a class="cart-widget" href="./cart.html">
+                                <a class="cart-widget" asp-controller="Cart" asp-action="Index">
                                     <div class="cart-total">
-                                        <span class="count">1</span>
+                                        <span class="count basket-count">@Model.BasketCount</span>
                                         <span class="text"> Shopping Cart </span>
-                                        <span class="price">
-                                            <span>£</span> 0.00
+                                        <span class="price ">
+                                            <span>$</span> <span class="grand-total-price">@Model.TotalPrice</span>
                                             <span><i class="fas fa-chevron-down"></i></span>
                                         </span>
                                     </div>
@@ -261,7 +261,7 @@
                             </li>
 
                             <li class="link-item">
-                                <a href="cart.html">
+                                <a asp-controller="Cart" asp-action="Index">
                                     <i class="ion-bag"></i>
                                 </a>
                             </li>
@@ -334,7 +334,7 @@
                                         <a asp-controller="Contact" asp-action="Index">Contact</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="wishlist.html">Wishlist</a>
+                                        <a asp-controller="Wishlist" asp-action="Index">Wishlist</a>
                                     </li>
                                 </ul>
                             </div>
