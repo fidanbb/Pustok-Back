@@ -1601,6 +1601,23 @@ main #product-detail-modal .detail-modal .modal-content .product-content .add-to
   font-size: 15px;
   width: 100%;
 }
+
+    main #product-detail-modal .detail-modal .modal-content .product-content .add-to-cart a {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        cursor: pointer;
+        font-weight: 600;
+        height: 3rem;
+        border-radius: 2px;
+        outline: none !important;
+        background-color: #63ab00;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        width: 100%;
+    }
+
 main #product-detail-modal .detail-modal .modal-content .product-content .product-extra-buttons {
   margin-top: 1.25rem;
   margin-bottom: 1.5rem;

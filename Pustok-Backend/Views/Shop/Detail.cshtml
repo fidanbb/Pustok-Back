@@ -78,7 +78,16 @@
                                             <i class="fa-solid fa-plus"></i>
                                         </span>
                                     </div>
-                                    <button type="submit">Add to cart</button>
+                                    @if(User.Identity.IsAuthenticated){
+                                        <button type="submit" class="add-cart" data-id="@Model.Product.Id">Add to cart</button>
+                                    }
+                                    else
+                                    {
+
+                                        <a asp-controller="Account" asp-action="Login">Add to cart</a>
+                                   
+                                    }
+
                                 </div>
 
                                 <div class="product-extra-buttons" data-id="@Model.Product.Id">
@@ -333,7 +342,7 @@
 
 <!-- product added to basket popup -->
 
-<div class="added-item-basket d-none ">
+<div class="added-item-basket">
     <i class="ion-checkmark"></i>
     <p>
         Cogratulations! Your item has been <br />
@@ -346,6 +355,7 @@
     <script src="~/assets/slick-1.8.1/slick/slick.js"></script>
     <script src="~/assets/js/productdetail.js"></script>
     <script src="~/assets/js/wishlist.js"></script>
+    <script src="~/assets/js/cart.js"></script>
 
 
 }

@@ -156,7 +156,16 @@
                                         <i class="fa-solid fa-plus"></i>
                                     </span>
                                 </div>
-                                <button type="submit">Add to cart</button>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <button type="submit" class="add-cart" data-id="0">Add to cart</button>
+                                }
+                                else
+                                {
+
+                                    <a asp-controller="Account" asp-action="Login">Add to cart</a>
+
+                                }
                             </div>
 
                             <div class="product-extra-buttons">
@@ -211,7 +220,7 @@
 
 <!-- product added to basket popup -->
 
-<div class="added-item-basket d-none ">
+<div class="added-item-basket">
     <i class="ion-checkmark"></i>
     <p>
         Cogratulations! Your item has been <br />

@@ -658,6 +658,7 @@ $(document).ready(function () {
         let imageContainer = document.querySelector(".detail-modal .product-image");
         let thumbnailContainer = document.querySelector(".detail-modal .slider-nav-thumbnails");
         let productContent = $(".product-content");
+        let addBtn = $(".add-cart");
 
 
         if ($(".product-image").hasClass("slick-initialized")) {
@@ -684,7 +685,7 @@ $(document).ready(function () {
                 sku.text(res.sku)
                 tags.text(res.tags)
                 productContent.attr("data-id", id)
-
+                addBtn.attr("data-id", id)
 
                 for (let i = 0; i < res.images.length; i++) {
                     let img = document.createElement("img");

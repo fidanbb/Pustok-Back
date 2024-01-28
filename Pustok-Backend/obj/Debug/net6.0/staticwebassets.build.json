@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i8lMEydiACGdEVoHcbL2ymcjdXIgMHfgO4qpY9gr6wc=",
+  "Hash": "QiuhS6MI4BzFmMgaQkmEGV0tOeS5+/NnY5ArAgZ81No=",
   "Source": "Pustok-Backend",
   "BasePath": "_content/Pustok-Backend",
   "Mode": "Default",
@@ -34120,6 +34120,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\home-slider-2-ai.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\icons8-open-book-50.png",
+      "SourceId": "Pustok-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\",
+      "BasePath": "_content/Pustok-Backend",
+      "RelativePath": "assets/images/icons8-open-book-50.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\icons8-open-book-50.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\logo--footer.webp",

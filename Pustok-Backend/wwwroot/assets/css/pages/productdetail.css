@@ -103,6 +103,23 @@ main #product-detail .product .product-content .add-to-cart button {
   font-size: 15px;
   width: 100%;
 }
+
+    main #product-detail .product .product-content .add-to-cart a {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        cursor: pointer;
+        font-weight: 600;
+        height: 3rem;
+        border-radius: 2px;
+        background-color: #63ab00;
+        outline: none !important;
+        border-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        width: 100%;
+    }
+
 main #product-detail .product .product-content .product-extra-buttons {
   margin-top: 1.25rem;
   margin-bottom: 1.5rem;

@@ -69,6 +69,52 @@ namespace Pustok_Backend.Services
            return grandTotal.Sum();
         }
 
+
+
+        public async Task<decimal> AddBasketWithCount(int id,int count, ProductDetailVM product)
+        {
+            List<CartVM> basket;
+
+            if (_httpContextAccessor.HttpContext.Request.Cookies["basket"] != null)
+            {
+                basket = JsonConvert.DeserializeObject<List<CartVM>>(_httpContextAccessor.HttpContext.Request.Cookies["basket"]);
+            }
+            else
+            {
+                basket = new List<CartVM>();
+            }
+
+            CartVM existProducts = basket.FirstOrDefault(m => m.Id == product.Id);
+
+            if (existProducts is null)
+            {
+                basket.Add(new CartVM { Id = product.Id, Count = count });
+            }
+            else
+            {
+                existProducts.Count = existProducts.Count + count;
+
+            }
+
+            List<decimal> grandTotal = new();
+
+            _httpContextAccessor.HttpContext.Response.Cookies.Append("basket", JsonConvert.SerializeObject(basket));
+
+
+            foreach (var item in basket)
+            {
+                var productById = await _productService.GetByIdWithoutTrackingAsync(item.Id);
+
+                decimal price = productById.Price - ((productById.Price * productById.Discount) / 100);
+
+                decimal total = item.Count * price;
+
+                grandTotal.Add(total);
+            }
+
+            return grandTotal.Sum();
+        }
+
         public int GetCount()
         {
             List<CartVM> basket;

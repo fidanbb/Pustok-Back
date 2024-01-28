@@ -45,7 +45,8 @@ namespace Pustok_Backend.Services
                 Email = settingDatas["Email"],
                 Categories = await _categoryService.GetAllAsync(),
                 BasketCount =  _cartService.GetCount(),
-                TotalPrice =await _cartService.GetGrandTotal()
+                TotalPrice =await _cartService.GetGrandTotal(),
+                Cart=await _cartService.GetBasketDatasAsync(),
      
             };
         }

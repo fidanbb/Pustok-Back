@@ -1,5 +1,6 @@
 ﻿using Pustok_Backend.Areas.Admin.ViewModels.Category;
 using Pustok_Backend.Areas.Admin.ViewModels.Social;
+using Pustok_Backend.ViewModels.Cart;
 
 namespace Pustok_Backend.ViewModels.Layout
 {
@@ -12,6 +13,8 @@ namespace Pustok_Backend.ViewModels.Layout
         public int BasketCount { get; set; }
         public decimal TotalPrice { get; set; }
         public List<CategoryVM> Categories { get; set; }
+
+        public List<CartDetailVM> Cart { get; set; }
 
 
     }

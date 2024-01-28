@@ -33,23 +33,31 @@ $(function () {
 
     })
 
-    //$(document).on("click", ".cart-add-basket", function () {
+    $(document).on("click", ".cart-add-basket", function () {
+
+        let addedItemBasket = document.querySelector(".added-item-basket");
+        let id = $(this).attr("data-id");;
+        let count = $(".basket-count").text();
+        $.ajax({
+            url: `shop/addbasket?id=${id}`,
+            type: "Post",
+            success: function (res) {
+
+                // Show "Product added to basket" message
+                addedItemBasket.style.display = "flex";
+                setTimeout(function () {
+                    addedItemBasket.style.display = "none";
+                }, 2000);
+                count++;
+                $(".basket-count").text(count);
+                /*  $(".total-count").text(count);*/
+                $(".grand-total-price").text(res.toFixed(2));
 
 
-    //    let id = $(this).parent().attr("data-id");;
-    //    let count = $(".basket-count").text();
-    //    $.ajax({
-    //        url: `shop/addbasket?id=${id}`,
-    //        type: "Post",
-    //        success: function (res) {
+            }
+        })
 
-    //            count++;
-    //            $(".basket-count").text(count);
-
-    //        }
-    //    })
-
-    //})
+    })
 
     $(document).on("click", ".delete-wishlist-item", function (e) {
 

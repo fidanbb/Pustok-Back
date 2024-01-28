@@ -141,67 +141,36 @@
                                 </a>
 
                                 <div class="cart-dropdown">
-                                    <p class="cart-empty d-none">
+                                    <p class="cart-empty @(Model.Cart.Count == 0 ? "":"d-none")">
                                         Your shopping cart is empty!
                                     </p>
-                                    <div class="single-cart-block">
-                                        <div class="cart-product">
-                                            <a href="productdetail.html">
-                                                <img src="~/assets/images/cart-product-1.webp"
-                                                     alt="" />
-                                            </a>
-                                            <div class="content">
-                                                <h3>
-                                                    <a href="productdetail.html">Kodak PIXPRO Astro Zoom AZ421 16 MP</a>
-                                                </h3>
-                                                <p class="price">
-                                                    <span>1 × </span> <span> £</span>87.34
-                                                </p>
-                                                <button class="delete-product">
-                                                    <i class="fas fa-times"></i>
-                                                </button>
+                                    <div class="single-cart-block @(Model.Cart.Count == 0 ? "d-none":"") ">
+                                        @foreach (var item in Model.Cart)
+                                        {
+                                            <div class="cart-product">
+                                                <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
+                                                    <img style="width:100px" src="~/assets/images/@item.Image"
+                                                         alt="" />
+                                                </a>
+                                                <div class="content">
+                                                    <h3>
+                                                        <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+                                                    </h3>
+                                                    <p class="price">
+                                                        <span>@item.Count × </span> <span> £</span>@item.Price
+                                                    </p>
+                                               @*      <button class="delete-product">
+                                                        <i class="fas fa-times"></i>
+                                                    </button> *@
+                                                </div>
                                             </div>
-                                        </div>
-                                        <hr />
-                                        <div class="cart-product">
-                                            <a href="productdetail.html">
-                                                <img src="~/assets/images/cart-product-1.webp"
-                                                     alt="" />
-                                            </a>
-                                            <div class="content">
-                                                <h3>
-                                                    <a href="productdetail.html">Kodak PIXPRO Astro Zoom AZ421 16 MP</a>
-                                                </h3>
-                                                <p class="price">
-                                                    <span>1 × </span> <span> £</span>87.34
-                                                </p>
-                                                <button class="delete-product">
-                                                    <i class="fas fa-times"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <hr />
-                                        <div class="cart-product">
-                                            <a href="productdetail.html">
-                                                <img src="~/assets/images/cart-product-1.webp"
-                                                     alt="" />
-                                            </a>
-                                            <div class="content">
-                                                <h3>
-                                                    <a href="productdetail.html">Kodak PIXPRO Astro Zoom AZ421 16 MP</a>
-                                                </h3>
-                                                <p class="price">
-                                                    <span>1 × </span> <span> £</span>87.34
-                                                </p>
-                                                <button class="delete-product">
-                                                    <i class="fas fa-times"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <hr />
+                                            <hr />
+                                        }
+                                      
+                                     
                                     </div>
 
-                                    <div class="cart-btn">
+                                    <div class="cart-btn @(Model.Cart.Count == 0 ? "d-none":"")">
                                         <a href="cart.html" class="btn">
                                             View Cart
                                             <i class="fas fa-chevron-right"></i>

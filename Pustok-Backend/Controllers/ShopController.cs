@@ -43,7 +43,6 @@ namespace Pustok_Backend.Controllers
             Paginate<ProductVM> paginatedDatas = new(dbPaginatedDatas, page, pageCount);
             List<CategoryVM> categories = await _categoryService.GetAllAsync();
             List<ProductVM> topProducts = await _productService.GetTopProducts(3);
-            ProductDetailVM product = null;
            
             ViewBag.take = take;
             ViewBag.TotalProduct = await _productService.GetTotalProductCountAsync();
@@ -304,6 +303,37 @@ namespace Pustok_Backend.Controllers
             }
 
            
+        }
+
+
+        [HttpPost]
+
+        public async Task<IActionResult> AddBasketWithCount(int? id,int count)
+        {
+            try
+            {
+                if (id is null) throw new ArgumentNullException();
+
+                ProductDetailVM product = await _productService.GetByIdWithoutTrackingAsync((int)id);
+
+                if (product is null) throw new NullReferenceException();
+
+                decimal grandTotal = await _cartService.AddBasketWithCount((int)id,count, product);
+
+
+                return Ok(grandTotal);
+            }
+            catch (ArgumentNullException)
+            {
+
+                return BadRequest();
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+
+
         }
 
     }

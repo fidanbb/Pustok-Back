@@ -136,7 +136,6 @@ $(document).ready(function () {
     function getProductsByFilter(clickedElem, url) {
         $(document).on("click", clickedElem, function (e) {
             e.preventDefault();
-            console.log("salam")
             let id = $(this).attr("data-id");
             let data = { id: id };
             let parent = $(".product-list")
@@ -193,6 +192,8 @@ $(document).ready(function () {
         let imageContainer = document.querySelector(".detail-modal .product-image");
         let thumbnailContainer = document.querySelector(".detail-modal .slider-nav-thumbnails");
         let productContent = $(".product-content");
+        let addBtn = $(".add-cart");
+
 
         if ($(".product-image").hasClass("slick-initialized")) {
             $(".product-image").slick("unslick");
@@ -219,6 +220,8 @@ $(document).ready(function () {
                 tags.text(res.tags)
 
                 productContent.attr("data-id", id)
+                addBtn.attr("data-id", id)
+
 
                 for (let i = 0; i < res.images.length; i++) {
                     let img = document.createElement("img");

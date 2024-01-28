@@ -10,17 +10,22 @@ $(function () {
             url: `/shop/addbasket?id=${id}`,
             type: "Post",
             success: function (res) {
+
                 // Show "Product added to basket" message
                 addedItemBasket.style.display = "flex";
                 setTimeout(function () {
                     addedItemBasket.style.display = "none";
                 }, 2000);
+
                 count++;
                 $(".basket-count").text(count);
                 /*  $(".total-count").text(count);*/
                 $(".grand-total-price").text(res.toFixed(2));
+                location.reload();
 
                 checkProgress(res.toFixed(2))
+
+               
 
             }
         })
@@ -104,6 +109,10 @@ $(function () {
                 if (res.count === 0) {
                     $("#empty-basket").removeClass("d-none");
                     $("#basket").addClass("d-none");
+                    $(".cart-empty").removeClass("d-none");
+                    $(".single-cart-block").addClass("d-none");
+                    $(".cart-btn").addClass("d-none");
+
                 }
 
 
@@ -116,10 +125,68 @@ $(function () {
 
   
 
+ 
+
+
+    $(document).on("click", ".quantity .plus", function () {
+        console.log("salam")
+        let count = $(".quantity .num").text();
+        count++;
+        $(".quantity .num").text(count);
+    })
+
+
+    $(document).on("click", ".quantity .minus", function () {
+        let count = $(".quantity .num").text();
+         count--;
+         if (count>=1) {
+             $(".quantity .num").text(count);
+
+         }
+     })
+
+
+    $(document).on("click", ".add-cart", function () {
+
+        let addedItemBasket = document.querySelector(".added-item-basket");
+
+        let id = $(this).attr("data-id");;
+        let basketCount = $(".basket-count").text();
+        let count = $(".quantity .num").text();
+        let data = { id: id, count: count }
+        $.ajax({
+            url: `/shop/AddBasketWithCount`,
+            type: "Post",
+            data:data,
+            
+            success: function (res) {
+
+                // Show "Product added to basket" message
+                addedItemBasket.style.display = "flex";
+                setTimeout(function () {
+                    addedItemBasket.style.display = "none";
+                }, 2000);
+
+                basketCount = basketCount + count;
+
+                $(".basket-count").text(basketCount);
+                $(".grand-total-price").text(res.toFixed(2));
+                location.reload();
+
+                checkProgress(res.toFixed(2))
+
+
+
+            }
+        })
+
+    })
+
+
     function checkProgress(totalPrice) {
         const progress = document.querySelector(".progress-done");
 
-        
+
 
         if (totalPrice < 250) {
             let width = (totalPrice * 100) / 250;
@@ -127,7 +194,7 @@ $(function () {
             progress.style.width = progress.getAttribute("data-done") + "%";
             progress.style.opacity = 1;
             document.querySelector(".free-shipping-notice").innerHTML = `Add
-      <span>$</span><span class="price-amount">${250 - totalPrice }</span>
+      <span>$</span><span class="price-amount">${(250 - totalPrice).toFixed(2)}</span>
       to cart and get free shipping!`;
             // document.querySelector(".price-amount").innerText = Math.round(
             //   250 - subTotalPrice
@@ -146,4 +213,6 @@ $(function () {
     let grandTotalPrice = $(".grand-total-price").text();
 
     checkProgress(grandTotalPrice);
+
+
 })

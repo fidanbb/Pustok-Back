@@ -8,6 +8,8 @@ namespace Pustok_Backend.Services.Interfaces
     public interface ICartService
     {
         Task<decimal> AddBasket(int id, ProductDetailVM product);
+        Task<decimal> AddBasketWithCount(int id,int count, ProductDetailVM product);
+
 
         int GetCount();
         Task<decimal> GetGrandTotal();
