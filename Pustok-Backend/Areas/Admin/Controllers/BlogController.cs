@@ -233,7 +233,8 @@ namespace Pustok_Backend.Areas.Admin.Controllers
                     Title = dbBlog.Title,
                     Description = dbBlog.Description,
                     Images = dbBlog.Images,
-                    Tags = tags
+                    Tags = tags,
+                    BlogAuthorId = dbBlog.BlogAuthorId,
 
                 });
             }

@@ -242,7 +242,11 @@ namespace Pustok_Backend.Areas.Admin.Controllers
                     Sku= dbProduct.Sku,
                     StockCount = dbProduct.StockCount,
                     Images = dbProduct.Images,
-                    Tags = tags
+                    Tags = tags,
+                    CategoryId = dbProduct.CategoryId,
+                    AuthorId = dbProduct.AuthorId,
+                    DiscountId = dbProduct.DiscountId,
+                  
 
                 });
             }

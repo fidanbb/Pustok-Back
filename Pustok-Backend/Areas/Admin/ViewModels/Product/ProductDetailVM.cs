@@ -22,5 +22,9 @@ namespace Pustok_Backend.Areas.Admin.ViewModels.Product
         public DateTime UpdatedDate { get; set; }
         public List<Models.Tag> Tags { get; set; }
         public List<ProductTag> ProductTags { get; set; }
+
+        public int AuthorId { get; set; }
+        public int CategoryId { get; set; }
+        public int DiscountId { get; set; }
     }
 }

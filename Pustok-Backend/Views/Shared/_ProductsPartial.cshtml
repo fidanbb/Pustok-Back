@@ -85,7 +85,11 @@
                             </a>
                             <div class="hover-content" data-id="@item.Id">
                                 <a asp-controller="Shop" asp-action="Detail" asp-route-id="@item.Id">
-                                    <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
+                                    @if (@item.Images.FirstOrDefault(m => !m.IsMain) != null)
+                                    {
+                                        <img src="~/assets/images/@item.Images.FirstOrDefault(m=>!m.IsMain).Image" alt="" />
+
+                                    }
                                 </a>
                                 <div class="hover-btns" data-id="@item.Id">
 

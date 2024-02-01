@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QiuhS6MI4BzFmMgaQkmEGV0tOeS5+/NnY5ArAgZ81No=",
+  "Hash": "+3tYB96UAWtd25ygW9664Qz7G3XM6TGZutctBFp2Z2g=",
   "Source": "Pustok-Backend",
   "BasePath": "_content/Pustok-Backend",
   "Mode": "Default",
@@ -33683,6 +33683,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\61c61f29-503f-49d1-aabc-3b6b79c51883-promo-banner-with-text.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\8c832ff8-2ccf-4aae-93ac-c43024f8dace-product-5.webp",
+      "SourceId": "Pustok-Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\",
+      "BasePath": "_content/Pustok-Backend",
+      "RelativePath": "assets/images/8c832ff8-2ccf-4aae-93ac-c43024f8dace-product-5.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\8c832ff8-2ccf-4aae-93ac-c43024f8dace-product-5.webp"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Asp-projects\\Pustok-Backend\\Pustok-Backend\\wwwroot\\assets\\images\\author-logo.webp",
