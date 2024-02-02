@@ -171,11 +171,11 @@
                                     </div>
 
                                     <div class="cart-btn @(Model.Cart.Count == 0 ? "d-none":"")">
-                                        <a href="cart.html" class="btn">
+                                        <a asp-controller="Cart" asp-action="Index" class="btn">
                                             View Cart
                                             <i class="fas fa-chevron-right"></i>
                                         </a>
-                                        <a href="checkout.html" class="btn">
+                                        <a asp-controller="Cart" asp-action="Index" class="btn">
                                             Check Out
                                             <i class="fas fa-chevron-right"></i>
                                         </a>

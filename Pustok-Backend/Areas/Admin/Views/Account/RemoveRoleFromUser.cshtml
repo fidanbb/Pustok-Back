@@ -1,0 +1,28 @@
+﻿@model UserRoleVM
+
+@{
+    ViewData["Title"] = "RemoveRoleFromUser";
+}
+
+<div class="container mt-5">
+    <h1>Remove Role From User</h1>
+
+    <form class="forms-sample" method="post" asp-action="RemoveRoleFromUser">
+
+        <div class="form-group">
+            <label asp-for="UserId">Users</label>
+            <select asp-for="UserId" asp-items="@ViewBag.users" class="form-control"></select>
+        </div>
+
+
+
+        <div class="form-group">
+            <label asp-for="RoleId">Roles</label>
+            <select asp-for="RoleId" asp-items="@ViewBag.roles " class="form-control"></select>
+            <span asp-validation-for="RoleId" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a class="btn btn-light" asp-action="Index">Back</a>
+
+    </form>
+</div>

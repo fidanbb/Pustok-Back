@@ -1,4 +1,4 @@
-﻿@model List<Setting>
+﻿@model Paginate<Setting>
 
 @{
     ViewData["Title"] = "Index";
@@ -23,7 +23,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var setting in Model)
+                @foreach (var setting in Model.Datas)
                 {
                     <tr>
                         <td class="py-1">
@@ -55,5 +55,35 @@
             </tbody>
         </table>
     </div>
+
+
+    <div class="pagination mt-5 justify-content-center">
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item  @(Model.HasPrevious ? "" : "disabled")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage - 1)">
+                        Previous
+                    </a>
+                </li>
+
+                @for (int i = 1; i <= Model.TotalPage; i++)
+                {
+                    <li class="page-item @(Model.CurrentPage == i ? "active" : "")">
+                        <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                    </li>
+
+                }
+
+                <li class="page-item  @(Model.HasNext ? "" : "disabled")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage + 1)">
+                        Next
+                    </a>
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
+
 
 </div>

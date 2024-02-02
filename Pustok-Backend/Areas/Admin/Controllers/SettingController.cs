@@ -1,8 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Pustok_Backend.Areas.Admin.ViewModels.Author;
 using Pustok_Backend.Areas.Admin.ViewModels.Setting;
+using Pustok_Backend.Helpers;
 using Pustok_Backend.Helpers.Extensions;
 using Pustok_Backend.Models;
+using Pustok_Backend.Services;
 using Pustok_Backend.Services.Interfaces;
 
 namespace Pustok_Backend.Areas.Admin.Controllers
@@ -18,15 +22,17 @@ namespace Pustok_Backend.Areas.Admin.Controllers
         {
             _settingService = settingService;
         }
-
-
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int take = 5)
         {
 
             try
             {
-                return View(await _settingService.GetAllAsync());
+                List<Setting> dbPaginatedDatas = await _settingService.GetPaginatedDatasAsync(page, take);
+
+                int pageCount = await GetPageCountAsync(take);
+                Paginate<Setting> paginatedDatas = new(dbPaginatedDatas, page, pageCount);
+                return View(paginatedDatas);
 
             }
             catch (ArgumentNullException)
@@ -39,6 +45,13 @@ namespace Pustok_Backend.Areas.Admin.Controllers
                 return NotFound();
             }
 
+        }
+
+        public async Task<int> GetPageCountAsync(int take)
+        {
+            int count = await _settingService.GetCountAsync();
+
+            return (int)Math.Ceiling((decimal)(count) / take);
         }
 
         [HttpGet]

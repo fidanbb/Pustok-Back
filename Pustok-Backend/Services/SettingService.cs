@@ -80,5 +80,14 @@ namespace Pustok_Backend.Services
 
         }
 
+        public async Task<int> GetCountAsync()
+        {
+           return await _context.Settings.CountAsync();
+        }
+
+        public async Task<List<Setting>> GetPaginatedDatasAsync(int page, int take)
+        {
+            return await _context.Settings.Skip((page*take)-take).Take(take).ToListAsync();
+        }
     }
 }

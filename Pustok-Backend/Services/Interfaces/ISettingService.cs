@@ -9,6 +9,8 @@ namespace Pustok_Backend.Services.Interfaces
 
         Task<List<Setting>> GetAllAsync();
 
+        Task<int> GetCountAsync();
+        Task<List<Setting>> GetPaginatedDatasAsync(int page, int take);
         Task<Setting> GetByIdAsync(int id);
         Task EditAsync(SettingEditVM setting);
     }

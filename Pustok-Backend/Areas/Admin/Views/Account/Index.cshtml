@@ -1,5 +1,5 @@
 ﻿﻿
-@model List<UserVM>
+@model Paginate<UserVM>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,7 +7,13 @@
 <div class="container">
     <h1 class="text-center mt-3 mb-3">Users</h1>
 
-    <a class="btn btn-success text-white" asp-action="AddRoleToUser">Add Role To User</a>
+    @if (User.IsInRole("SuperAdmin"))
+    {
+        <a class="btn btn-success text-white" asp-action="AddRoleToUser">Add Role To User</a>
+        <a asp-action="RemoveRoleFromUser" class="btn btn-danger">Remove Role From User</a>
+    }
+
+   
 
 
     <div class="table-responsive">
@@ -29,7 +35,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var user in Model)
+                @foreach (var user in Model.Datas)
                 {
                     <tr>
                         <td>
@@ -55,6 +61,23 @@
 
                             }
                         </td>
+
+                        <td>
+                            @if (User.IsInRole("SuperAdmin"))
+                            {
+                                bool hasNonSuperAdminRole = !user.RoleNames.Any(role => role.Contains("SuperAdmin"));
+
+                                if (hasNonSuperAdminRole)
+                                {
+                                    <form method="post" asp-action="DeleteUser" asp-route-id="@user.Id">
+                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                    </form>
+                                }
+                                    
+
+                            }
+
+                        </td>
                     </tr>
                 }
 
@@ -62,6 +85,33 @@
         </table>
     </div>
 
+    <div class="pagination mt-5 justify-content-center">
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item  @(Model.HasPrevious ? "" : "disabled")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage - 1)">
+                        Previous
+                    </a>
+                </li>
+
+                @for (int i = 1; i <= Model.TotalPage; i++)
+                {
+                    <li class="page-item @(Model.CurrentPage == i ? "active" : "")">
+                        <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                    </li>
+
+                }
+
+                <li class="page-item  @(Model.HasNext ? "" : "disabled")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage + 1)">
+                        Next
+                    </a>
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
 
 
 </div>
