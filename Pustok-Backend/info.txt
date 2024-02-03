@@ -1,0 +1,7 @@
+
+
+SuperAdmin - username: fidan123 password: Fidan123_
+Admin - username: bakhshali123 password: Fidan123_
+Member - username: kubra123 password: Fidan123_
+
+Site Link - http://bashirova12345-001-site1.anytempurl.com/
