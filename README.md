@@ -75,10 +75,6 @@ ASP.NET Identity: Secure login and registration processes with email confirmatio
 
 ![Screenshot 2024-06-30 195723](https://github.com/fidanbb/Pustok-Back/assets/138569787/1419d2b1-314a-4ec9-9a0d-4242eaa053ad)
 
-![Screenshot 2024-06-30 195756](https://github.com/fidanbb/Pustok-Back/assets/138569787/a88f4a59-179f-4833-be2f-666b376d81f6)
-
-![Screenshot 2024-06-30 195856](https://github.com/fidanbb/Pustok-Back/assets/138569787/94f31329-da31-442f-861e-75f9ee5585c6)
-
 ![Screenshot 2024-06-30 195908](https://github.com/fidanbb/Pustok-Back/assets/138569787/2d89e92c-7de8-48b2-bb99-00db00e0b129)
 
 ![Screenshot 2024-06-30 195924](https://github.com/fidanbb/Pustok-Back/assets/138569787/a817004f-d5ab-46a4-be0b-9c616569109a)
@@ -89,8 +85,6 @@ ASP.NET Identity: Secure login and registration processes with email confirmatio
 
 ![Screenshot 2024-06-30 200245](https://github.com/fidanbb/Pustok-Back/assets/138569787/4fe2a8c2-18d0-4984-afdb-b34bbdd1d094)
 
-![Screenshot 2024-06-30 200256](https://github.com/fidanbb/Pustok-Back/assets/138569787/7e593409-45ce-4de1-ae2c-cec446ba6401)
-
 ![Screenshot 2024-06-30 200319](https://github.com/fidanbb/Pustok-Back/assets/138569787/27069a06-5b9c-4ab1-b26a-4979c4aae75d)
 
 ![Screenshot 2024-06-30 200407](https://github.com/fidanbb/Pustok-Back/assets/138569787/a143a562-2c95-4e15-a1fa-a92c334a67b7)
@@ -100,8 +94,6 @@ ASP.NET Identity: Secure login and registration processes with email confirmatio
 ![Screenshot 2024-06-30 200450](https://github.com/fidanbb/Pustok-Back/assets/138569787/b8af3dea-a276-4321-983c-5d668c806ca3)
 
 ![Screenshot 2024-06-30 200503](https://github.com/fidanbb/Pustok-Back/assets/138569787/d747e913-654a-4853-aeeb-4cd29b78593f)
-
-![Screenshot 2024-06-30 200517](https://github.com/fidanbb/Pustok-Back/assets/138569787/f542ca60-122b-4b52-ba4e-0824ca8090f8)
 
 ![Screenshot 2024-06-30 200532](https://github.com/fidanbb/Pustok-Back/assets/138569787/eec97b93-f1fe-4ea6-9e72-369a77bb685c)
 
